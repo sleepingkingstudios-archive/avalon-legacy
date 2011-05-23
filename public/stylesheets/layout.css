@@ -1,0 +1,65 @@
+/****************************************************************************
+ *  public/stylesheets/sass/layout.scss
+ ***************************************************************************/
+/* DEFINE VARIABLES */
+/*  940 pixels allows for a wide variety of grid/column combinations, using
+ *  a 20 pixel grid size (the minus one accounts for an "extra" margin,
+ *  since in most layouts there will be one fewer space between sections
+ *  than there are sections).
+ *  
+ *  940 = 20 * (48 - 1):
+ *    2 columns @ 460px
+ *    2 columns @ 580px, 340px (golden ratio, 96.9% accurate)
+ *    3 columns @ 300px
+ *    4 columns @ 220px
+ */
+html {
+  overflow-y: scroll; }
+
+body {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0; }
+
+div#banner {
+  width: 940px;
+  height: 80px;
+  margin-top: 20px; }
+  div#banner h1 {
+    margin: 0;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center; }
+
+div#top_navigation {
+  width: 940px;
+  height: 30px; }
+  div#top_navigation div.navigation_item {
+    width: 172px;
+    height: 30px;
+    margin: 0 0 0 20px;
+    float: left; }
+    div#top_navigation div.navigation_item:first-child {
+      margin-left: 0; }
+    div#top_navigation div.navigation_item h2 {
+      margin: 0;
+      text-align: center; }
+
+div#content {
+  width: 580px;
+  min-height: 480px;
+  margin-top: 20px;
+  float: left; }
+
+div#sidebar {
+  width: 340px;
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left; }
+  div#sidebar h2:first-child {
+    padding-top: 10px;
+    margin-bottom: 0px; }
+
+br.clear {
+  clear: both; }

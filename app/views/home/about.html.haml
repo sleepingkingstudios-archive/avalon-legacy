@@ -1,0 +1,53 @@
+/ %h1 Home#about
+/ %p Find me in app/views/home/about.html.haml
+
+= content_for :top_navigation do
+  = navigation :skip => [ :about ]
+
+%h1 About This Site
+
+%p
+  This site runs on
+  #{link_to "Ruby on Rails", "http://rubyonrails.org/"}, which I recommend
+  highly. The views are written in
+  #{link_to "Haml", "http://haml-lang.com/"}
+  and styled using
+  #{link_to "Sass", "http://sass-lang.com/"},
+  with a little
+  #{link_to "Markdown", "http://daringfireball.net/projects/markdown/"}
+  magic (powered by
+  #{link_to "Redcarpet", "https://github.com/tanoku/redcarpet"}).
+  For client-side scripting made easy, I'm using the excellent
+  #{link_to "jQuery", "http://jquery.com/"}
+  library.
+
+%p
+  This site also uses the
+  = link_to "Solarized", "http://ethanschoonover.com/solarized"
+  theme, by Ethan Schoonover.
+
+%h1 About The Author
+%p
+  (With apologies to J. M. Barrie and J. Michael Straczynski.)
+
+%h2 Who Are You?
+%p
+  My name is Rob Smith, I'm an engineer, programmer, web developer, and
+  aspiring game designer.
+
+%h2 What Do You Want?
+%p
+  Someday, to design the world's greatest game. For now, to write, to code,
+  and to not go too crazy along the way.
+
+%h2 Where Are You Going?
+%p
+  Second star to the right, and straight on 'till morning.
+
+%h2 Who Do You Serve, and Who Do You Trust?
+%p
+  I work for
+  = (link_to "T-Mark International", "http://www.t-mark.co.jp/en") + ","
+  a web development company with offices in Japan and the eastern United
+  States. My business card says "Programmer", but mostly I do web
+  development, and a little Flash.

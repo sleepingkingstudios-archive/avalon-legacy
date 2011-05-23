@@ -1,0 +1,108 @@
+- if @theme_override == :light
+  - light_or_dark = "light"
+- elsif @theme_override == :dark
+  - light_or_dark = "dark"
+- else
+  - light_or_dark = @is_it_dark ? "dark" : "light"
+
+!!! 5
+%html{:class => light_or_dark + " dusk"}
+  %head
+    %title Sleeping King Studios
+    %meta{:charset => "utf-8"}
+    
+    = stylesheet_link_tag "layout", "text", "solarized"
+    = yield :css
+    
+    = javascript_include_tag "jquery-1.6.min", "jquery.cookie", :defaults
+    = yield :javascript
+    
+    :javascript
+      function set_theme(theme) {
+        if(theme == 'light') {
+          jQuery('html').addClass('light').removeClass('dark');
+        } else {
+          jQuery('html').addClass('dark').removeClass('light');
+        } // end if
+      } // end function set_theme
+    
+      var cookie_theme = get_cookie('default_theme');
+      console.log('default theme = "' + cookie_theme + '"');
+      if(cookie_theme) {
+        set_theme(cookie_theme);
+      } // end if-elsif
+      
+      jQuery(document).ready(function(){
+        jQuery('a#theme_select_light').click(function(){
+          set_theme('light');
+          set_cookie('default_theme', 'light');
+          
+          return false;
+        }); // end click
+        
+        jQuery('a#theme_select_dark').click(function(){
+          set_theme('dark');
+          set_cookie('default_theme', 'dark', 1);
+          
+          return false;
+        }); // end click
+        
+        jQuery('a#theme_select_auto').click(function(){
+          var server_dark = (String(#{@is_it_dark}) == "true");
+          if(server_dark) {
+            set_theme('dark');
+          } else {
+            set_theme('light');
+          } // end if-else
+          clear_cookie('default_theme');
+          
+          return false;
+        }); // end click
+      }); // end document.ready
+    
+    = csrf_meta_tag
+  / end head
+  
+  %body
+    #banner
+      - content_for_banner = yield :banner
+      - if content_for_banner.empty? then
+        %h1 Sleeping King Studios
+      - else
+        = content_for_banner
+    / end banner
+    
+    #top_navigation
+      - content_for_top_nav = yield :top_navigation
+      - if content_for_top_nav.empty? then
+        = navigation :skip => [ :sitemap ]
+      - else
+        = content_for_top_nav
+    / end top_navigation
+    
+    #content
+      = yield
+    / end body
+    
+    #sidebar
+      - content_for_sidebar = yield :sidebar
+      - if content_for_sidebar.empty? then
+        %h2 Navigation, yo.
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      - else
+        = content_for_sidebar
+    / end navigation
+    
+    %br.clear
+    
+    #footer
+      %p{:style => "text-align: center;"}
+        It is now #{@time.hour}:#{@time.min}. It #{@is_it_dark ? "is" : "is not"} dark.#{@is_it_dark ? " You are likely to be eaten by a grue." : ""}
+        Choose a theme:
+        %a#theme_select_light{:href => "#light"} Light
+        |
+        %a#theme_select_dark{:href => "#dark"} Dark
+        (
+        %a#theme_select_auto{:href => "#auto"} Auto
+        )

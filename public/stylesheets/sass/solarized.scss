@@ -1,0 +1,68 @@
+/****************************************************************************
+ *  public/stylesheets/sass/solarized.scss
+ *
+ *  implements the Solarized color palette:
+ *    http://ethanschoonover.com/solarized
+ ***************************************************************************/
+
+@import "colors";
+
+$background_image_y_offset: 210px;
+
+html {
+  background-color: $base3;
+  color: $base00;
+  
+  body {
+    background-image: url('../images/background-tree-light.png');
+    background-position: center $background_image_y_offset;
+    background-repeat: no-repeat;
+  } // html body
+  
+  strong, em, h1, h2, h3, h4, h5, h6 {
+    color: $base01;
+  } // html [strong, em, ...]
+  
+  a {
+    color: $orange;
+    
+    &:visited {
+      color: $yellow;
+    } // html a.visited
+  } // html a
+  
+  .apple {
+    background-image: url('../images/apple_color_light_small.png');
+    background-position: left -2px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  } // html .apple
+  
+  &.dark {
+    background-color: $base03;
+    color: $base0;
+    
+    body {
+      background-image: url('../images/background-tree-dark.png');
+    } // html.dark body
+    
+    strong, em, h1, h2, h3, h4, h5, h6 {
+      color: $base1;
+    } // html.dark [strong, em, ...]
+    
+    a {
+      color: $blue;
+
+      &:visited {
+        color: $violet;
+      } // html.dark a.visited
+    } // html.dark a
+    
+    .apple {
+      background-image: url('../images/apple_color_dark_small.png');
+      background-position: left -2px;
+      background-repeat: no-repeat;
+      padding-left: 25px;
+    } // html.dark .apple
+  } // html.dark
+} // html

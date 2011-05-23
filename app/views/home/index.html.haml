@@ -1,0 +1,60 @@
+/ %h1 Home#index
+/ %p Find me in app/views/home/index.html.haml
+
+= content_for :javascript do
+  :javascript
+    function position_links() {
+      var angle = 70;
+      var center_x = jQuery('body').css('width');
+      center_x = +(center_x.substring(0, center_x.length - 2)) / 2;
+      // console.log(center_x);
+      var center_y = 300;
+      var radius = 280;
+      
+      var reverse = true;
+    
+      links = jQuery('.navigation_item');
+      links.unshift;
+      links.each(function(){
+        self = jQuery(this);
+        self.addClass('apple');
+        
+        if(self.attr('id') == 'top_navigation_Home') {
+          this.hide();
+          return;
+        } // end if
+      
+        var x_pos = center_x - radius * Math.sin(angle * Math.PI / 180);
+        var width = self.css('width');
+        width = +(width.substring(0, width.length - 2));
+        
+        if(reverse && angle <= 0) {
+          x_pos -= width / 2;
+          reverse = false
+        } else if(reverse) {
+          self.addClass('reverse_apple');
+          x_pos -= width;
+        } // end if-elsif
+        var y_pos = center_y - radius * Math.cos(angle * Math.PI / 180);
+        self.css({
+          top: y_pos,
+          left: x_pos
+        }); // end css
+        
+        // console.log(jQuery(this).html() + ': ' + x_pos + ', ' + y_pos);
+        angle -= 35;
+      }); // end each
+    } // end function position_links
+    
+    jQuery(document).ready(function(){
+      position_links();
+    }); // end document.ready
+
+= content_for :css do
+  = stylesheet_link_tag "home"
+
+= content_for :top_navigation do
+  %h2{:style => "text-align: center;"} Hic Iacet Arthuris, Rex Quondam, Rexque Futuris
+
+#arc_navigation
+  = navigation :only => [ :about, :projects, :articles, :blog, :sitemap ]

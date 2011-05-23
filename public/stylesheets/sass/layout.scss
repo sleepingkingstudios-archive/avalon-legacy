@@ -1,0 +1,98 @@
+/****************************************************************************
+ *  public/stylesheets/sass/layout.scss
+ ***************************************************************************/
+
+/* DEFINE VARIABLES */
+$margin: 20px;
+$total_width: 940px;
+  /*  940 pixels allows for a wide variety of grid/column combinations, using
+   *  a 20 pixel grid size (the minus one accounts for an "extra" margin,
+   *  since in most layouts there will be one fewer space between sections
+   *  than there are sections).
+   *  
+   *  940 = 20 * (48 - 1):
+   *    2 columns @ 460px
+   *    2 columns @ 580px, 340px (golden ratio, 96.9% accurate)
+   *    3 columns @ 300px
+   *    4 columns @ 220px
+   */
+   
+$banner_height: 80px;
+
+$top_nav_height: 30px;
+$top_nav_item_count: 5;
+
+$content_width: 580px;
+$content_min_height: 480px;
+
+$sidebar_width: 340px;
+
+html {
+  overflow-y: scroll;
+} // html
+
+body {
+  position: relative;
+  width: $total_width;
+  margin: 0 auto;
+  padding: 0;
+} // body
+
+div#banner {
+  width: $total_width;
+  height: $banner_height;
+  margin-top: $margin;
+  
+  h1 {
+    margin: 0;
+    
+    font-size: $banner_height * 0.8;
+    line-height: $banner_height;
+    text-align: center;
+  } // div#banner h1
+} // div#banner
+
+div#top_navigation {
+  width: $total_width;
+  height: $top_nav_height;
+  
+  div.navigation_item {
+    width: ($total_width - $margin * ($top_nav_item_count - 1)) / $top_nav_item_count;
+    height: $top_nav_height;
+    margin: 0 0 0 $margin;
+    
+    float: left;
+    
+    &:first-child {
+      margin-left: 0;
+    } // div#top_navigation div.navigation_item:first-child
+    
+    h2 {
+      margin: 0;
+      text-align: center;
+    } // div#top_navigation div.navigation_item h2
+  } // div#top_navigation div.navigation_item
+} // div#top_navigation
+
+div#content {
+  width: $content_width;
+  min-height: $content_min_height;
+  margin-top: $margin;
+  float: left;
+} // div#content
+
+div#sidebar {
+  width: $sidebar_width;
+  margin-top: $margin;
+  margin-left: $margin;
+  float: left;
+  
+  h2:first-child {
+    padding-top: 10px;
+    margin-bottom: 0px;
+  } // div#sidebar h2:first-child
+} // div#sidebar
+
+br.clear {
+  clear: both;
+} // br.clear

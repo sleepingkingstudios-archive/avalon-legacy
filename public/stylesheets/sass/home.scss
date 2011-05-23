@@ -1,0 +1,46 @@
+@import "layout";
+@import "solarized";
+
+html {
+  body {
+    background-image: url('../images/background-tree-light-hi.png');
+  } // html body
+  
+  .apple {
+    background-image: url('../images/apple_color_light_large.png');
+    padding-left: 30px;
+  } // html .apple
+  
+  &.dark {
+    body {
+      background-image: url('../images/background-tree-dark-hi.png');
+    } // html.dark body
+    
+    .apple {
+      background-image: url('../images/apple_color_dark_large.png');
+      padding-left: 30px;
+    } // html.dark .apple
+  } // html.dark
+} // html
+
+div#arc_navigation {
+  height: 0;
+  width: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  
+  div.navigation_item {
+    position: absolute;
+  } // div#arc_navigation div.navigation_item
+  
+  .reverse_apple {
+    padding-left: 0;
+    padding-right: 30px;
+    background-position: right -2px;
+  } // .reverse
+} // div#arc_navigation
+
+div#sidebar {
+  display: none;
+} // div#sidebar
