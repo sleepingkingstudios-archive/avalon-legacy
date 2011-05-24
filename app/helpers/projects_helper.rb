@@ -1,6 +1,20 @@
 module ProjectsHelper
   def key_facts(params = {})
     facts = '<div class="key_facts"><h3><p>'
+    fact_array = Array.new
+    
+    if params[:language]
+      language = params[:language]
+      if language.respond_to? :join
+        fact_array.push({ :label => "Language(s):", :content => language.join(", ") })
+      else
+        fact_array.push({ :label => "Language(s):", :content => language })
+      end # if-else
+    end # if
+    
+    fact_array.each do |fact|
+      facts += key_fact fact[:label], fact[:content]
+    end # each
     
     facts += '</p></h3></div>'
     

@@ -10,6 +10,7 @@
  *  940 = 20 * (48 - 1):
  *    2 columns @ 460px
  *    2 columns @ 580px, 340px (golden ratio, 96.9% accurate)
+ *    2 columns @ 660px, 260px (golden ratio squared)
  *    3 columns @ 300px
  *    4 columns @ 220px
  */
@@ -35,31 +36,30 @@ div#banner {
 div#top_navigation {
   width: 940px;
   height: 30px; }
-  div#top_navigation div.navigation_item {
+  div#top_navigation h2.navigation_item {
     width: 172px;
     height: 30px;
     margin: 0 0 0 20px;
-    float: left; }
-    div#top_navigation div.navigation_item:first-child {
+    float: left;
+    margin: 0;
+    text-align: center; }
+    div#top_navigation h2.navigation_item:first-child {
       margin-left: 0; }
-    div#top_navigation div.navigation_item h2 {
-      margin: 0;
-      text-align: center; }
 
 div#content {
-  width: 580px;
+  width: 660px;
   min-height: 480px;
   margin-top: 20px;
   float: left; }
 
 div#sidebar {
-  width: 340px;
+  width: 240px;
   margin-top: 20px;
   margin-left: 20px;
   float: left; }
   div#sidebar h2:first-child {
     padding-top: 10px;
-    margin-bottom: 0px; }
+    margin-bottom: 10px; }
 
 br.clear {
   clear: both; }
@@ -128,7 +128,7 @@ div#arc_navigation {
   overflow: visible;
   position: relative;
   z-index: 1; }
-  div#arc_navigation div.navigation_item {
+  div#arc_navigation .navigation_item {
     position: absolute; }
   div#arc_navigation .reverse_apple {
     padding-left: 0;

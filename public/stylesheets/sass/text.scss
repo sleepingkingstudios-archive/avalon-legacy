@@ -30,6 +30,7 @@ body {
 
 $heading1_size: 32px;
 $heading1_height: 40px;
+$heading1_margin: 0 0 20px;
 
 $heading2_size: 20px;
 $heading2_height: 30px;
@@ -42,7 +43,7 @@ $heading3_margin: 0 0 10px;
 $heading4_size: 14px;
 
 h1 {
-  margin: 0;
+  margin: $heading1_margin;
   
   font-size:   $heading1_size;
   line-height: $heading1_size;
@@ -72,6 +73,8 @@ p {
   text-align: justify;
 } // p
 
+/* ANCHORS */
+
 a {
   text-decoration: none;
   
@@ -79,3 +82,19 @@ a {
     text-decoration: underline;
   } // a:hover
 } // a
+
+/* LISTS */
+
+ul {
+  margin: 0 0 20px;
+  padding: 0;
+  
+  li {
+    font-size: 17px;
+    line-height: 20px;
+    
+    &.apple {
+      list-style-type: none;
+    } // ul li.apple
+  } // ul li
+} // ul

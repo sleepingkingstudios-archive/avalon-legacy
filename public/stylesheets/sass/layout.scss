@@ -13,6 +13,7 @@ $total_width: 940px;
    *  940 = 20 * (48 - 1):
    *    2 columns @ 460px
    *    2 columns @ 580px, 340px (golden ratio, 96.9% accurate)
+   *    2 columns @ 660px, 260px (golden ratio squared)
    *    3 columns @ 300px
    *    4 columns @ 220px
    */
@@ -22,10 +23,10 @@ $banner_height: 80px;
 $top_nav_height: 30px;
 $top_nav_item_count: 5;
 
-$content_width: 580px;
+$content_width: 660px;
 $content_min_height: 480px;
 
-$sidebar_width: 340px;
+$sidebar_width: 240px;
 
 html {
   overflow-y: scroll;
@@ -56,22 +57,19 @@ div#top_navigation {
   width: $total_width;
   height: $top_nav_height;
   
-  div.navigation_item {
+  h2.navigation_item {
     width: ($total_width - $margin * ($top_nav_item_count - 1)) / $top_nav_item_count;
     height: $top_nav_height;
     margin: 0 0 0 $margin;
     
     float: left;
+    margin: 0;
+    text-align: center;
     
     &:first-child {
       margin-left: 0;
-    } // div#top_navigation div.navigation_item:first-child
-    
-    h2 {
-      margin: 0;
-      text-align: center;
-    } // div#top_navigation div.navigation_item h2
-  } // div#top_navigation div.navigation_item
+    } // div#top_navigation h2.navigation_item:first-child
+  } // div#top_navigation h2.navigation_item
 } // div#top_navigation
 
 div#content {
@@ -89,8 +87,14 @@ div#sidebar {
   
   h2:first-child {
     padding-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   } // div#sidebar h2:first-child
+  
+  ul#side_navigation {
+    li {
+      
+    }
+  } // div#sidebar h2#side_navigation
 } // div#sidebar
 
 br.clear {

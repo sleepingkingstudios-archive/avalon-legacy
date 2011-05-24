@@ -13,6 +13,7 @@
  *  940 = 20 * (48 - 1):
  *    2 columns @ 460px
  *    2 columns @ 580px, 340px (golden ratio, 96.9% accurate)
+ *    2 columns @ 660px, 260px (golden ratio squared)
  *    3 columns @ 300px
  *    4 columns @ 220px
  */
@@ -38,31 +39,30 @@ div#banner {
 div#top_navigation {
   width: 940px;
   height: 30px; }
-  div#top_navigation div.navigation_item {
+  div#top_navigation h2.navigation_item {
     width: 172px;
     height: 30px;
     margin: 0 0 0 20px;
-    float: left; }
-    div#top_navigation div.navigation_item:first-child {
+    float: left;
+    margin: 0;
+    text-align: center; }
+    div#top_navigation h2.navigation_item:first-child {
       margin-left: 0; }
-    div#top_navigation div.navigation_item h2 {
-      margin: 0;
-      text-align: center; }
 
 div#content {
-  width: 580px;
+  width: 660px;
   min-height: 480px;
   margin-top: 20px;
   float: left; }
 
 div#sidebar {
-  width: 340px;
+  width: 240px;
   margin-top: 20px;
   margin-left: 20px;
   float: left; }
   div#sidebar h2:first-child {
     padding-top: 10px;
-    margin-bottom: 0px; }
+    margin-bottom: 10px; }
 
 br.clear {
   clear: both; }
@@ -86,7 +86,7 @@ body {
 
 /* HEADINGS */
 h1 {
-  margin: 0;
+  margin: 0 0 20px;
   font-size: 32px;
   line-height: 32px; }
 
@@ -107,7 +107,18 @@ p {
   line-height: 20px;
   text-align: justify; }
 
+/* ANCHORS */
 a {
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
+
+/* LISTS */
+ul {
+  margin: 0 0 20px;
+  padding: 0; }
+  ul li {
+    font-size: 17px;
+    line-height: 20px; }
+    ul li.apple {
+      list-style-type: none; }
