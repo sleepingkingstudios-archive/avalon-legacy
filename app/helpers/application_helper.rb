@@ -3,7 +3,7 @@ module ApplicationHelper
     nav_data = {
       :home => { :label => "home", :path => :root},
       :articles => { :label => "articles" },
-      :projects => {},
+      :projects => { :path => "projects" },
       :blog => {},
       :about => { :path => :about },
       :sitemap => { :path => :sitemap }
@@ -21,7 +21,7 @@ module ApplicationHelper
       item = nav_data[key]
       logger.debug "item = " + item.inspect
       next if item.nil?
-      nav += self.navigation_item (item[:label] || key), item[:path], item[:children]
+      nav += navigation_item (item[:label] || key), item[:path], item[:children]
     end # each
     
     return nav.html_safe
@@ -39,5 +39,6 @@ module ApplicationHelper
     
     logger.debug '"' + item + '"'
     return item.html_safe
-  end # helper navigation_item
+  end # method navigation_item
+  private :navigation_item
 end # module ApplicationHelper

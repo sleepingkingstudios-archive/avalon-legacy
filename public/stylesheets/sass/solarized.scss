@@ -24,10 +24,10 @@ html {
   } // html [strong, em, ...]
   
   a {
-    color: $orange;
+    color: $red;
     
     &:visited {
-      color: $yellow;
+      color: $orange;
     } // html a.visited
   } // html a
   

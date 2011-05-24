@@ -20,9 +20,9 @@ html {
   html strong, html em, html h1, html h2, html h3, html h4, html h5, html h6 {
     color: #586e75; }
   html a {
-    color: #cb4b16; }
+    color: #dc322f; }
     html a:visited {
-      color: #b58900; }
+      color: #cb4b16; }
   html .apple {
     background-image: url("../images/apple_color_light_small.png");
     background-position: left -2px;

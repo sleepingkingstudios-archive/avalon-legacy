@@ -70,10 +70,25 @@ br.clear {
 body {
   font-size: 100%; }
 
+.strong {
+  font-weight: bold !important; }
+
+.emphasis {
+  font-style: italic !important; }
+
+.plain {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none; }
+
+.no_margin {
+  margin-bottom: 0; }
+
+/* HEADINGS */
 h1 {
   margin: 0;
   font-size: 32px;
-  line-height: 40px; }
+  line-height: 32px; }
 
 h2 {
   margin: 0 0 10px;
@@ -85,6 +100,7 @@ h3 {
   font-size: 17px;
   line-height: 20px; }
 
+/* PARAGRAPHS */
 p {
   margin: 0 0 20px;
   font-size: 15px;

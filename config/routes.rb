@@ -1,4 +1,7 @@
 Avalon::Application.routes.draw do
+  get "projects/index"
+  match "projects" => "projects#index"
+  
   match "about"   => "home#about"
   match "sitemap" => "home#sitemap"
   

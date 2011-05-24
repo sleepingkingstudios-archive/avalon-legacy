@@ -1,0 +1,34 @@
+/ %h1 Projects#index
+/ %p Find me in app/views/projects/index.html.haml
+
+- content_for :css do
+  = stylesheet_link_tag "projects"
+
+%h1 Projects
+%p
+  
+.key_facts
+  %h3 Key Facts
+  %p
+    %em Language(s):
+    Ruby
+    %br
+    %em Current Release:
+    None
+    %br
+    %em Next Release:
+    Robin
+    %br
+    = link_to "Source (github.com)", "https://github.com/sleepingkingstudios/camelot"
+%hgroup
+  %h2.no_margin Camelot
+  %h3.plain.emphasis A text-based adventure game engine.
+%p
+  Camelot is a text-based adventure game engine in the spirit of classic
+  terminal games such as <em>Colossal Cave Adventure</em> &mdash; at least,
+  it's text-based for now. The engine is designed to be interface-agnostic,
+  enabling a staged development approach: each major release should support
+  an improved front- and back-end experience. The initial release, a.k.a
+  <em>Robin</em>, will use a turn-based engine with parsed-text input and
+  output, with the second release <em>Bedeviere</em> to use a time-based
+  engine, supporting a real-time battle experience.
