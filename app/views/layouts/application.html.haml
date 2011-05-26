@@ -90,6 +90,9 @@
         %h2 Site Navigation
         %ul#side_navigation
           = navigation :tag => :li, :tag_class => :apple
+        %h2 Recent Activity
+        %ul#recent_activity
+          = recent_activity
       - else
         = content_for_sidebar
     / end navigation

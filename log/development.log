@@ -14901,3 +14901,2566 @@ rendering navigation item: label = Sitemap, path = sitemap
 "<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
 Rendered home/index.html.haml within layouts/application (14.8ms)
 Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sitemap" for 127.0.0.1 at 2011-05-24 14:55:59 -0400
+  Processing by HomeController#sitemap as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered home/sitemap.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:56:06 -0400
+  Processing by HomeController#index as HTML
+params = {:only=>[:about, :articles, :projects, :blog, :sitemap]}
+nav_items = [:about, :articles, :projects, :blog, :sitemap]
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<h2 class='navigation_item navigation_Sitemap'><a href="/sitemap">Sitemap</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered home/index.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-24 14:56:15 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 31ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-24 14:57:15 -0400
+  Processing by HomeController#index as HTML
+params = {:only=>[:about, :articles, :projects, :blog, :sitemap]}
+nav_items = [:about, :articles, :projects, :blog, :sitemap]
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<h2 class='navigation_item navigation_Sitemap'><a href="/sitemap">Sitemap</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered home/index.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 19:29:55 -0400
+  Processing by HomeController#index as HTML
+params = {:only=>[:about, :articles, :projects, :blog, :sitemap]}
+nav_items = [:about, :articles, :projects, :blog, :sitemap]
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<h2 class='navigation_item navigation_Sitemap'><a href="/sitemap">Sitemap</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered home/index.html.haml within layouts/application (19.1ms)
+Completed 200 OK in 97ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 19:30:35 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (27.8ms)
+Completed 200 OK in 41ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 19:30:57 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 31ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 19:53:13 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (24.3ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:18:44 -0400
+  Processing by ProjectsController#index as HTML
+Rendered projects/index.html.haml within layouts/application (8.2ms)
+Completed   in 14ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h2 and nested within it.):
+    91:         %ul#side_navigation
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:           = recent_activity
+    95:       - else
+    96:         = content_for_sidebar
+    97:     / end navigation
+  app/views/layouts/application.html.haml:94
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:18:51 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (14.0ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:19:17 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (14.2ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:19:40 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (29.0ms)
+Completed   in 32ms
+
+ActionView::Template::Error (can't convert Symbol into Integer):
+    91:         %ul#side_navigation
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         = recent_activity
+    95:       - else
+    96:         = content_for_sidebar
+    97:     / end navigation
+  app/helpers/application_helper.rb:66:in `[]'
+  app/helpers/application_helper.rb:66:in `github_list_commits'
+  app/helpers/application_helper.rb:58:in `recent_activity'
+  app/views/layouts/application.html.haml:94:in `_app_views_layouts_application_html_haml__1838790893365848447_2153960420_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:20:54 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (28.1ms)
+Completed   in 31ms
+
+ActionView::Template::Error (can't convert Symbol into Integer):
+    91:         %ul#side_navigation
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         = recent_activity
+    95:       - else
+    96:         = content_for_sidebar
+    97:     / end navigation
+  app/helpers/application_helper.rb:66:in `[]'
+  app/helpers/application_helper.rb:66:in `github_list_commits'
+  app/helpers/application_helper.rb:58:in `recent_activity'
+  app/views/layouts/application.html.haml:94:in `_app_views_layouts_application_html_haml__1838790893365848447_2153515380_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:21:14 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:21:38 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (16.6ms)
+Completed   in 20ms
+
+ActionView::Template::Error (undefined local variable or method `log' for #<#<Class:0x00000101c6e9e8>:0x00000101c68930>):
+    91:         %ul#side_navigation
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         = recent_activity
+    95:       - else
+    96:         = content_for_sidebar
+    97:     / end navigation
+  app/helpers/application_helper.rb:62:in `recent_activity'
+  app/views/layouts/application.html.haml:94:in `_app_views_layouts_application_html_haml__1838790893365848447_2162304200_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:21:43 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (30.6ms)
+Completed   in 33ms
+
+ActionView::Template::Error (uninitialized constant ApplicationHelper::Log):
+    91:         %ul#side_navigation
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         = recent_activity
+    95:       - else
+    96:         = content_for_sidebar
+    97:     / end navigation
+  app/helpers/application_helper.rb:62:in `recent_activity'
+  app/views/layouts/application.html.haml:94:in `_app_views_layouts_application_html_haml__1838790893365848447_2154316220_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:21:48 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (27.7ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:22:11 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (29.2ms)
+Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:23:54 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000101cb2e68>:0x00000101ca6d98>: listing commits...
+Rendered projects/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:24:28 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+rendering navigation item: label = Home, path = root
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+rendering navigation item: label = Articles, path = 
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+rendering navigation item: label = Projects, path = projects
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+rendering navigation item: label = Blog, path = 
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+rendering navigation item: label = About, path = about
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+rendering navigation item: label = Sitemap, path = sitemap
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+Rendered projects/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 31ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:24:53 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000100bcb5c8>:0x00000100bc7450>: listing commits...
+Rendered projects/index.html.haml within layouts/application (722.1ms)
+Completed   in 725ms
+
+ActionView::Template::Error (GET https://github.com/api/v2/json/commits/list/sleepingkingstudios/camelot/: 401: api route not recognized):
+    91:         %ul#side_navigation
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         = recent_activity
+    95:       - else
+    96:         = content_for_sidebar
+    97:     / end navigation
+  app/helpers/application_helper.rb:69:in `github_list_commits'
+  app/helpers/application_helper.rb:58:in `recent_activity'
+  app/views/layouts/application.html.haml:94:in `_app_views_layouts_application_html_haml__1838790893365848447_2153645140_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:25:21 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001058fdd78>:0x000001058fc108>: listing commits...
+Rendered projects/index.html.haml within layouts/application (814.1ms)
+Completed 200 OK in 817ms (Views: 817.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:26:00 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001059d6858>:0x000001059d4bc0>: listing commits...
+Rendered projects/index.html.haml within layouts/application (762.0ms)
+Completed 200 OK in 765ms (Views: 765.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:26:41 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000100b58640>:0x00000100b54978>: listing commits...
+Rendered projects/index.html.haml within layouts/application (1042.0ms)
+Completed 200 OK in 1045ms (Views: 1045.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:27:25 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000101dd31d0>:0x00000101db6198>: listing commits...
+Rendered projects/index.html.haml within layouts/application (2953.7ms)
+Completed 200 OK in 2957ms (Views: 2956.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:27:28 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001059cf508>:0x000001059cd7f8>: listing commits...
+Rendered projects/index.html.haml within layouts/application (1180.8ms)
+Completed 200 OK in 1184ms (Views: 1183.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:27:53 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000100d10e10>:0x00000100d0df30>: listing commits...
+Rendered projects/index.html.haml within layouts/application (5507.0ms)
+Completed 200 OK in 5510ms (Views: 5510.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:28:01 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010313e918>:0x0000010313cc30>: listing commits...
+Rendered projects/index.html.haml within layouts/application (6280.1ms)
+Completed 200 OK in 6283ms (Views: 6283.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:28:07 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001059e8440>:0x000001059e6780>: listing commits...
+Rendered projects/index.html.haml within layouts/application (2652.3ms)
+Completed 200 OK in 2655ms (Views: 2655.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:28:17 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000100dfd670>:0x00000100df97f0>: listing commits...
+Rendered projects/index.html.haml within layouts/application (2962.6ms)
+Completed 200 OK in 2966ms (Views: 2965.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:28:24 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000103193080>:0x0000010318cff0>: listing commits...
+Rendered projects/index.html.haml within layouts/application (2663.2ms)
+Completed 200 OK in 2667ms (Views: 2666.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:28:27 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001059f6c20>:0x000001059f4f60>: listing commits...
+Rendered projects/index.html.haml within layouts/application (4064.8ms)
+Completed 200 OK in 4068ms (Views: 4067.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:28:31 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000103097a00>:0x00000103095d68>: listing commits...
+Rendered projects/index.html.haml within layouts/application (2413.6ms)
+Completed 200 OK in 2417ms (Views: 2416.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:28:34 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000105a48fe8>:0x00000105a47378>: listing commits...
+Rendered projects/index.html.haml within layouts/application (2184.5ms)
+Completed 200 OK in 2188ms (Views: 2187.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:29:05 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001030e74d8>:0x000001030e29d8>: listing commits...
+Rendered projects/index.html.haml within layouts/application (4092.7ms)
+Completed 200 OK in 4096ms (Views: 4095.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:29:50 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000105073f68>:0x000001050722d0>: listing commits...
+Rendered projects/index.html.haml within layouts/application (817.0ms)
+Completed 200 OK in 820ms (Views: 819.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:30:50 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010598f2a0>:0x0000010598d4c8>: listing commits...
+Rendered projects/index.html.haml within layouts/application (832.5ms)
+Completed 200 OK in 836ms (Views: 835.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:31:00 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000103128118>:0x000001031264a8>: listing commits...
+Rendered projects/index.html.haml within layouts/application (795.0ms)
+Completed 200 OK in 798ms (Views: 798.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:34:04 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001050d4548>:0x000001050d27c0>: listing commits...
+Rendered projects/index.html.haml within layouts/application (1797.4ms)
+Completed 200 OK in 1801ms (Views: 1800.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:34:54 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000105130e38>:0x0000010512a970>: listing commits...
+Rendered projects/index.html.haml within layouts/application (5276.0ms)
+Completed 200 OK in 5279ms (Views: 5278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:36:25 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001059f5050>:0x000001059f33b8>: listing commits...
+Rendered projects/index.html.haml within layouts/application (792.2ms)
+Completed 200 OK in 796ms (Views: 795.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:36:40 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001031c4dd8>:0x000001031c3168>: listing commits...
+Rendered projects/index.html.haml within layouts/application (934.7ms)
+Completed 200 OK in 939ms (Views: 938.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:37:49 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010594eb38>:0x0000010594cec8>: listing commits...
+Rendered projects/index.html.haml within layouts/application (881.9ms)
+Completed   in 885ms
+
+ActionView::Template::Error (undefined method `-' for "2011-05-22T21:34:18-07:00":String):
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         %ul#recent_activity
+    95:           = recent_activity
+    96:       - else
+    97:         = content_for_sidebar
+    98:     / end navigation
+  app/helpers/application_helper.rb:81:in `github_format_commit'
+  app/helpers/application_helper.rb:59:in `block in recent_activity'
+  app/helpers/application_helper.rb:58:in `each'
+  app/helpers/application_helper.rb:58:in `recent_activity'
+  app/views/layouts/application.html.haml:95:in `_app_views_layouts_application_html_haml__1838790893365848447_2194297940_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:38:11 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010310eb00>:0x0000010310ce68>: listing commits...
+Rendered projects/index.html.haml within layouts/application (874.4ms)
+Completed   in 878ms
+
+ActionView::Template::Error (undefined method `-' for "2011-05-22T21:34:18-07:00":String):
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         %ul#recent_activity
+    95:           = recent_activity
+    96:       - else
+    97:         = content_for_sidebar
+    98:     / end navigation
+  app/helpers/application_helper.rb:81:in `github_format_commit'
+  app/helpers/application_helper.rb:59:in `block in recent_activity'
+  app/helpers/application_helper.rb:58:in `each'
+  app/helpers/application_helper.rb:58:in `recent_activity'
+  app/views/layouts/application.html.haml:95:in `_app_views_layouts_application_html_haml__1838790893365848447_2173195360_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:38:35 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001051167e0>:0x00000105114b70>: listing commits...
+Rendered projects/index.html.haml within layouts/application (1245.9ms)
+Completed   in 1249ms
+
+ActionView::Template::Error (undefined method `-' for "2011-05-22T21:34:18-07:00":String):
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         %ul#recent_activity
+    95:           = recent_activity
+    96:       - else
+    97:         = content_for_sidebar
+    98:     / end navigation
+  app/helpers/application_helper.rb:81:in `github_format_commit'
+  app/helpers/application_helper.rb:59:in `block in recent_activity'
+  app/helpers/application_helper.rb:58:in `each'
+  app/helpers/application_helper.rb:58:in `recent_activity'
+  app/views/layouts/application.html.haml:95:in `_app_views_layouts_application_html_haml__1838790893365848447_2189969640_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:45:37 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000101d0dc78>:0x00000101d02fd0>: listing commits...
+Rendered projects/index.html.haml within layouts/application (1073.3ms)
+Completed   in 1077ms
+
+ActionView::Template::Error (undefined local variable or method `committed_date' for #<#<Class:0x00000101d0dc78>:0x00000101d02fd0>):
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         %ul#recent_activity
+    95:           = recent_activity
+    96:       - else
+    97:         = content_for_sidebar
+    98:     / end navigation
+  app/helpers/application_helper.rb:81:in `github_format_commit'
+  app/helpers/application_helper.rb:59:in `block in recent_activity'
+  app/helpers/application_helper.rb:58:in `each'
+  app/helpers/application_helper.rb:58:in `recent_activity'
+  app/views/layouts/application.html.haml:95:in `_app_views_layouts_application_html_haml__1838790893365848447_2162665280_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:45:50 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010512b910>:0x00000105129c00>: listing commits...
+Rendered projects/index.html.haml within layouts/application (768.8ms)
+Completed   in 772ms
+
+ActionView::Template::Error (undefined method `first' for #<MatchData "2011-05-22T">):
+    92:           = navigation :tag => :li, :tag_class => :apple
+    93:         %h2 Recent Activity
+    94:         %ul#recent_activity
+    95:           = recent_activity
+    96:       - else
+    97:         = content_for_sidebar
+    98:     / end navigation
+  app/helpers/application_helper.rb:87:in `block in github_datetime'
+  app/helpers/application_helper.rb:86:in `match'
+  app/helpers/application_helper.rb:86:in `github_datetime'
+  app/helpers/application_helper.rb:81:in `github_format_commit'
+  app/helpers/application_helper.rb:59:in `block in recent_activity'
+  app/helpers/application_helper.rb:58:in `each'
+  app/helpers/application_helper.rb:58:in `recent_activity'
+  app/views/layouts/application.html.haml:95:in `_app_views_layouts_application_html_haml__1838790893365848447_2190030340_2504502381275551426'
+
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/peregrine/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:46:52 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000101d70940>:0x00000101d63c18>: listing commits...
+2011-05-22T21:34:18-07:00: 2011-05-22T
+2011-05-22T21:31:24-07:00: 2011-05-22T
+2011-05-22T14:04:49-07:00: 2011-05-22T
+2011-05-22T13:41:14-07:00: 2011-05-22T
+Rendered projects/index.html.haml within layouts/application (793.8ms)
+Completed 200 OK in 797ms (Views: 796.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:47:34 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001050573b8>:0x00000105055748>: listing commits...
+2011-05-22T21:34:18-07:00: 2011-05-22
+2011-05-22T21:31:24-07:00: 2011-05-22
+2011-05-22T14:04:49-07:00: 2011-05-22
+2011-05-22T13:41:14-07:00: 2011-05-22
+Rendered projects/index.html.haml within layouts/application (737.3ms)
+Completed 200 OK in 741ms (Views: 740.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:48:10 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000105987898>:0x00000105985c28>: listing commits...
+2011-05-22T21:34:18-07:00: T21:34:18-07:0
+2011-05-22T21:31:24-07:00: T21:31:24-07:0
+2011-05-22T14:04:49-07:00: T14:04:49-07:0
+2011-05-22T13:41:14-07:00: T13:41:14-07:0
+Rendered projects/index.html.haml within layouts/application (840.3ms)
+Completed 200 OK in 844ms (Views: 843.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:48:29 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000103121458>:0x0000010311f7c0>: listing commits...
+2011-05-22T21:34:18-07:00: 2011-05-22, T21:34:18-07:00}
+2011-05-22T21:31:24-07:00: 2011-05-22, T21:31:24-07:00}
+2011-05-22T14:04:49-07:00: 2011-05-22, T14:04:49-07:00}
+2011-05-22T13:41:14-07:00: 2011-05-22, T13:41:14-07:00}
+Rendered projects/index.html.haml within layouts/application (838.0ms)
+Completed 200 OK in 841ms (Views: 840.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:48:50 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000105085f88>:0x00000105082c98>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "T21:34:18-07:00"}
+2011-05-22T21:31:24-07:00: "2011-05-22", "T21:31:24-07:00"}
+2011-05-22T14:04:49-07:00: "2011-05-22", "T14:04:49-07:00"}
+2011-05-22T13:41:14-07:00: "2011-05-22", "T13:41:14-07:00"}
+Rendered projects/index.html.haml within layouts/application (785.9ms)
+Completed 200 OK in 789ms (Views: 788.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:48:56 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001059a6ef0>:0x000001059a5280>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "T21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "T21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "T14:04:49-07:00"
+2011-05-22T13:41:14-07:00: "2011-05-22", "T13:41:14-07:00"
+Rendered projects/index.html.haml within layouts/application (752.4ms)
+Completed 200 OK in 757ms (Views: 756.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:50:40 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010313b9c0>:0x00000103139cb0>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22T", "T21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22T", "T21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22T", "T14:04:49-07:00"
+2011-05-22T13:41:14-07:00: "2011-05-22T", "T13:41:14-07:00"
+Rendered projects/index.html.haml within layouts/application (735.3ms)
+Completed 200 OK in 739ms (Views: 738.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:50:50 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000105106f48>:0x00000105102420>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22T", "T21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22T", "T21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22T", "T14:04:49-07:00"
+2011-05-22T13:41:14-07:00: "2011-05-22T", "T13:41:14-07:00"
+Rendered projects/index.html.haml within layouts/application (691.6ms)
+Completed 200 OK in 695ms (Views: 694.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:50:57 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001059c1b60>:0x000001059bfef0>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22T", "T21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22T", "T21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22T", "T14:04:49-07:00"
+2011-05-22T13:41:14-07:00: "2011-05-22T", "T13:41:14-07:00"
+Rendered projects/index.html.haml within layouts/application (702.2ms)
+Completed 200 OK in 706ms (Views: 705.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:51:02 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010316ee38>:0x0000010316d178>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "T21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "T21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "T14:04:49-07:00"
+2011-05-22T13:41:14-07:00: "2011-05-22", "T13:41:14-07:00"
+Rendered projects/index.html.haml within layouts/application (873.3ms)
+Completed 200 OK in 877ms (Views: 876.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:51:15 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010513f398>:0x0000010513d4d0>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "T21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "T21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "T14:04:49-07:00"
+2011-05-22T13:41:14-07:00: "2011-05-22", "T13:41:14-07:00"
+Rendered projects/index.html.haml within layouts/application (699.7ms)
+Completed 200 OK in 703ms (Views: 702.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:51:41 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001059e9b88>:0x000001059e7f18>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "14:04:49-07:00"
+2011-05-22T13:41:14-07:00: "2011-05-22", "13:41:14-07:00"
+Rendered projects/index.html.haml within layouts/application (725.4ms)
+Completed 200 OK in 729ms (Views: 728.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:53:36 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x0000010318b038>:0x00000103189378>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "14:04:49-07:00"
+2011-05-22T13:41:14-07:00: "2011-05-22", "13:41:14-07:00"
+Rendered projects/index.html.haml within layouts/application (823.0ms)
+Completed 200 OK in 826ms (Views: 826.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:54:01 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000105923bb8>:0x00000105921ef8>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "14:04:49-07:00"
+Rendered projects/index.html.haml within layouts/application (1145.6ms)
+Completed 200 OK in 1149ms (Views: 1148.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 22:54:25 -0400
+  Processing by HomeController#index as HTML
+params = {:only=>[:about, :articles, :projects, :blog, :sitemap]}
+nav_items = [:about, :articles, :projects, :blog, :sitemap]
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:sitemap}
+"<h2 class='navigation_item navigation_Sitemap'><a href="/sitemap">Sitemap</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001010d8840>:0x00000101072e50>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "14:04:49-07:00"
+Rendered home/index.html.haml within layouts/application (821.8ms)
+Completed 200 OK in 828ms (Views: 825.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-25 22:54:31 -0400
+  Processing by ProjectsController#index as HTML
+params = {:skip=>[:sitemap]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000102a59e90>:0x00000102a561f0>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "14:04:49-07:00"
+Rendered projects/index.html.haml within layouts/application (832.7ms)
+Completed 200 OK in 836ms (Views: 835.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2011-05-25 22:54:34 -0400
+  Processing by HomeController#about as HTML
+params = {:skip=>[:about]}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<h2 class='navigation_item navigation_Home'><a href="/">Home</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:sitemap}
+"<h2 class='navigation_item navigation_Sitemap'><a href="/sitemap">Sitemap</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x00000102969ff8>:0x00000102967820>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "14:04:49-07:00"
+Rendered home/about.html.haml within layouts/application (695.3ms)
+Completed 200 OK in 714ms (Views: 714.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 22:54:43 -0400
+  Processing by HomeController#index as HTML
+params = {:only=>[:about, :articles, :projects, :blog, :sitemap]}
+nav_items = [:about, :articles, :projects, :blog, :sitemap]
+item = {:path=>:about}
+"<h2 class='navigation_item navigation_About'><a href="/about">About</a></h2>"
+item = {:label=>"articles"}
+"<h2 class='navigation_item navigation_Articles'>Articles</h2>"
+item = {:path=>"projects"}
+"<h2 class='navigation_item navigation_Projects'><a href="projects">Projects</a></h2>"
+item = {}
+"<h2 class='navigation_item navigation_Blog'>Blog</h2>"
+item = {:path=>:sitemap}
+"<h2 class='navigation_item navigation_Sitemap'><a href="/sitemap">Sitemap</a></h2>"
+params = {:tag=>:li, :tag_class=>:apple}
+nav_items = [:home, :articles, :projects, :blog, :about, :sitemap]
+item = {:label=>"home", :path=>:root}
+"<li class='navigation_item navigation_Home apple'><a href="/">Home</a></li>"
+item = {:label=>"articles"}
+"<li class='navigation_item navigation_Articles apple'>Articles</li>"
+item = {:path=>"projects"}
+"<li class='navigation_item navigation_Projects apple'><a href="projects">Projects</a></li>"
+item = {}
+"<li class='navigation_item navigation_Blog apple'>Blog</li>"
+item = {:path=>:about}
+"<li class='navigation_item navigation_About apple'><a href="/about">About</a></li>"
+item = {:path=>:sitemap}
+"<li class='navigation_item navigation_Sitemap apple'><a href="/sitemap">Sitemap</a></li>"
+#<#<Class:0x000001015922f0>:0x00000101583368>: listing commits...
+2011-05-22T21:34:18-07:00: "2011-05-22", "21:34:18-07:00"
+2011-05-22T21:31:24-07:00: "2011-05-22", "21:31:24-07:00"
+2011-05-22T14:04:49-07:00: "2011-05-22", "14:04:49-07:00"
+Rendered home/index.html.haml within layouts/application (717.9ms)
+Completed 200 OK in 721ms (Views: 720.7ms | ActiveRecord: 0.0ms)

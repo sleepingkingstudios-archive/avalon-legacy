@@ -90,11 +90,19 @@ ul {
   padding: 0;
   
   li {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 20px;
+    margin-left: 20px;
     
     &.apple {
       list-style-type: none;
     } // ul li.apple
   } // ul li
 } // ul
+
+ul#side_navigation {
+  li {
+    font-size: 17px;
+    margin-left: 0;
+  } // ul#side_navigation li
+} // ul#side_navigation

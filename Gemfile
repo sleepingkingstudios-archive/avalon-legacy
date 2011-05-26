@@ -21,7 +21,8 @@ gem 'sqlite3'
 gem 'haml'
 gem 'haml-rails'
 gem 'sass'
-gem 'redcarpet'
+gem 'redcarpet' # Github-flavored Markdown
+gem 'octokit'   # Github API (http://rdoc.info/gems/octokit)
 # gem 'bj'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'

@@ -118,7 +118,12 @@ ul {
   margin: 0 0 20px;
   padding: 0; }
   ul li {
-    font-size: 17px;
-    line-height: 20px; }
+    font-size: 15px;
+    line-height: 20px;
+    margin-left: 20px; }
     ul li.apple {
       list-style-type: none; }
+
+ul#side_navigation li {
+  font-size: 17px;
+  margin-left: 0; }
