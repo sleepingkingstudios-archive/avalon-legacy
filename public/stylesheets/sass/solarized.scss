@@ -38,6 +38,10 @@ html {
     padding-left: 25px;
   } // html .apple
   
+  div.error {
+    border-color: $base00;
+  } // html div.error
+  
   &.dark {
     background-color: $base03;
     color: $base0;
@@ -64,5 +68,9 @@ html {
       background-repeat: no-repeat;
       padding-left: 25px;
     } // html.dark .apple
+    
+    div.error {
+      border-color: $base0;
+    } // html.dark div.error
   } // html.dark
 } // html

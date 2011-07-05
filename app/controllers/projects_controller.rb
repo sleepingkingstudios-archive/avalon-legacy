@@ -1,5 +1,4 @@
 class ProjectsController < ApplicationController
   def index
-  end
-
-end
+  end # action index
+end # controller ProjectsController

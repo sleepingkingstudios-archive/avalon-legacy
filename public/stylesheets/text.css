@@ -64,6 +64,15 @@ div#sidebar {
     padding-top: 10px;
     margin-bottom: 10px; }
 
+div.error {
+  border-style: solid;
+  border-width: 2px;
+  padding: 8px;
+  margin-bottom: 20px; }
+  div.error p {
+    margin-top: 0;
+    margin-bottom: 0; }
+
 br.clear {
   clear: both; }
 
@@ -89,11 +98,16 @@ h1 {
   margin: 0 0 20px;
   font-size: 32px;
   line-height: 32px; }
+  h1.title {
+    margin-bottom: 0; }
 
 h2 {
   margin: 0 0 10px;
   font-size: 20px;
   line-height: 30px; }
+  h2.subtitle {
+    margin-top: 0;
+    font-size: 17px; }
 
 h3 {
   margin: 0 0 10px;

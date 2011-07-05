@@ -97,6 +97,18 @@ div#sidebar {
   } // div#sidebar h2#side_navigation
 } // div#sidebar
 
+div.error {
+  border-style: solid;
+  border-width: 2px;
+  padding: 8px;
+  margin-bottom: 20px;
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  } // div.error p
+} // div.error
+
 br.clear {
   clear: both;
 } // br.clear

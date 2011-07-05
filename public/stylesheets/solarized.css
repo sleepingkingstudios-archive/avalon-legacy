@@ -28,6 +28,8 @@ html {
     background-position: left -2px;
     background-repeat: no-repeat;
     padding-left: 25px; }
+  html div.error {
+    border-color: #657b83; }
   html.dark {
     background-color: #002b36;
     color: #839496; }
@@ -44,3 +46,5 @@ html {
       background-position: left -2px;
       background-repeat: no-repeat;
       padding-left: 25px; }
+    html.dark div.error {
+      border-color: #839496; }

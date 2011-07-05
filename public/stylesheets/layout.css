@@ -61,5 +61,14 @@ div#sidebar {
     padding-top: 10px;
     margin-bottom: 10px; }
 
+div.error {
+  border-style: solid;
+  border-width: 2px;
+  padding: 8px;
+  margin-bottom: 20px; }
+  div.error p {
+    margin-top: 0;
+    margin-bottom: 0; }
+
 br.clear {
   clear: both; }

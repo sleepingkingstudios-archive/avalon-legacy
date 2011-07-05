@@ -61,6 +61,15 @@ div#sidebar {
     padding-top: 10px;
     margin-bottom: 10px; }
 
+div.error {
+  border-style: solid;
+  border-width: 2px;
+  padding: 8px;
+  margin-bottom: 20px; }
+  div.error p {
+    margin-top: 0;
+    margin-bottom: 0; }
+
 br.clear {
   clear: both; }
 
@@ -94,6 +103,8 @@ html {
     background-position: left -2px;
     background-repeat: no-repeat;
     padding-left: 25px; }
+  html div.error {
+    border-color: #657b83; }
   html.dark {
     background-color: #002b36;
     color: #839496; }
@@ -110,6 +121,8 @@ html {
       background-position: left -2px;
       background-repeat: no-repeat;
       padding-left: 25px; }
+    html.dark div.error {
+      border-color: #839496; }
 
 html body {
   background-image: url("../images/background-tree-light-hi.png"); }

@@ -92,7 +92,7 @@
           = navigation :tag => :li, :tag_class => :apple
         %h2 Recent Activity
         %ul#recent_activity
-          = recent_activity
+          =# recent_activity
       - else
         = content_for_sidebar
     / end navigation
@@ -100,12 +100,16 @@
     %br.clear
     
     #footer
-      %p{:style => "text-align: center;"}
-        It is now #{@time.hour}:#{@time.min}. It #{@is_it_dark ? "is" : "is not"} dark.#{@is_it_dark ? " You are likely to be eaten by a grue." : ""}
-        Choose a theme:
-        %a#theme_select_light{:href => "#light"} Light
-        |
-        %a#theme_select_dark{:href => "#dark"} Dark
-        (
-        %a#theme_select_auto{:href => "#auto"} Auto
-        )
+      - content_for_footer = yield :footer
+      - if content_for_footer.empty? then
+        %p{:style => "text-align: center;"}
+          It is now #{@time.hour}:#{@time.min}. It #{@is_it_dark ? "is" : "is not"} dark.#{@is_it_dark ? " You are likely to be eaten by a grue." : ""}
+          Choose a theme:
+          %a#theme_select_light{:href => "#light"} Light
+          |
+          %a#theme_select_dark{:href => "#dark"} Dark
+          (
+          %a#theme_select_auto{:href => "#auto"} Auto
+          )
+      - else
+        = content_for_footer

@@ -2,24 +2,24 @@ module ApplicationHelper
   def navigation(params = {})
     nav_data = {
       :home => { :label => "home", :path => :root},
-      :articles => { :label => "articles" },
-      :projects => { :path => "projects" },
+      :articles => { :label => "articles", :path => "/articles" },
+      :projects => { :path => "/projects" },
       :blog => {},
       :about => { :path => :about },
       :sitemap => { :path => :sitemap }
     } # end nav_items
     
-    logger.debug "params = " + params.inspect
+    # logger.debug "params = " + params.inspect
     
     nav_items = (params[:only].respond_to? :[]) ? params[:only] : [ :home, :articles, :projects, :blog, :about, :sitemap ]
-    logger.debug "nav_items = " + nav_items.inspect
+    # logger.debug "nav_items = " + nav_items.inspect
     
     if params[:skip].respond_to? :[] then nav_items -= params[:skip] end
     
     nav = String.new
     nav_items.each do |key|
       item = nav_data[key]
-      logger.debug "item = " + item.inspect
+      # logger.debug "item = " + item.inspect
       next if item.nil?
       nav += navigation_item({
         :label => (item[:label] || key),
@@ -47,7 +47,7 @@ module ApplicationHelper
       (link_to_unless path.to_s.empty?, label, path) +
     "</" + tag + ">"
     
-    logger.debug '"' + item + '"'
+    # logger.debug '"' + item + '"'
     return item.html_safe
   end # method navigation_item
   private :navigation_item
@@ -64,7 +64,7 @@ module ApplicationHelper
   
   def github_list_commits(params = {})
     return Array.new if params[:repository].nil?
-    logger.debug "#{self}: listing commits..."
+    # logger.debug "#{self}: listing commits..."
     
     commits = Octokit.commits params[:repository]
     
@@ -94,7 +94,7 @@ module ApplicationHelper
       time = time[1..(time.size-1)]
     end # match
     
-    logger.debug "#{date_string}: \"#{date}\", \"#{time}\""
+    # logger.debug "#{date_string}: \"#{date}\", \"#{time}\""
     return "#{date} #{time}"
   end # method github_datetime
   private :github_list_commits, :github_format_commit, :github_datetime
