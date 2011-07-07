@@ -5,8 +5,7 @@ Avalon::Application.routes.draw do
   match "about"   => "home#about"
   match "sitemap" => "home#sitemap"
   
-  match 'articles'       => "articles#index"
-  match 'articles/index' => "articles#index"
+  match 'articles'       => "articles#static"
   match 'articles/*path' => "articles#static"
   match '*path'          => "articles#static"
   

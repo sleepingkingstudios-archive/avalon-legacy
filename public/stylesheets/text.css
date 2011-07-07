@@ -69,7 +69,7 @@ div.error {
   border-width: 2px;
   padding: 8px;
   margin-bottom: 20px; }
-  div.error p {
+  div.error ul {
     margin-top: 0;
     margin-bottom: 0; }
 

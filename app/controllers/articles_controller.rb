@@ -4,63 +4,125 @@ class ArticlesController < ApplicationController
   end # action index
   
   def static
-    @prefix = Dir.getwd + "/app/views/articles/"
-    @path = params[:path]
-    @render_me = nil
-    logger.debug "Received path variable \"" + @path + "\""
-    logger.debug "Current path = " + @prefix
+    # primary objective COMPLETE
+    # if :path is a file, render the file
+    # 
+    # primary objective COMPLETE
+    # if :path is a directory, render dir/index.html.haml
+    # 
+    # primary objective COMPLETE
+    # otherwise, render the most-specific sub-directory with valid index page, with an error message
+    #
+    # secondary objective COMPLETE
+    # for each directory in the final rendered path, render a _layout partial if applicable
     
-    # @error = "Have you tried turning it off and on again? Well, try harder!"
+    prefix = Dir.pwd + "/app/views/"
+    logger.debug "articles parent directory = #{prefix}"
     
-    # check if path to directory
-    if @render_me.nil?
-      logger.debug "Checking for directory..."
-      @render_me = render_directory(@prefix + @path)
-      logger.debug(@render_me.nil? ? "Did not find directory at #{@prefix + @path}/" : "Found directory at #{@prefix + @path}/")
-    end # if
+    path_tokens = "articles/#{params[:path]}".split("/")
+    logger.debug "path tokens = #{path_tokens.inspect}"
     
-    # check if path to file
-    if @render_me.nil?
-      logger.debug "Checking for file..."
-      @render_me = render_file(@prefix + @path)
-      logger.debug(@render_me.nil? ? "Did not find file at #{@prefix + @path}.html.haml" : "Found file at #{@prefix + @path}.html.haml")
-    end # if
+    file_content = ""
+    rendered_file = ""
     
-    # try walking up the path
-    while(@render_me.nil? && (segments = @path.split("/")) && segments.length > 1)
-      @error = "Unable to locate article or directory at \"articles/#{@path}\""
+    @errors = nil
+    @layouts = nil
+    
+    highest_valid_index = -1
+    path_tokens.each_with_index do |token, index|
+      path = path_tokens[0..index].join("/")
+      logger.debug "checking path \"#{path}\""
       
-      segments.pop
-      @path = segments.join("/")
-      @render_me = render_directory(@prefix + @path)
-      logger.debug(@render_me.nil? ? "Did not find directory at #{@prefix + @path}/" : "Found directory at #{@prefix + @path}/")
-    end # while
+      if index < path_tokens.length - 1
+        # check each directory along the path
+        
+        if path_is_directory? "#{prefix}#{path}"
+          highest_valid_index = index
+        else
+          @errors ||= []
+          @errors.push "Unable to locate directory at \"#{path}\""
+          logger.error @errors.last
+          break
+        end # if-else path_is_directory?
+      else
+        if path_is_file? "#{prefix}#{path}.html.haml"
+          logger.debug "Located file at \"#{path}.html.haml\""
+          @layouts = render_layouts(prefix, path_tokens)
+          rendered_file = render_to_string :text => File.read("#{prefix}#{path}.html.haml")
+        elsif path_is_directory? "#{prefix}#{path}"
+          logger.debug "Located directory at \"#{path}\", checking for index"
+          if path_is_file? "#{prefix}#{path}/index.html.haml"
+            logger.debug "Located index file at #{path}/index.html.haml"
+            @layouts = render_layouts(prefix, path_tokens)
+            rendered_file = render_to_string :file => "#{prefix}#{path}/index.html.haml"
+          else
+            @errors ||= []
+            @errors.push "Unable to locate index for directory \"#{path}\""
+            logger.error @errors.last
+          end # if
+        else
+          @errors ||= []
+          @errors.push "Unable to locate file or directory at \"#{path}\""
+          logger.error @errors.last
+          break
+        end # if-elsif-if
+      end # if-else
+    end # each_with_index
     
-    unless @render_me.nil?
-      render :text => @render_me
-    else
-      @error = "Unable to locate article or directory at \"articles/#{@path}\""
-      render "/articles/index"
-    end # unless-else
+    if rendered_file.empty?
+      logger.debug "last index = #{highest_valid_index}"
+      highest_valid_index.downto(0) do |index|
+        path = path_tokens[0..index].join('/')
+        if path_is_file? "#{prefix}#{path}/index.html.haml"
+          logger.debug "Located index file at #{path}/index.html.haml"
+          @layouts = render_layouts(prefix, path_tokens[0..index])
+          rendered_file = (render_to_string :file => "#{prefix}#{path}/index.html.haml") and break
+        else
+          @errors ||= []
+          @errors.push "Unable to locate index for directory \"#{path}\""
+          logger.error @errors.last
+        end # if
+      end # downto
+    end # if rendered_file.empty?
+    
+    unless rendered_file.empty?
+      logger.debug "Rendering from string, with layouts..."
+      logger.debug @layouts.inspect
+      render :text => "#{rendered_file}" and return
+    end # unless rendered_file.empty?
+    
+    redirect_to :index
   end # action static
   
   private
   
-  def render_directory(path, index = "/index.html.haml")
-    rendered_layout = ""
-    if File.exists?(path + "_layout.html.haml")
-      rendered_layout = render_to_string(path + "_layout.html.haml")
-    end # if
-    if File.exists?(path + index)
-      return rendered_layout + render_to_string(path + index)
-    end # if
-    return nil
-  end # method render_directory
+  def path_is_directory?(path);
+    return File.directory? path
+  end # method path_is_directory?
   
-  def render_file(path, suffix = ".html.haml")
-    if File.exists?(path + suffix)
-      return render_to_string(path + suffix)
-    end # if
-    return nil
-  end # method render_file
+  def path_is_file?(path)
+    # logger.debug "Evaluating existence of file at \"#{path}\""
+    return File.exists? path
+  end # method path_is_file?
+  
+  def render_layouts(prefix, path_tokens, file_name = "_layout.html.haml")
+    layouts = []
+    
+    path_tokens.each_index do |index|
+      path = path_tokens[0..index].join("/")
+      concat_path = "#{prefix}#{path}/#{file_name}"
+      if path_is_file? concat_path
+        begin
+          logger.debug "Loading layout #{concat_path}"
+          layouts.push File.read concat_path
+        rescue Exception => exception
+          logger.error exception.message
+        end # begin-rescue
+      else
+        logger.debug "Unable to locate layout at #{concat_path}"
+      end # if path_is_file?
+    end # each_index
+    
+    return layouts.reverse
+  end # method render_layouts
 end # controller ArticlesController

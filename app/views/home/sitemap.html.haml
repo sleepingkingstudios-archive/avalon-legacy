@@ -10,16 +10,14 @@
   %a#theme_select_light{:href => "#light"} Light
   |
   %a#theme_select_dark{:href => "#dark"} Dark
-
-.error
-  %p
-    %strong Error:
-    This is an error message.
   
 %p
   This is <strong>bold text</strong>.
   This is <em>italic text</em>.
-  
+
+- @errors ||= ["This is an error message."] * 2
+= render "articles/error"  
+
 %h2 Images
 
 %h3 Apples (Light)

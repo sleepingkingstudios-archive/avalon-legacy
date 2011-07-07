@@ -1,5 +1,7 @@
-- unless @error.nil?
+- unless @errors.nil?
   .error
-    %p
-      %strong Error:
-      = @error
+    %ul
+      - @errors.each do |error|
+        %li
+          %strong Error:
+          = error
