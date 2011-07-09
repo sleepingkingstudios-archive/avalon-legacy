@@ -3,6 +3,7 @@
     - footer_quote = (!(yield :footer_quote).empty?) ? yield(:footer_quote) : "When people see birds flying overhead, they feel the urge to go on a journey."
     = footer_quote
     %br
+    = yield :article_breadcrumbs
     = link_to "Back to Articles", "/articles"
     |
     = link_to "Back to Home", :root

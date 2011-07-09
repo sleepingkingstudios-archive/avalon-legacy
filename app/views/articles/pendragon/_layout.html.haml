@@ -1,7 +1,25 @@
+= content_for :article_breadcrumbs do
+  %span.breadcrumb.breadcrumb_index
+    = link_to "Back to Pendragon", "/pendragon"
+    |
+
 = content_for :footer_quote do
   A Million Miles is the Difference Between a Failure and a New Chance
   
 = content_for :sidebar do
+  %h2 Articles Navigation
+  %ul#side_navigation
+    %li.apple= link_to "Home", "/pendragon"
+    %li.apple= link_to "The Basics", "/pendragon/basics"
+    %li.apple= link_to "Character Creation", "/pendragon/character-creation"
+    %li.apple
+      = link_to "Stats", "/pendragon/stats"
+      |
+      = link_to "Skills", "/pendragon/skills"
+      |
+      = link_to "Tokens", "/pendragon/tokens"
+    %li.apple= link_to "Running the Game", "/pendragon/running-the-game"
+  
   %h2 Site Navigation
   %ul#side_navigation
     = navigation :tag => :li, :tag_class => :apple
