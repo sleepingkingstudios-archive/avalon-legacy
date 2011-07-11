@@ -59,6 +59,10 @@ h2 {
   font-size: $heading2_size;
   line-height: $heading2_height;
   
+  &.title {
+    margin-bottom: 0;
+  } // h2.title
+  
   &.subtitle {
     margin-top: 0;
     font-size: $heading3_size;
@@ -70,6 +74,11 @@ h3 {
   
   font-size: $heading3_size;
   line-height: $heading3_height;
+  
+  &.subitle {
+    margin-top: 0;
+    font-size: $heading4_size;
+  } // h3.subtitle
 } // h3
 
 /* PARAGRAPHS */

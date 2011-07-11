@@ -1,26 +1,15 @@
 class ArticlesController < ApplicationController
-  # GET /articles/:path
+  # GET /articles
   def index
   end # action index
   
+  # GET /articles/:path
   def static
-    # primary objective COMPLETE
-    # if :path is a file, render the file
-    # 
-    # primary objective COMPLETE
-    # if :path is a directory, render dir/index.html.haml
-    # 
-    # primary objective COMPLETE
-    # otherwise, render the most-specific sub-directory with valid index page, with an error message
-    #
-    # secondary objective COMPLETE
-    # for each directory in the final rendered path, render a _layout partial if applicable
-    
     prefix = Dir.pwd + "/app/views/"
-    logger.debug "articles parent directory = #{prefix}"
+    # logger.debug "articles parent directory = #{prefix}"
     
     path_tokens = "articles/#{params[:path]}".split("/")
-    logger.debug "path tokens = #{path_tokens.inspect}"
+    # logger.debug "path tokens = #{path_tokens.inspect}"
     
     file_content = ""
     rendered_file = ""
@@ -31,7 +20,7 @@ class ArticlesController < ApplicationController
     highest_valid_index = -1
     path_tokens.each_with_index do |token, index|
       path = path_tokens[0..index].join("/")
-      logger.debug "checking path \"#{path}\""
+      # logger.debug "checking path \"#{path}\""
       
       if index < path_tokens.length - 1
         # check each directory along the path
@@ -48,11 +37,11 @@ class ArticlesController < ApplicationController
         if path_is_file? "#{prefix}#{path}.html.haml"
           logger.debug "Located file at \"#{path}.html.haml\""
           @layouts = render_layouts(prefix, path_tokens)
-          rendered_file = render_to_string :text => File.read("#{prefix}#{path}.html.haml")
+          rendered_file = render_to_string :file => "#{prefix}#{path}.html.haml"
         elsif path_is_directory? "#{prefix}#{path}"
-          logger.debug "Located directory at \"#{path}\", checking for index"
+          # logger.debug "Located directory at \"#{path}\", checking for index"
           if path_is_file? "#{prefix}#{path}/index.html.haml"
-            logger.debug "Located index file at #{path}/index.html.haml"
+            # logger.debug "Located index file at #{path}/index.html.haml"
             @layouts = render_layouts(prefix, path_tokens)
             rendered_file = render_to_string :file => "#{prefix}#{path}/index.html.haml"
           else
@@ -70,11 +59,11 @@ class ArticlesController < ApplicationController
     end # each_with_index
     
     if rendered_file.empty?
-      logger.debug "last index = #{highest_valid_index}"
+      # logger.debug "last index = #{highest_valid_index}"
       highest_valid_index.downto(0) do |index|
         path = path_tokens[0..index].join('/')
         if path_is_file? "#{prefix}#{path}/index.html.haml"
-          logger.debug "Located index file at #{path}/index.html.haml"
+          # logger.debug "Located index file at #{path}/index.html.haml"
           @layouts = render_layouts(prefix, path_tokens[0..index])
           rendered_file = (render_to_string :file => "#{prefix}#{path}/index.html.haml") and break
         else
@@ -86,8 +75,7 @@ class ArticlesController < ApplicationController
     end # if rendered_file.empty?
     
     unless rendered_file.empty?
-      logger.debug "Rendering from string, with layouts..."
-      logger.debug @layouts.inspect
+      # logger.debug "Rendering from string, with layouts..."
       render :text => "#{rendered_file}" and return
     end # unless rendered_file.empty?
     
@@ -113,13 +101,13 @@ class ArticlesController < ApplicationController
       concat_path = "#{prefix}#{path}/#{file_name}"
       if path_is_file? concat_path
         begin
-          logger.debug "Loading layout #{concat_path}"
+          # logger.debug "Loading layout #{concat_path}"
           layouts.push File.read concat_path
         rescue Exception => exception
           logger.error exception.message
         end # begin-rescue
       else
-        logger.debug "Unable to locate layout at #{concat_path}"
+        # logger.debug "Unable to locate layout at #{concat_path}"
       end # if path_is_file?
     end # each_index
     

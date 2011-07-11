@@ -105,6 +105,8 @@ h2 {
   margin: 0 0 10px;
   font-size: 20px;
   line-height: 30px; }
+  h2.title {
+    margin-bottom: 0; }
   h2.subtitle {
     margin-top: 0;
     font-size: 17px; }
@@ -113,6 +115,9 @@ h3 {
   margin: 0 0 10px;
   font-size: 17px;
   line-height: 20px; }
+  h3.subitle {
+    margin-top: 0;
+    font-size: 14px; }
 
 /* PARAGRAPHS */
 p {
