@@ -3,13 +3,14 @@
 %h1 The Basics
 
 = render "error"
+- read_more = "Read&nbsp;More".html_safe
 
 %h2 Checks
 %p
   The basic task-resolution mechanism in Pendragon is the check. To resolve a
   check, simply roll two six-sided dice, add the creature's applicable
   attribute score (see below), and add any bonuses from relevant skills.
-%p.apple= link_to "Read More", "/pendragon/running#check"
+  = link_to read_more, "/pendragon/running#check"
 
 %h2 Attributes
 %p
@@ -18,8 +19,27 @@
   Taken together, these attribute scores representing its base level of
   ability, and are used to determine the creature's bonus when making checks,
   as well as the size of its token pools (see Tokens, below).
-%p.apple= link_to "Read More", "/pendragon/attributes"
+  = link_to read_more, "/pendragon/attributes"
 
 %h2 Skills
+%p
+  While a creature or character's basic aptitudes are defined by its three
+  attribute scores, by learning skills they can acquire new abilities and
+  powers as well as focused bonuses rewarding specialization and experience in
+  a field. Skills can grant new attacks, spells, shouts, or other techniques,
+  or grant bonuses to checks in specific circumstances. Characters can also
+  spend their skill points to customize their existing skills, and build their
+  own skill combos.
+  = link_to read_more, "/pendragon/skills"
 
 %h2 Tokens
+%p
+  During encounters, a creature's current status is tracked using tokens. In
+  addition to hit points and damage, tokens are used to power abilities, such
+  as special techniques and magic spells. Tokens are highly dynamic &ndash; as
+  the flow of an encounter shifts, creatures will pick up, lose, spend, and
+  recover tokens often. In a difficult challenge, careful management of this
+  resource can mean the difference between victory and defeat.
+  = link_to read_more, "/pendragon/tokens"
+
+%p.apple= link_to "Continue to Character Creation", "/pendragon/character-creation"

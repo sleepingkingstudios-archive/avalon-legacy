@@ -42,15 +42,22 @@ $heading3_margin: 0 0 10px;
 
 $heading4_size: 14px;
 
+h1, h2, h3 {
+  &.title {
+    margin-bottom: 0;
+  } // [h1, h2, h3].title
+  
+  &.subtitle {
+    font-style: italic;
+    font-weight: normal;
+  } // h1, h2, h3
+} // h1, h2, h3
+
 h1 {
   margin: $heading1_margin;
   
   font-size:   $heading1_size;
   line-height: $heading1_size;
-  
-  &.title {
-    margin-bottom: 0;
-  } // h1.title
 } // h1
 
 h2 {
@@ -58,15 +65,6 @@ h2 {
   
   font-size: $heading2_size;
   line-height: $heading2_height;
-  
-  &.title {
-    margin-bottom: 0;
-  } // h2.title
-  
-  &.subtitle {
-    margin-top: 0;
-    font-size: $heading3_size;
-  } // h2.subtitle
 } // h2
 
 h3 {
@@ -74,11 +72,6 @@ h3 {
   
   font-size: $heading3_size;
   line-height: $heading3_height;
-  
-  &.subitle {
-    margin-top: 0;
-    font-size: $heading4_size;
-  } // h3.subtitle
 } // h3
 
 /* PARAGRAPHS */

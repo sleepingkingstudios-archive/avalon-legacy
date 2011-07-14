@@ -94,30 +94,26 @@ body {
   margin-bottom: 0; }
 
 /* HEADINGS */
+h1.title, h2.title, h3.title {
+  margin-bottom: 0; }
+h1.subtitle, h2.subtitle, h3.subtitle {
+  font-style: italic;
+  font-weight: normal; }
+
 h1 {
   margin: 0 0 20px;
   font-size: 32px;
   line-height: 32px; }
-  h1.title {
-    margin-bottom: 0; }
 
 h2 {
   margin: 0 0 10px;
   font-size: 20px;
   line-height: 30px; }
-  h2.title {
-    margin-bottom: 0; }
-  h2.subtitle {
-    margin-top: 0;
-    font-size: 17px; }
 
 h3 {
   margin: 0 0 10px;
   font-size: 17px;
   line-height: 20px; }
-  h3.subitle {
-    margin-top: 0;
-    font-size: 14px; }
 
 /* PARAGRAPHS */
 p {
