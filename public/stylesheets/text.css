@@ -73,6 +73,16 @@ div.error {
     margin-top: 0;
     margin-bottom: 0; }
 
+table {
+  margin: 0 0 20px;
+  border-collapse: collapse;
+  border-style: solid;
+  border-width: 1px; }
+
+table, td, th {
+  border: solid;
+  border-width: 1px; }
+
 br.clear {
   clear: both; }
 
@@ -142,3 +152,13 @@ ul {
 ul#side_navigation li {
   font-size: 17px;
   margin-left: 0; }
+
+/* TABLES */
+table {
+  font-size: 15px;
+  line-height: 18px; }
+  table th, table td {
+    text-align: center;
+    padding: 3px; }
+    table th.left, table td.left {
+      text-align: left; }

@@ -19,9 +19,13 @@ html {
     background-repeat: no-repeat;
   } // html body
   
-  strong, em, h1, h2, h3, h4, h5, h6 {
+  strong, em, h1, h2, h3, h4, h5, h6, th {
     color: $base01;
   } // html [strong, em, ...]
+  
+  table, th, td {
+    border-color: $base01;
+  } // html [table, th, td]
   
   a {
     color: $red;
@@ -50,9 +54,13 @@ html {
       background-image: url('../images/background-tree-dark.png');
     } // html.dark body
     
-    strong, em, h1, h2, h3, h4, h5, h6 {
+    strong, em, h1, h2, h3, h4, h5, h6, th {
       color: $base1;
     } // html.dark [strong, em, ...]
+    
+    table, th, td {
+      border-color: $base1;
+    } // html.dark [table, th, td]
     
     a {
       color: $blue;

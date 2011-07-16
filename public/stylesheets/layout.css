@@ -70,5 +70,15 @@ div.error {
     margin-top: 0;
     margin-bottom: 0; }
 
+table {
+  margin: 0 0 20px;
+  border-collapse: collapse;
+  border-style: solid;
+  border-width: 1px; }
+
+table, td, th {
+  border: solid;
+  border-width: 1px; }
+
 br.clear {
   clear: both; }

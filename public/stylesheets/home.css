@@ -70,6 +70,16 @@ div.error {
     margin-top: 0;
     margin-bottom: 0; }
 
+table {
+  margin: 0 0 20px;
+  border-collapse: collapse;
+  border-style: solid;
+  border-width: 1px; }
+
+table, td, th {
+  border: solid;
+  border-width: 1px; }
+
 br.clear {
   clear: both; }
 
@@ -92,8 +102,10 @@ html {
     background-image: url("../images/background-tree-light.png");
     background-position: center 210px;
     background-repeat: no-repeat; }
-  html strong, html em, html h1, html h2, html h3, html h4, html h5, html h6 {
+  html strong, html em, html h1, html h2, html h3, html h4, html h5, html h6, html th {
     color: #586e75; }
+  html table, html th, html td {
+    border-color: #586e75; }
   html a {
     color: #dc322f; }
     html a:visited {
@@ -110,8 +122,10 @@ html {
     color: #839496; }
     html.dark body {
       background-image: url("../images/background-tree-dark.png"); }
-    html.dark strong, html.dark em, html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+    html.dark strong, html.dark em, html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6, html.dark th {
       color: #93a1a1; }
+    html.dark table, html.dark th, html.dark td {
+      border-color: #93a1a1; }
     html.dark a {
       color: #268bd2; }
       html.dark a:visited {

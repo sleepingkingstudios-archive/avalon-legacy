@@ -117,3 +117,19 @@ ul#side_navigation {
     margin-left: 0;
   } // ul#side_navigation li
 } // ul#side_navigation
+
+/* TABLES */
+
+table {
+  font-size: 15px;
+  line-height: 18px;
+  
+  th, td {
+    text-align: center;
+    padding: 3px;
+    
+    &.left {
+      text-align: left;
+    } // end table [th, td].left
+  } // table [th, td]
+} // end table
