@@ -1,3 +1,6 @@
+= content_for :css do
+  = stylesheet_link_tag "articles"
+
 = content_for :article_breadcrumbs do
   %span.breadcrumb.breadcrumb_index
     = link_to "Back to Pendragon", "/pendragon"

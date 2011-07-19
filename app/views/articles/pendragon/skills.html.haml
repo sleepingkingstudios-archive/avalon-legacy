@@ -1,0 +1,85 @@
+= render "layoutRenderer"
+- skills = PendragonSkill.all.sort
+
+%h1 Skills
+
+= render "error"
+
+%p
+  Skills are what make Pendragon characters and creatures unique.
+
+%h2 Reading the Skill Entries
+
+%h3 Skill Name
+%p
+  At the top of the skill entry is the skill name. Each skill has a unique
+  name, which reflects the nature and the effects of the skill.
+
+%h3 Skill Type and Subtypes
+%p
+  Directly below the name is the skill type, which determines the requirements
+  on or restrictions to using the skill, as well as what other effects can
+  influence the use or the effect of the skill. Each skill has a single type,
+  plus zero or more subtypes, which are listed in square brackets after the
+  skill type.
+%p
+  The following types and subtypes have special requirements, restrictions, or
+  other rules regarding their use. Other subtypes not listed only determine
+  what other effects are triggered by or can influence the use of skills of
+  that subtype.
+
+%h4#instant Instant
+%p
+  The instant subtype indicates that the skill can be used out of the usual
+  turn order, even in the middle of another creature's action. However, the
+  skill can only be used immediately after the trigger condition is met (see
+  Trigger, below).
+
+%h4#magic Magic
+%p
+  The magic subtype indicates that the effect is powered by supernatural
+  energies. Skills with the magic subtype typically require the user to spend
+  mana tokens.
+  
+%h4#melee Melee
+%p
+  The melee subtype indicates that the user must make a successful melee attack
+  check in order to use the skill. For techniques with the melee subtype, the
+  check must be made using the specified equipment. If the user cannot make a
+  melee attack (e.g. the target is out of reach), or if the check fails, then
+  the skill fails.
+%p
+  If the skill is a technique, then unless otherwise noted the usual effect of
+  a successful melee attack is applied to the target in addition to the effects
+  of the technique.
+
+%h4#projectile Projectile
+%p
+  As the melee subtype, above, except that the user must make a successful
+  projectile attack in order to use the skill. Skills with the projectile
+  subtype require a clear path to the target.
+
+%h4#spell Spell
+%p
+  Spells are magical effects brought forth through ritual and incantation.
+  Characters or creatures with roles such as &ldquo;sorcerer&rdquo;,
+  &ldquo;wizard&rdquo; or &ldquo;mystic&rdquo; make extensive use of spells.
+%p
+  Spells have no inherent restrictions or requirements, but most spellcasters
+  have one or more restrictions on spell use, depending on the magical
+  tradition they represent. In addition, spells always have the [Magic]
+  subtype (see above), and are subject to the restrictions thereof.
+
+%h4#technique Technique
+%p
+  Techniques are special abilities that use or require a piece of equipment, as
+  determined by the full type, e.g. a &ldquo;Melee Weapon Technique&rdquo;
+  requires the use of any melee weapon, and a &ldquo;Shield Technique&rdquo;
+  requires the user to be wielding a shield. If the user is not wielding (or
+  wearing, in the case of worn equipment) the specified equipment, then the
+  creature or character cannot use that skill.
+
+%h2 List of Skills
+
+- skills.each do |skill|
+  = render "articles/pendragon_skill", :skill => skill

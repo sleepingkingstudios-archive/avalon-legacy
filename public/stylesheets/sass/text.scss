@@ -1,11 +1,15 @@
 /****************************************************************************
- * public/stylesheets/sass/text.css
+ * public/stylesheets/sass/text.scss
  ***************************************************************************/
 
 @import "layout";
 
 body {
   font-size: 100%;
+  
+  font-size: 15px;
+  line-height: 20px;
+  text-align: justify;
 } // body
 
 .strong {
@@ -40,18 +44,25 @@ $heading3_size: 17px;
 $heading3_height: 20px;
 $heading3_margin: 0 0 10px;
 
-$heading4_size: 14px;
+$heading4_size: 15px;
+$heading4_height: 20px;
+$heading4_margin: 0;
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   &.title {
     margin-bottom: 0;
-  } // [h1, h2, h3].title
+  } // [h1, h2, h3, h4].title
   
   &.subtitle {
     font-style: italic;
     font-weight: normal;
-  } // h1, h2, h3
-} // h1, h2, h3
+  } // [h1, h2, h3, h4].subtitle
+  
+  &.inline {
+    display: inline-block;
+    margin: 0;
+  } // [h1, h2, h3, h4].inline
+} // h1, h2, h3, h4
 
 h1 {
   margin: $heading1_margin;
@@ -74,14 +85,17 @@ h3 {
   line-height: $heading3_height;
 } // h3
 
+h4 {
+  margin: $heading4_margin;
+  
+  font-size: $heading4_size;
+  line-height: $heading4_height;
+} // h4
+
 /* PARAGRAPHS */
 
 p {
   margin: 0 0 20px;
-  
-  font-size: 15px;
-  line-height: 20px;
-  text-align: justify;
 } // p
 
 /* ANCHORS */
