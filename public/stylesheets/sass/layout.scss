@@ -26,7 +26,7 @@ $top_nav_item_count: 5;
 $content_width: 660px;
 $content_min_height: 480px;
 
-$sidebar_width: 240px;
+$sidebar_width: 260px;
 
 html {
   overflow-y: scroll;
@@ -63,7 +63,6 @@ div#top_navigation {
     margin: 0 0 0 $margin;
     
     float: left;
-    margin: 0;
     text-align: center;
     
     &:first-child {

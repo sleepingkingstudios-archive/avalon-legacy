@@ -5,6 +5,14 @@ Avalon::Application.routes.draw do
   match "about"   => "home#about"
   match "sitemap" => "home#sitemap"
   
+  get "recent_activity" => "home#recent_activity"
+  
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  # get "sign_up" => "users#new", :as => "sign_up"
+  
+  resources :users
+  resources :sessions
+  
   match 'articles'       => "articles#static"
   match 'articles/*path' => "articles#static"
   match '*path'          => "articles#static"

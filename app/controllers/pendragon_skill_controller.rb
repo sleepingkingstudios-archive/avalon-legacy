@@ -1,0 +1,2 @@
+class PendragonSkillController < ApplicationController
+end

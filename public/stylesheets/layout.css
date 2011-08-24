@@ -41,7 +41,6 @@ div#top_navigation {
     height: 30px;
     margin: 0 0 0 20px;
     float: left;
-    margin: 0;
     text-align: center; }
     div#top_navigation h2.navigation_item:first-child {
       margin-left: 0; }
@@ -53,7 +52,7 @@ div#content {
   float: left; }
 
 div#sidebar {
-  width: 240px;
+  width: 260px;
   margin-top: 20px;
   margin-left: 20px;
   float: left; }

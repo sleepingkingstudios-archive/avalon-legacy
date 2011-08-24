@@ -1,0 +1,28 @@
+= render "layoutRenderer"
+
+%h1 Glossary
+
+= render "error"
+
+%p
+  The following is a glossary of terms used in the Pendragon game system.
+  
+%h3.glossary-item#skill Skill
+%p.apple
+  Main Article:
+  = link_to "Skills", "/pendragon/skills"
+%p
+  Skills are the most important mechanic in the Pendragon system, and are what
+  define and differentiate creatures and characters within the sphere of game
+  mechanics. Skills can be (roughly) divided into two categories: skill
+  abilities and skill bonuses.
+%p
+  Skill abilities grant a creature or character an additional ability or trick
+  that it can use. A magic spell, a weapon technique, a psychic shield, and the
+  ability to land safely after a long fall are all examples of skill abilities.
+%p
+  Skill bonuses provide some sort of numeric bonus or effect. Unlike skill
+  abilities, skill bonuses are not activated by the user. Instead, they are
+  typically static or "always on", e.g. a skill that grants +1 to casting Fire
+  spells, or a skill that grants +1 to checks made to climb or to gather
+  information socially.

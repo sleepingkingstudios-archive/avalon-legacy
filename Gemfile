@@ -23,6 +23,7 @@ gem 'haml-rails'
 gem 'sass'
 gem 'redcarpet' # Github-flavored Markdown
 gem 'octokit'   # Github API (http://rdoc.info/gems/octokit)
+gem 'bcrypt-ruby', :require => "bcrypt" # Password Encryption
 # gem 'bj'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'

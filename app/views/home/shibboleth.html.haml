@@ -1,0 +1,14 @@
+-# app/views/home/shibboleth.html.haml
+
+= content_for :javascript do
+  = javascript_include_tag "konami"
+
+= content_for :css do
+  :css
+    div#content {
+      width: 940px;
+    }
+    
+    div#sidebar {
+      display: none;
+    }

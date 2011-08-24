@@ -52,50 +52,25 @@ module ApplicationHelper
   end # method navigation_item
   private :navigation_item
   
-  def recent_activity(params = {})
-    activity = String.new
+  def theme_select_bar(params = {})
+    tag = params[:tag] || "p"
+    tag_attrs = Hash.new
     
-    github_list_commits(:repository => "sleepingkingstudios/camelot", :count => 3).each do |commit|
-      activity += github_format_commit commit 
-    end # each
+    tag_style = params[:style] || {}
+    tag_style["text-align"] ||= "center"
     
-    return activity.html_safe
-  end # helper recent_activity
-  
-  def github_list_commits(params = {})
-    return Array.new if params[:repository].nil?
-    # logger.debug "#{self}: listing commits..."
+    tag_attrs["style"] = (tag_style.map do |key, value| "#{key}: #{value};" end).join(" ")
     
-    commits = Octokit.commits params[:repository]
+    theme = "<#{tag} #{(tag_attrs.map do |key, value| "#{key}='#{value}'" end).join(" ")}>"
     
-    if params[:count]
-      return commits[0..(params[:count].to_i - 1)]
-    else
-      return commits
-    end # if-else
-  end # method github_list_commits
-  
-  def github_format_commit(commit, params = {})
-    tag = (params[:tag] || "li").to_s
+    theme += "It is now #{@time.hour}:#{@time.min}. It #{@is_it_dark ? "is" : "is not"} dark.#{@is_it_dark ? " You are likely to be eaten by a grue." : ""} "
+    theme += "Choose a theme: "
+    theme += "<a id='#theme_select_light' href='#light'>Light</a> | "
+    theme += "<a id='#theme_select_dark' href='#dark'>Dark</a> "
+    theme += "( <a id='#theme_select_auto' href='#auto'>Auto</a> )"
     
-    return "<#{tag}>Camelot: \"#{commit.message}\" at #{github_datetime commit.committed_date}</#{tag}>"
-  end # method github_format_commit
-  
-  def github_datetime(date_string)
-    date = nil
-    /[\d\-]+T/.match(date_string) do |match|
-      date = match[0]
-      date = date[0..(date.size-2)]
-    end # match
+    theme += "</#{tag}}>"
     
-    time = nil
-    /T[\d\-\:]+/.match(date_string) do |match|
-      time = match[0]
-      time = time[1..(time.size-1)]
-    end # match
-    
-    # logger.debug "#{date_string}: \"#{date}\", \"#{time}\""
-    return "#{date} #{time}"
-  end # method github_datetime
-  private :github_list_commits, :github_format_commit, :github_datetime
+    return theme.html_safe
+  end # helper theme_select_bar
 end # module ApplicationHelper

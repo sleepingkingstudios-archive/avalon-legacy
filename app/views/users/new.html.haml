@@ -1,0 +1,24 @@
+-# app/views/user/new.html.haml
+
+%h1 Sign Up
+
+= form_for @user do |form|
+  - if @user.errors.any? then
+    .error_messages
+      %h2 Form is invalid
+      %ul
+        - @user.errors.full_messages.each do |message|
+          %li= message
+  %p
+    = form.label :handle
+    = form.text_field :handle
+  %p
+    = form.label :email
+    = form.text_field :email
+  %p
+    = form.label :password
+    = form.password_field :password
+  %p
+    = form.label :password_confirmation
+    = form.password_field :password_confirmation
+  %p.button= form.submit

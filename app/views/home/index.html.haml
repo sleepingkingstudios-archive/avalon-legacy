@@ -2,6 +2,8 @@
 / %p Find me in app/views/home/index.html.haml
 
 = content_for :javascript do
+  = javascript_include_tag "konami"
+
   :javascript
     function position_links() {
       var angle = 70;
@@ -49,6 +51,14 @@
     jQuery(document).ready(function(){
       position_links();
     }); // end document.ready
+
+= content_for :footer do
+  - if current_user
+    %p{:style => "text-align: center; margin-bottom: 0;"}
+      You are currently logged in as
+      = "#{current_user.email}.".html_safe
+      = "#{link_to "Log Out", log_out_path}.".html_safe
+  = theme_select_bar
 
 = content_for :css do
   = stylesheet_link_tag "home"

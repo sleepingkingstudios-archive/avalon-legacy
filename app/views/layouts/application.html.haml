@@ -58,6 +58,9 @@
           
           return false;
         }); // end click
+        
+        // load recent activity
+        jQuery('#recent_activity').load('#{recent_activity_path}')
       }); // end document.ready
     
     = csrf_meta_tag
@@ -92,7 +95,7 @@
           = navigation :tag => :li, :tag_class => :apple
         %h2 Recent Activity
         %ul#recent_activity
-          =# recent_activity
+          %p Loading recent activity...
       - else
         = content_for_sidebar
     / end navigation
@@ -102,14 +105,6 @@
     #footer
       - content_for_footer = yield :footer
       - if content_for_footer.empty? then
-        %p{:style => "text-align: center;"}
-          It is now #{@time.hour}:#{@time.min}. It #{@is_it_dark ? "is" : "is not"} dark.#{@is_it_dark ? " You are likely to be eaten by a grue." : ""}
-          Choose a theme:
-          %a#theme_select_light{:href => "#light"} Light
-          |
-          %a#theme_select_dark{:href => "#dark"} Dark
-          (
-          %a#theme_select_auto{:href => "#auto"} Auto
-          )
+        = theme_select_bar
       - else
         = content_for_footer

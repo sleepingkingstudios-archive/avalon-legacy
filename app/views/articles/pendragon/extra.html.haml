@@ -1,0 +1,151 @@
+= render "layoutRenderer"
+
+%h1 Pendragon Notes
+
+= render "error"
+
+%p
+  The following notes have yet to be categorized. Often, the correct pages or
+  sections do not yet exist. As with the rest of the system notes, these are
+  subject to change. Caveat lector.
+
+%h1 Grand Unified Theory
+%p
+  :redcarpet
+    **Skills** and **Techniques**
+    
+    Both cost **skill points**. Techniques grant a new ability. Skills grant a
+    passive/conditional/numeric bonus or improve a technique.
+    
+    **Skills**
+    
+    * Acrobatics +1
+    * Athletics +1
+    * Burglary +1
+    * [Element] Magic +1
+      * Air, Earth, Fire, Metal, Water, Wood
+      * Ether, Void
+      * Light, Shadow
+      * Life, Death
+    * Lore +1
+    * Social +1
+    * [Weapon] Mastery +1
+    
+    **Tokens**
+    
+    Few types of default tokens.
+    
+    * *Adrenaline:* Used to power strength-based abilities, e.g. heavy weapons,
+      Athletics, etc. Charged by hitting enemy (optional: hit by attacks?).
+    * *Aim:* Used to power ranged attacks. Charged by hitting enemy.
+    * *Charm:* Used to power social/bardic abilities?
+    * *Mana:* Used to cast spells/use magical abilities. Recharged by rest.
+    * *Swashbuckling:* Used to power dexterity-based abilities, e.g. light
+      melee weapons, Acrobatics. Charged by hitting enemy (optional: dodge
+      attacks?).
+
+%h1 Other Notes
+
+%h2 Spells and "Levels"
+%p
+  To cast a spell (use an ability), the user must have a skill level of (mana
+  cost - 1). So, to cast a spell with a mana cost of two, the user must have
+  taken at least the [Element] Magic +1 skill.
+%p
+  The user can take (once) the Signature Spell skill, which lets the creature
+  treat one skill as having a mana cost 1 point lower (min 1 point => reserve).
+%p
+  Improving spells (e.g. more damage, check bonus, etc) increases the mana
+  cost.
+
+%h2 Skills and Restrictions
+%p
+  Restrictions are, in a sense, "anti-Skills". Instead of granting the creature
+  new abilities or bonuses they instead apply limitations or penalties.
+  Conversely, instead of costing skill points restrictions grant either
+  additional skill points to spend or directly grant the use of new skills in
+  exchange. They provide an additional option for the customization of
+  creatures and characters in the Pendragon system.
+
+%h2 Skills, Spells, and Magical Traditions
+%p
+  Although the Pendragon system is simple, that simplicity is matched with a
+  powerful flexibility, particularly in regard to the semiotics of skills and
+  abilities.
+%p
+  Consider spells. By default, the assumption for a spell is that it represents
+  some innate or otherwise immediately available quantity, akin to the
+  classical sorcerer, wielding a limited repertoire of spells but with great
+  flexibility as to their use. A creature that directly learns a spell using
+  a skill point can be said to add that spell to its "spells known".
+%p
+  One alternate means of spell acquisition is gaining an Item that grants the
+  use of that spell, or a Consumable that offers a single use thereof. However,
+  what about the classic wizard, who carries around a spellbook full of arcane
+  rituals and eldritch incantations?
+
+%h3 Preparing Spells
+%p
+  For a Vancian wizard, who casts memorized spells once and must prepare them
+  anew each day, take the Spell Preparation skill one or more times. Each time
+  that skill is taken, the creature gains two prepared spell slots, which he,
+  she, or it can fill with any spells for which he, she, or it has access (see
+  Spell Books and Spell Access, below). The wizard may cast any of its prepared
+  spells as if it were a spell known, expending the activation time, mana cost,
+  and/or other costs as normal. However, once cast, the prepared spell is lost,
+  and must be prepared anew when the wizard has sufficient time and focus.
+
+%h3 Readying Spells
+%p
+  As a more flexible alternative to the old Vancian system, a magister can take
+  the Spell Readying skill one or more times. Each time that skill is taken,
+  the creature gains one readied spell slot. Unlike a prepared spell slot, the
+  readied spell is not lost when the spell is cast.
+  
+%h3 Time, Rest, and Preparing/Readying Spells
+%p
+  A creature with Readied or Prepared spells may renew his, her, or its
+  selection of chosen spells as part of a major rest. This counts as a major
+  restriction; rather than granting an additional skill point, however, the
+  creature gains one additional readied spell slot or two additional prepared
+  spell slots as if it had selected the Readied Spell or Prepared Spell skills.
+
+%h3 Spell Books and Spell Access
+%p
+  A creature requiring written spell notes, e.g. with the Readied Spell or
+  Prepared Spell skills, may treat this as a major restriction; rather than
+  granting an additional skill point, however, the creature gains three
+  additional Consumable slots, as if the creature had chosen the Resources
+  skill. These Consumable slots must be used to select spells (see below).
+%p
+  Each spell for use with the Readied Spell or Prepared Skill skills requires
+  the creature to spend one Consumable slot, so a wizard with a spell book
+  containing six spells would have spent six Consumable slots (or,
+  equivalently, two Items). Spells provided as part of trade or treasure are
+  likewise valued as equivalent to Consumables.
+%p
+  At the Narrator's discretion, spellcasters may treat spell book pages as
+  scrolls (allowing the caster to cast an unprepared or unreadied spell at
+  the cost of the page) and/or vice versa (preparing spells from a scroll).
+  Pages consumed in this fashion would return one consumable slot to the
+  spellcaster, although this is not recommended as replacing the page (even
+  with the Arcane Calligrapher skill) would be difficult without the original
+  spell (that was just lost).
+  
+
+%h2 Somatic and Verbal Components
+%p
+  By default, using a spell requires the user/creature to make a ritual gesture
+  and speak a brief incantation. The spellcaster may choose to skip one or both
+  of these components, but at a cost of a -1 penalty to the Check to cast the
+  spell, or a -2 penalty for skipping both components.
+%p
+  If the creature is not able to use a component, such as a Silenced creature
+  unable to speak or a Paralyzed or Frozen creature unable to move, the penalty
+  to cast is doubled to -2 per component.
+%p
+  The Silenced Spellcaster and Stilled Spellcaster skills allow a creature to
+  reduce the penalty for casting a spell without verbal and somatic components,
+  respectively. Each reduces the respective penalty by -1, effectively removing
+  the penalty for voluntarily skipping the component and halving the penalty if
+  unable to use the component.
