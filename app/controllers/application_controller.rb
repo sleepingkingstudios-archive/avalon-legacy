@@ -1,6 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
+  def authenticate_user(params = {})
+    return false if (user = current_user).nil?
+    
+    # authenticate permissions here
+    # (eventually)
+  end # method authenticate_user
+  
   def recent_activity(params = {})
     activity = String.new
     

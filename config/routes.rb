@@ -15,6 +15,8 @@ Avalon::Application.routes.draw do
   resources :sessions
   
   match 'articles'       => "articles#static"
+  match 'articles/pendragon/skills/list' => "pendragon_skill#list"
+  match 'articles/pendragon/skills/*id' => "pendragon_skill#show"
   match 'articles/*path' => "articles#static"
   match '*path'          => "articles#static"
   

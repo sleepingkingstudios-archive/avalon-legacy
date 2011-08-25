@@ -19,7 +19,7 @@ class PendragonSkill < ActiveRecord::Base
     return (self.subtypes_as_array.map do |string| string.capitalize end).join(", ")
   end # method subtypes_as_formatted_string
   
-  def slug(str = "_")
-    return self.name.downcase.split().join(str)
-  end # method slug
+  def to_slug(char = '-')
+    return self.name.downcase.split().join(char)
+  end # method to_slug
 end # end class PendragonSkill
