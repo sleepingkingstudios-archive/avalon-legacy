@@ -65,9 +65,9 @@ module ApplicationHelper
     
     theme += "It is now #{@time.hour}:#{@time.min}. It #{@is_it_dark ? "is" : "is not"} dark.#{@is_it_dark ? " You are likely to be eaten by a grue." : ""} "
     theme += "Choose a theme: "
-    theme += "<a id='#theme_select_light' href='#light'>Light</a> | "
-    theme += "<a id='#theme_select_dark' href='#dark'>Dark</a> "
-    theme += "( <a id='#theme_select_auto' href='#auto'>Auto</a> )"
+    theme += "<a id='theme_select_light' href='#light'>Light</a> | "
+    theme += "<a id='theme_select_dark' href='#dark'>Dark</a> "
+    theme += "( <a id='theme_select_auto' href='#auto'>Auto</a> )"
     
     theme += "</#{tag}}>"
     

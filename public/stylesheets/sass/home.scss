@@ -2,7 +2,7 @@
 @import "solarized";
 
 html {
-  body {
+  body.home {
     background-image: url('../images/background-tree-light-hi.png');
   } // html body
   
@@ -12,7 +12,7 @@ html {
   } // html .apple
   
   &.dark {
-    body {
+    body.home {
       background-image: url('../images/background-tree-dark-hi.png');
     } // html.dark body
     
@@ -41,6 +41,23 @@ div#arc_navigation {
   } // .reverse
 } // div#arc_navigation
 
+div#content {
+  width: $total_width;
+}
+
 div#sidebar {
   display: none;
 } // div#sidebar
+
+$overlay_width: 240px;
+$overlay_offset_x: 0.5 * ($total_width - $overlay_width);
+$overlay_offset_y: 160px;
+div#overlay {
+/*  background-color: #f36;*/
+  width: 240px;
+  left: $overlay_offset_x;
+  padding: 5px;
+  position: relative;
+  top: $overlay_offset_y;
+  width: $overlay_width;
+} // div#overlay

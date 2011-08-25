@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     activity = String.new
     
     github_list_commits(:repository => "sleepingkingstudios/camelot", :count => 3).each do |commit|
-      activity += github_format_commit commit 
+      activity += github_format_commit commit
     end # each
     
     render :text => activity.html_safe

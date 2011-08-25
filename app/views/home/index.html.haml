@@ -1,9 +1,16 @@
 / %h1 Home#index
 / %p Find me in app/views/home/index.html.haml
 
-= content_for :javascript do
-  = javascript_include_tag "konami"
+= content_for :css do
+  = stylesheet_link_tag "home"
+  
+  :css
+    #overlay label {
+      display: inline-block;
+      width: 100px;
+    }
 
+= content_for :javascript do
   :javascript
     function position_links() {
       var angle = 70;
@@ -49,8 +56,19 @@
     } // end function position_links
     
     jQuery(document).ready(function(){
+      jQuery('body').addClass('home');
       position_links();
     }); // end document.ready
+    
+  - unless current_user
+    = javascript_include_tag "konami"
+    :javascript
+      jQuery(document).ready(function(){
+        konami.code = function(){
+          jQuery('body').removeClass('home');
+          jQuery('#overlay').load("shibboleth");
+        } // end konami.code
+      }); // end document.ready
 
 = content_for :footer do
   - if current_user
@@ -60,11 +78,10 @@
       = "#{link_to "Log Out", log_out_path}.".html_safe
   = theme_select_bar
 
-= content_for :css do
-  = stylesheet_link_tag "home"
-
 = content_for :top_navigation do
   %h2{:style => "text-align: center;"} Hic Iacet Arthuris, Rex Quondam, Rexque Futuris
 
 #arc_navigation
   = navigation :only => [ :about, :articles, :projects, :blog, :sitemap ]
+  
+#overlay

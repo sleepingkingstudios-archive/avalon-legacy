@@ -137,12 +137,12 @@ html {
     html.dark div.error {
       border-color: #839496; }
 
-html body {
+html body.home {
   background-image: url("../images/background-tree-light-hi.png"); }
 html .apple {
   background-image: url("../images/apple_color_light_large.png");
   padding-left: 30px; }
-html.dark body {
+html.dark body.home {
   background-image: url("../images/background-tree-dark-hi.png"); }
 html.dark .apple {
   background-image: url("../images/apple_color_dark_large.png");
@@ -161,5 +161,17 @@ div#arc_navigation {
     padding-right: 30px;
     background-position: right -2px; }
 
+div#content {
+  width: 940px; }
+
 div#sidebar {
   display: none; }
+
+div#overlay {
+  /*  background-color: #f36;*/
+  width: 240px;
+  left: 350px;
+  padding: 5px;
+  position: relative;
+  top: 160px;
+  width: 240px; }

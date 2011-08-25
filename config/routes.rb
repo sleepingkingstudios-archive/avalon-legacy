@@ -7,8 +7,9 @@ Avalon::Application.routes.draw do
   
   get "recent_activity" => "home#recent_activity"
   
+  get "log_in"  => "sessions#new",     :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
-  # get "sign_up" => "users#new", :as => "sign_up"
+  get "shibboleth" => "sessions#sign_in", :as => "shibboleth"
   
   resources :users
   resources :sessions

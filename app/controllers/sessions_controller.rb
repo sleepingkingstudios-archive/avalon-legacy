@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
   def new
   end
+  
+  def sign_in
+    render "new", :layout => false
+  end # action sign_in
 
   def create
     user = User.authenticate(params[:email], params[:password])
@@ -9,7 +13,7 @@ class SessionsController < ApplicationController
       redirect_to root_url, :notice => "Logged in!"
     else
       flash.now.alert = "Invalid email or password"
-      render "new"
+      redirect_to root_url
     end # end if-else
   end # action create
 
