@@ -9,12 +9,24 @@ Avalon::Application.routes.draw do
   
   resource :session, :only => [:new, :create, :destroy]
   
-  match 'articles'       => "articles#static"
-  match 'articles/pendragon/skills/list' => "pendragon_skill#list"
-  match 'articles/pendragon/skills/edit/*id' => "pendragon_skill#edit"
-  match 'articles/pendragon/skills/*id' => "pendragon_skill#show"
-  match 'articles/*path' => "articles#static"
+  # articles routing; abandon hope, all ye who enter here
   
+  namespace "articles" do
+    namespace "pendragon" do
+      resources :skills, :only => [:show, :edit] do
+        collection do
+          get 'list'
+        end # collection
+      end # resources skills
+    end # namespace articles/pendragon
+  end # namespace articles
+  
+  match "/pendragon/:path" => redirect("/articles/pendragon/%{path}")
+  
+  get 'articles/*path' => "articles#static"
+  get 'articles'       => "articles#static"
+  
+  # root url
   root :to => "home#index"
 
   # The priority is based upon order of creation:

@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       render :new, :layout => false
     else
       # standard http; redirect to route
-      redirect_to root_url
+      redirect_to :root
     end # if-else
   end # action new
 

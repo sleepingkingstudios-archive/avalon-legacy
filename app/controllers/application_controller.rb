@@ -9,13 +9,19 @@ class ApplicationController < ActionController::Base
   end # method authenticate_user
   
   def recent_activity(params = {})
-    activity = String.new
+    if request.xhr?
+      # AJAX request; serve the "new" form sans layout
+      activity = String.new
     
-    github_list_commits(:repository => "sleepingkingstudios/camelot", :count => 3).each do |commit|
-      activity += github_format_commit commit
-    end # each
+      github_list_commits(:repository => "sleepingkingstudios/camelot", :count => 3).each do |commit|
+        activity += github_format_commit commit
+      end # each
     
-    render :text => activity.html_safe
+      render :text => activity.html_safe
+    else
+      # standard http; redirect to route
+      redirect_to :root
+    end # if-else
   end # action recent_activity
   
   before_filter :get_local_time, :get_theme_override

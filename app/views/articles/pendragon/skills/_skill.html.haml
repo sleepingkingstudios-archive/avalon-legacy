@@ -1,0 +1,29 @@
+%div.skill{ :id => "skill-#{@skill.to_slug("-")}", :style => "margin-bottom: 20px;" }
+  %h3.inline.name= @skill.name
+  .block.stat-block
+    %p= "#{@skill.type} [#{@skill.subtypes_as_formatted_string}]".html_safe
+    - unless @skill.cost.nil? || @skill.cost.empty?
+      %p
+        %strong Cost:
+        = @skill.cost
+    - unless @skill.range.nil? || @skill.range.empty?
+      %p
+        %strong Range:
+        = @skill.range
+    - unless @skill.target.nil? || @skill.target.empty?
+      %p
+        %strong Target:
+        = @skill.target
+    - unless @skill.trigger.nil? || @skill.trigger.empty?
+      %p
+        %strong Trigger:
+        = @skill.trigger
+  .description
+    - case @skill.description_format
+      - when "plain"
+        %p= @skill.description
+      - when "html"
+        = @skill.description.html_safe
+      - when "redcarpet"
+        :redcarpet
+          = @skill.description
