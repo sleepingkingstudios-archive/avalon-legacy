@@ -3,12 +3,25 @@ class PendragonSkillController < ApplicationController
     @skills = PendragonSkill.all
   end # method list
   
+  def edit
+    @skill = skill_from_id_or_slug params[:id]
+  end # method edit
+  
   def show
-    if params[:id].match /^\d*$/
-      # params is an id
-      @skill = PendragonSkill.find params[:id]
-    else
-      @skill = PendragonSkill.find_by_slug params[:id]
-    end # if-else
+    @skill = skill_from_id_or_slug params[:id]
   end # method show
+  
+  def skill_from_id_or_slug(param)
+    if param.match /^\d*$/
+      # parameter is an integer, so probably an id
+      skill = PendragonSkill.find param
+    else
+      # parameter is not an integer, so hopefully a slug
+      skill = PendragonSkill.find_by_slug param
+    end # if-else
+    return skill
+  rescue ActiveRecord::RecordNotFound => err
+    return nil
+  end # method skill_from_id_or_slug
+  private :skill_from_id_or_slug
 end # end controller PendragonSkillController

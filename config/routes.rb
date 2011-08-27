@@ -7,18 +7,13 @@ Avalon::Application.routes.draw do
   
   get "recent_activity" => "home#recent_activity"
   
-  get "log_in"  => "sessions#new",     :as => "log_in"
-  get "log_out" => "sessions#destroy", :as => "log_out"
-  get "shibboleth" => "sessions#sign_in", :as => "shibboleth"
-  
-  resources :users
-  resources :sessions
+  resource :session, :only => [:new, :create, :destroy]
   
   match 'articles'       => "articles#static"
   match 'articles/pendragon/skills/list' => "pendragon_skill#list"
+  match 'articles/pendragon/skills/edit/*id' => "pendragon_skill#edit"
   match 'articles/pendragon/skills/*id' => "pendragon_skill#show"
   match 'articles/*path' => "articles#static"
-  match '*path'          => "articles#static"
   
   root :to => "home#index"
 

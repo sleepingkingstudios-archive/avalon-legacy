@@ -1,10 +1,13 @@
 class SessionsController < ApplicationController
   def new
-  end
-  
-  def sign_in
-    render "new", :layout => false
-  end # action sign_in
+    if request.xhr?
+      # AJAX request; serve the "new" form sans layout
+      render :new, :layout => false
+    else
+      # standard http; redirect to route
+      redirect_to root_url
+    end # if-else
+  end # action new
 
   def create
     user = User.authenticate(params[:email], params[:password])
