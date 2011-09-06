@@ -1,30 +1,39 @@
-- if @skill.is_a? PendragonSkill
-  %div.skill{ :id => "skill-#{@skill.to_slug("-")}", :style => "margin-bottom: 20px;" }
-    %h3.inline.name= @skill.name
+- skill ||= @skill
+- if skill.is_a? PendragonSkill
+  %div.skill{ :id => "skill-#{skill.to_slug("-")}", :style => "margin-bottom: 20px;" }
+    %h3.inline.name= skill.name
     .block.stat-block
-      %p= "#{@skill.type} [#{@skill.subtypes_as_formatted_string}]".html_safe
-      - unless @skill.cost.nil? || @skill.cost.empty?
+      %p
+        = skill.type
+        = skill.subtypes_as_formatted_string
+      - unless skill.action.nil? || skill.action.empty?
+        %p
+          %strong Action:
+          = skill.action
+      - unless skill.cost.nil? || skill.cost.empty?
         %p
           %strong Cost:
-          = @skill.cost
-      - unless @skill.range.nil? || @skill.range.empty?
+          = skill.cost
+      - unless skill.range.nil? || skill.range.empty?
         %p
           %strong Range:
-          = @skill.range
-      - unless @skill.target.nil? || @skill.target.empty?
+          = skill.range
+      - unless skill.target.nil? || skill.target.empty?
         %p
           %strong Target:
-          = @skill.target
-      - unless @skill.trigger.nil? || @skill.trigger.empty?
+          = skill.target
+      - unless skill.trigger.nil? || skill.trigger.empty?
         %p
           %strong Trigger:
-          = @skill.trigger
+          = skill.trigger
     .description
-      - case @skill.description_format
+      - case skill.description_format
         - when "plain"
-          %p= @skill.description
+          %p= skill.description
         - when "html"
-          = @skill.description.html_safe
+          = skill.description.html_safe
         - when "redcarpet"
           :redcarpet
-            = @skill.description
+            = skill.description
+    %span.skill-links
+      = link_to "Edit Skill", "/articles/pendragon/skills/#{skill.slug}/edit"

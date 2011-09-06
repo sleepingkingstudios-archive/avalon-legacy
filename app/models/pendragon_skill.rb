@@ -7,30 +7,32 @@ class PendragonSkill < ActiveRecord::Base
   
   self.inheritance_column = :inheritance_type
   
-  def update_attributes(attributes)
-    attributes[:slug] = convert_name_to_slug attributes[:name]
-    
-    super attributes
-  end # method update_attributes
+  def self.convert_name_to_slug(name, char = '-')
+    return name.downcase.split().join(char)
+  end # class method convert_name_to_slug
   
   def <=>(other)
     self.name <=> other.name
   end # method <=>
   
   def subtypes_as_array
-    return (self.subtypes || []).split(/,\ |,|\ /)
+    return (self.subtypes || []).split(",").map do |subtype| subtype.strip end
   end # method subtypes_as_array
   
   def subtypes_as_formatted_string
-    return (self.subtypes_as_array.map do |string| string.capitalize end).join(", ")
+    ary = self.subtypes_as_array
+    if ary.empty? then return "" end
+    ary = ary.map do |string|
+      string = (string.split(" ").map do |substring|
+        (substring.split("/").map do |subsubstring|
+          subsubstring.capitalize 
+        end).join("/")
+      end).join(" ")
+    end # map
+    return "[#{ary.join(", ")}]"
   end # method subtypes_as_formatted_string
   
   def to_slug(char = '-')
-    return convert_name_to_slug self.name, char
+    return self.class.convert_name_to_slug self.name, char
   end # method to_slug
-  
-  def convert_name_to_slug(name, char = '-')
-    return name.downcase.split().join(char)
-  end # method convert_name_to_slug
-  private :convert_name_to_slug
 end # end class PendragonSkill

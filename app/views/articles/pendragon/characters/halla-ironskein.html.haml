@@ -58,41 +58,5 @@
 
 %h2 Halla's Skills
 
-.skill{:style => "margin-bottom: 20px;"}
-  %h3.inline.name Guardian
-  .block.stat-block
-    %p Skill [Token Pool]
-  .description
-    %p
-      You gain a Shield token pool. At the beginning of an encounter, your
-      Shield token pool is empty. You gain 1 Shield token each time a melee
-      attack against you fails while you are wielding a shield.
-
-.skill{:style => "margin-bottom: 20px;"}
-  %h3.inline.name Guard Ally
-  .block.stat-block
-    %p Shield Technique
-    %p
-      %strong Action:
-      Instant
-    %p
-      %strong Trigger:
-      An adjacent ally is attacked in melee
-    %p
-      %strong Cost:
-      2 Shield tokens
-    %p
-      %strong Range:
-      Adjacent
-  .description
-    %p
-      When an adjacent ally is attacked using a melee weapon, you may choose to
-      intercept the attack. The attack is resolved as if you are the target,
-      using your Defense stat. Any damage or other effects from the attack are
-      inflicted upon you on a successful attack, rather than the original
-      target. You must declare you are using this technique before the incoming
-      attack is resolved.
-    %p
-      You may choose to spend additional Shield tokens when using this
-      technique. Each additional shield token grants you a +1 bonus to Defense
-      against the intercepted attack.
+= render "articles/pendragon/skills/skill", :skill => PendragonSkill.find_by_slug("guardian")
+= render "articles/pendragon/skills/skill", :skill => PendragonSkill.find_by_slug("guard-ally")

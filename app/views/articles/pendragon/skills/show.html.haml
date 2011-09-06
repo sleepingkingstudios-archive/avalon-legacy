@@ -1,7 +1,8 @@
-= render "layout"
+= render "articles/pendragon/layout"
 
 %h1 Skill
 
 = render "skill", :object => @skill
 
-%p= link_to "Edit Skill", edit_articles_pendragon_skill_path
+%p.apple
+  = link_to "Back to Skills", "/articles/pendragon/skills/list"

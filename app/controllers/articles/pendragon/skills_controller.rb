@@ -5,6 +5,10 @@ class Articles::Pendragon::SkillsController < ApplicationController
   # GET /articles/pendragon/skills/:slug
   def show
     @skill = skill_from_id_or_slug params[:id]
+    if @skill.nil?
+      flash[:error].push "Unknown skill #{params[:id]}"
+      redirect_to "/articles/pendragon/skills/list"
+    end # if
   end # action show
   
   # GET /articles/pendragon/skills/list
@@ -20,14 +24,15 @@ class Articles::Pendragon::SkillsController < ApplicationController
   # POST /articles/pendragon/skills
   def create
     # concatenate the skill subtypes
-    subtypes = params[:subtype].select do |subtype| !(subtype.nil? || subtype.empty?) end
+    subtypes = (params[:subtype] || []).select do |subtype| !(subtype.nil? || subtype.empty?) end
     subtypes = subtypes.map do |subtype| subtype.downcase end
     params[:pendragon_skill][:subtypes] = subtypes.sort().join(",")
+    params[:pendragon_skill][:slug] = PendragonSkill.convert_name_to_slug params[:pendragon_skill][:name], "-"
     
     @skill = PendragonSkill.new(params[:pendragon_skill])
     
     if @skill.save
-      redirect_to @skill, :namespace => "articles"
+      redirect_to articles_pendragon_skill_path, :namespace => "articles", :notice => "Skill was successfully created."
     else
       render :action => "new"
     end # if-else
@@ -45,9 +50,10 @@ class Articles::Pendragon::SkillsController < ApplicationController
     @skill = skill_from_id_or_slug params[:id]
     
     # concatenate the skill subtypes
-    subtypes = params[:subtype].select do |subtype| !(subtype.nil? || subtype.empty?) end
+    subtypes = (params[:subtype] || []).select do |subtype| !(subtype.nil? || subtype.empty?) end
     subtypes = subtypes.map do |subtype| subtype.downcase end
     params[:pendragon_skill][:subtypes] = subtypes.sort().join(",")
+    params[:pendragon_skill][:slug] = PendragonSkill.convert_name_to_slug params[:pendragon_skill][:name], "-"
     
     if @skill.update_attributes(params[:pendragon_skill])
       # successful update
