@@ -4,6 +4,7 @@ Avalon::Application.routes.draw do
   
   match "about"   => "home#about"
   match "sitemap" => "home#sitemap"
+  match "demo"    => "home#demo"
   
   get "recent_activity" => "home#recent_activity"
   
@@ -13,7 +14,7 @@ Avalon::Application.routes.draw do
   
   namespace "articles" do
     namespace "pendragon" do
-      resources :skills, :only => [:show, :edit] do
+      resources :skills, :only => [:create, :edit, :new, :show, :update] do
         collection do
           get 'list'
         end # collection

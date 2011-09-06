@@ -90,7 +90,7 @@ div#sidebar {
   } // div#sidebar h2:first-child
 } // div#sidebar
 
-div.error {
+div.notices {
   border-style: solid;
   border-width: 2px;
   padding: 8px;
@@ -99,8 +99,8 @@ div.error {
   ul {
     margin-top: 0;
     margin-bottom: 0;
-  } // div.error ul
-} // div.error
+  } // div.notices ul
+} // div.notices
 
 table {
   margin: 0 0 20px;

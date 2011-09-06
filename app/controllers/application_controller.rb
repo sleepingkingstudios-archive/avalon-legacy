@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
     
     # authenticate permissions here
     # (eventually)
+    
+    return true
   end # method authenticate_user
   
   def recent_activity(params = {})
@@ -24,7 +26,14 @@ class ApplicationController < ActionController::Base
     end # if-else
   end # action recent_activity
   
-  before_filter :get_local_time, :get_theme_override
+  before_filter :get_local_time, :get_theme_override, :override_flash_notices
+  
+  def override_flash_notices
+    %w(error warning notice).each do |key|
+      flash[key.intern] = [flash[key.intern] || []].flatten
+      flash.now[key.intern] = [flash.now[key.intern] || []].flatten
+    end # each
+  end # method override_flash_notices
   
   def get_local_time
     Time.zone = 'EST'

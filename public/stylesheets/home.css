@@ -60,12 +60,12 @@ div#sidebar {
     padding-top: 10px;
     margin-bottom: 10px; }
 
-div.error {
+div.notices {
   border-style: solid;
   border-width: 2px;
   padding: 8px;
   margin-bottom: 20px; }
-  div.error ul {
+  div.notices ul {
     margin-top: 0;
     margin-bottom: 0; }
 
@@ -114,7 +114,12 @@ html {
     background-position: left -2px;
     background-repeat: no-repeat;
     padding-left: 25px; }
-  html div.error {
+  html .leaf {
+    background-image: url("../images/leaf_color_light_large.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-left: 25px; }
+  html div.notices {
     border-color: #657b83; }
   html.dark {
     background-color: #002b36;
@@ -134,17 +139,17 @@ html {
       background-position: left -2px;
       background-repeat: no-repeat;
       padding-left: 25px; }
-    html.dark div.error {
+    html.dark div.notices {
       border-color: #839496; }
 
 html body.home {
   background-image: url("../images/background-tree-light-hi.png"); }
-html .apple {
+html .big-apple {
   background-image: url("../images/apple_color_light_large.png");
   padding-left: 30px; }
 html.dark body.home {
   background-image: url("../images/background-tree-dark-hi.png"); }
-html.dark .apple {
+html.dark .big-apple {
   background-image: url("../images/apple_color_dark_large.png");
   padding-left: 30px; }
 

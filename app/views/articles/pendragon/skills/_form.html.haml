@@ -1,0 +1,139 @@
+-# app/views/articles/pendragon/skills/_form.html.haml
+
+= content_for :css do
+  :css
+    table.form {
+      width: 100%;
+    }
+    
+    table.form, table.form th, table.form td {
+      border: 0px none;
+      text-align: left;
+      vertical-align: top;
+    }
+    
+    table.form td label {
+      font-weight: bold;
+    }
+    
+    table.form td input {
+      width: 100%;
+    }
+    
+    table.form td span.subtype {
+      display: inline-block;
+      margin-left: 20px;
+      width: 175px;
+    }
+    
+    table.form td span.subtype:first-child {
+      margin-left: 0;
+    }
+    
+    table.form td span.subtype input {
+      margin: 2px 0;
+      width: auto;
+    }
+    
+    table.form .add_subtype_link {}
+
+= content_for :javascript do
+  :javascript    
+    function alignSubtypes(){
+      var subtypes = jQuery('span.subtype');
+      subtypes.detach();
+      
+      // check if there are enough rows
+      var row_count, rows_needed = Math.ceil(subtypes.length / 3);
+      while((row_count = jQuery('div.subtype_row').length) < rows_needed) {
+        console.log('row_count = ' + row_count + ', rows_needed = ' + rows_needed);
+        jQuery('td.subtypes').prepend(jQuery('<div>').addClass('subtype_row'));
+      } // end while
+      if(row_count > rows_needed) {
+        console.log("less rows");
+      } // end if
+      
+      for(var index = 0; index < subtypes.length; index++) {
+        jQuery(jQuery('div.subtype_row')[Math.floor(index / 3)]).append(subtypes[index]);
+      } // end for
+    } // end function alignSubtypes
+    
+    function addSubtype(){
+      var index = jQuery('span.subtype').length;
+      var subtype = jQuery('<span>').addClass('subtype').attr('id', 'subtype_' + index);
+      subtype.append(jQuery('<input>').attr('name', 'subtype[]').attr('type', 'text'));
+      subtype.append(" ");
+      
+      var link = jQuery('<a>').attr('href', '#').attr('id', 'delete_subtype_' + index).addClass('delete_subclass_link').html("Delete");
+      link.click(deleteSubtypeHandler);
+      subtype.append(link);
+
+      jQuery('td.subtypes').append(jQuery(subtype));
+      alignSubtypes();
+    } // end function addSubtype
+    
+    function deleteSubtype(index){
+      var button = jQuery('#delete_subtype_' + index);
+      var subtype = button.closest('span.subtype');
+      subtype.remove();
+      alignSubtypes();
+    } // end function deleteSubtype
+    
+    function deleteSubtypeHandler(event){
+      var index = jQuery(this).attr('id');
+      index = index.substring(15, index.length);
+    
+      deleteSubtype(index);
+      event.preventDefault();
+    } // end handler deleteSubtypeHandler
+    
+    jQuery(document).ready(function(){
+      jQuery('.add_subtype_link').click(function(event){
+        addSubtype();
+        event.preventDefault();
+      });
+      
+      jQuery('.delete_subtype_link').click(deleteSubtypeHandler);
+      
+      alignSubtypes();
+    }); // end document.ready
+
+- if @skill.is_a? PendragonSkill
+  = form_for @skill, :as => :pendragon_skill, :url => articles_pendragon_skills_path do |form|
+    %table.form
+      %tbody
+        %tr
+          %td{:style => "width: 74px;"}= form.label :name
+          %td= form.text_field :name
+        %tr
+          %td= form.label :type
+          %td= form.text_field :type
+        %tr
+          %td= form.label :subtypes
+          %td.subtypes
+            - subtypes = @skill.subtypes_as_array
+            - index = 0
+            - subtypes.each do |subtype|
+              %span.subtype{ :id => "subtype_#{index}"}
+                = text_field_tag "subtype[]", subtype, :id => nil
+                = link_to "Delete", "#", :id => "delete_subtype_#{index}", :class => "delete_subtype_link"
+                - index += 1
+            = link_to "Add Subtype", {}, :class => "add_subtype_link"
+        %tr
+          %td= form.label :cost
+          %td= form.text_field :cost
+        %tr
+          %td= form.label :range
+          %td= form.text_field :range
+        %tr
+          %td= form.label :target
+          %td= form.text_field :target
+        %tr
+          %td= form.label :trigger
+          %td= form.text_field :trigger
+        %tr
+          %td= form.label :description
+          %td
+            = form.select :description_format, options_for_select([["Plain Text", "plain"], ["HTML", "html"], ["Redcarpet", "redcarpet"]], @skill.description_format)
+            = form.text_area :description, :rows => 6, :style => "width: 100% !important;"
+    %p= form.submit "Update Skill"

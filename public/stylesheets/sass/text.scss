@@ -4,12 +4,24 @@
 
 @import "layout";
 
+@mixin heading-font {
+  font-family: "Gentium Book Basic", "Georgia", "Palatino", "Times New Roman", "Hoefler Text", "Baskerville", serif;
+}
+
+@mixin body-font {
+  font-family: "Gentium Book Basic", "Georgia", "Palatino", "Times New Roman", "Hoefler Text", "Baskerville", serif;
+}
+
 body {
   font-size: 100%;
   
   font-size: 15px;
   line-height: 20px;
   text-align: justify;
+  
+  #sidebar {
+    text-align: left;
+  } // body *#sidebar
 } // body
 
 .strong {
@@ -49,6 +61,8 @@ $heading4_height: 20px;
 $heading4_margin: 0;
 
 h1, h2, h3, h4 {
+  @include heading-font;
+  
   &.title {
     margin-bottom: 0;
   } // [h1, h2, h3, h4].title
@@ -95,6 +109,7 @@ h4 {
 /* PARAGRAPHS */
 
 p {
+  @include body-font;
   margin: 0 0 20px;
 } // p
 
@@ -111,6 +126,8 @@ a {
 /* LISTS */
 
 ul {
+  @include body-font;
+  
   margin: 0 0 20px;
   padding: 0;
   
@@ -118,10 +135,12 @@ ul {
     font-size: 15px;
     line-height: 20px;
     margin-left: 20px;
+    padding-left: 5px;
     
-    &.apple {
+    &.apple, &.leaf {
       list-style-type: none;
-    } // ul li.apple
+      margin-left: 0px;
+    } // ul li.[apple, leaf]
   } // ul li
 } // ul
 
@@ -135,6 +154,8 @@ ul#side_navigation {
 /* TABLES */
 
 table {
+  @include body-font;
+  
   font-size: 15px;
   line-height: 18px;
   

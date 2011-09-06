@@ -1,0 +1,23 @@
+- errors ||= flash[:error]
+- warnings = flash[:warning]
+- notices = flash[:notice]
+
+/ - errors.push "This is an error message."
+/ - warnings.push "This is a warning message."
+/ - notices.push "This is a notice message."
+
+- unless errors.empty? && warnings.empty? && notices.empty?
+  .notices
+    %ul
+      - errors.each do |error|
+        %li.apple
+          %strong{:style => "color: #dc322f;"} Error:
+          = error
+      - warnings.each do |warning|
+        %li.apple
+          %strong{:style => "color: #cb4b16;"} Warning:
+          = warning
+      - notices.each do |notice|
+        %li.leaf
+          %strong{:style => "color: #859900;"} Notice:
+          = notice

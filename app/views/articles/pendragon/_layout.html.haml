@@ -10,15 +10,22 @@
   A Million Miles is the Difference Between a Failure and a New Chance
   
 = content_for :sidebar do
-  %h2 Articles Navigation
+  %h2 Pendragon Navigation
   %ul#side_navigation
     %li.apple= link_to "Home", "/articles/pendragon"
     %li.apple= link_to "The Basics", "/articles/pendragon/basics"
     %li.apple= link_to "Character Creation", "/articles/pendragon/character-creation"
     %li.apple
-      = link_to "List of Skills", "/articles/pendragon/skills"
-    %li.apple= link_to "Running the Game", "/articles/pendragon/running"
+      = link_to "Skills", "/articles/pendragon/skills"
+      %ul.no_margin
+        %li.leaf= link_to "List of Skills", "/articles/pendragon/skills/list"
+    %li.apple
+      = link_to "Running the Game", "/articles/pendragon/running"
+      %ul.no_margin
+        %li.leaf= link_to "Combat", "/articles/pendragon/running-combat"
     %li.apple= link_to "Glossary", "/articles/pendragon/glossary"
+    %li.apple
+      = link_to "Quick Reference", "/articles/pendragon/quick-reference"
   
   %h2 Site Navigation
   %ul#side_navigation

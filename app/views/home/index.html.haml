@@ -9,6 +9,23 @@
       display: inline-block;
       width: 100px;
     }
+    
+    #content .notices {
+      margin: 0px auto;
+      height: 0px;
+      overflow: visible;
+      padding: 0px;
+      border: 0px none;
+      text-align: center;
+    }
+    
+    #content .notices ul {
+      
+    }
+    
+    #content .notices li {
+      display: inline-block;
+    }
 
 = content_for :javascript do
   :javascript
@@ -18,7 +35,7 @@
       center_x = +(center_x.substring(0, center_x.length - 2)) / 2;
       // console.log(center_x);
       var center_y = 300;
-      var radius = 280;
+      var radius = 260;
       
       var reverse = true;
     
@@ -26,7 +43,7 @@
       links.unshift;
       links.each(function(){
         self = jQuery(this);
-        self.addClass('apple');
+        self.addClass('apple big-apple');
         
         if(self.attr('id') == 'top_navigation_Home') {
           this.hide();
@@ -71,6 +88,9 @@
       }); // end document.ready
 
 = content_for :footer do
+  %div{:style => "height: 0px; overflow: visible; vertical-align: bottom;"}
+    / = render "layouts/notices"
+  
   - if current_user
     %p{:style => "text-align: center; margin-bottom: 0;"}
       You are currently logged in as

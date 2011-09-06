@@ -28,15 +28,16 @@ class ArticlesController < ApplicationController
         if path_is_directory? "#{prefix}#{path}"
           highest_valid_index = index
         else
-          @errors ||= []
-          @errors.push "Unable to locate directory at \"#{path}\""
-          logger.error @errors.last
+          flash[:error].push "Unable to locate directory at \"#{path}\""
+          logger.error flash[:error].last
           break
         end # if-else path_is_directory?
       else
         if path_is_file? "#{prefix}#{path}.html.haml"
-          logger.debug "Located file at \"#{path}.html.haml\""
-          @layouts = render_layouts(prefix, path_tokens)
+          # logger.debug "Located file at \"#{path}.html.haml\""
+          @layouts = render_layouts(prefix, path_tokens[0..-2])
+          # 0..-2 removes the last item (the file name), covering the case of
+          # both a file and a directory with the same name and a layout file.
           rendered_file = render_to_string :file => "#{prefix}#{path}.html.haml"
         elsif path_is_directory? "#{prefix}#{path}"
           # logger.debug "Located directory at \"#{path}\", checking for index"
@@ -45,14 +46,12 @@ class ArticlesController < ApplicationController
             @layouts = render_layouts(prefix, path_tokens)
             rendered_file = render_to_string :file => "#{prefix}#{path}/index.html.haml"
           else
-            @errors ||= []
-            @errors.push "Unable to locate index for directory \"#{path}\""
-            logger.error @errors.last
+            flash[:error].push "Unable to locate index for directory \"#{path}\""
+            logger.error flash[:error].last
           end # if
         else
-          @errors ||= []
-          @errors.push "Unable to locate file or directory at \"#{path}\""
-          logger.error @errors.last
+          flash[:error].push "Unable to locate file or directory at \"#{path}\""
+          logger.error flash[:error].last
           break
         end # if-elsif-if
       end # if-else

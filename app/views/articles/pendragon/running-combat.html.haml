@@ -1,0 +1,88 @@
+-# app/views/articles/pendragon/quick-reference/combat.html.haml
+
+= render "layoutRenderer"
+
+%h1.title Running the Game
+%h2.subtitle Combat Encounters
+
+%h2 Getting Started
+%p
+  Each participant rolls an Initiative check (normally, a Spirit check plus any
+  applicable bonuses). In the case of a tie, the participant with the higher
+  Spirit score acts first; if the Spirit scores are also tied, play a round of
+  rock-paper-scissors, and the winning player's character acts first.
+  
+%h3 Combat Rounds and Turns
+%p
+  Combat is divided into rounds, each representing (very approximately) six
+  seconds of in-game time. During each round, each participant acts once in
+  order of their Initiative results, highest to lowest. This is the
+  participant's Turn.
+  %span.rewrite
+    Any effects that have a set duration of Rounds will end at the beginning
+    of that participant's turn in the final round of the effect.
+
+%h4 Combat Actions
+%p
+  During their Turn, each participant can take one or more Actions.
+  Specifically, a participant may take either a single full-round action, or a
+  standard action, a move action, and a minor action. The player may substitute
+  a move action for a standard action, or a minor action for a move action if
+  desired, and may choose not to take all of the actions available in a given
+  Turn.
+
+%h4 Instant Actions
+%p
+  Some Techniques allow a creature to take an action outside of their Turn.
+  These instant actions are in addition to the actions permitted above, but
+  the technique can only be used when the specified condition is met.
+
+%h3 Hit Points, Damage, and Wounds
+%p
+  Many effects inflict damage on a creature's opponents. The base unit of
+  damage is the Token. Whenever a creature takes damage, place the appropriate
+  number of Damage Tokens on that creature, up to a total number of damage
+  tokens equal to the creature's hit points. Any remaining damage is instead
+  converted to Wounds; place a number of Wound tokens on the creature equal to
+  the remaining damage from the effect. Some effects can also apply wounds
+  directly.
+%p
+  %span.rewrite
+    A creature's hit points represent its ability to absorb or shrug off
+    damage, whereas wounds represent sufficient damage to reduce the creature's
+    combat effectiveness.
+  Each wound token on a creature applies a cumulative -1 penalty to all checks,
+  so a creature that has taken 3 wounds suffers a -3 penalty.
+  
+%h4 Unconsciousness
+%p
+  %span.rewrite
+    When a creature takes damage, if the total of its damage and wounds exceeds
+    its hit points, it must make an immediate Spirit check against a Difficulty
+    of 10 + the amount of damage just taken.
+  Remember to subtract the creature's wounds from the check result. On a failed
+  check, the creature falls unconscious and cannot take any actions, even
+  purely mental ones, until the creature is revived or rallies (see below).
+%p
+  Once per round during its turn, an unconscious creature can attempt to rally
+  with a successful Spirit check (Difficulty 10). On a successful check, the
+  creature is no longer unconscious and may act as normal during subsequent
+  turns.
+%p
+  %span.rewrite
+    An adjacent ally can attempt to revive a downed ally by making a successful
+    Heal check against a Difficulty equal to 10 + the creature's total damage.
+  Some effects can also immediately revive downed allies.
+
+%h4 Death and Dying
+%p
+  If a creature's wounds ever exceed 6 + the creature's Body score, the
+  creature dies. Dead creatures cannot take any actions, even purely mental
+  ones, and cannot rally or be revived. Some effects can resurrect dead
+  creatures within a short period after death (typically the duration of a
+  combat encounter), but creatures that have been dead for a longer period,
+  or whose physical forms have been destroyed, require the use of a
+  resurrection ritual or quest to restore to life.
+%p
+  Some effects can also inflict death directly. A few environmental effects
+  are similarly hazardous, such as falling into molten lava.

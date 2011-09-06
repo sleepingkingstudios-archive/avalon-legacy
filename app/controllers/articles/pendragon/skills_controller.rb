@@ -1,15 +1,70 @@
 class Articles::Pendragon::SkillsController < ApplicationController
-  def list
-    @skills = PendragonSkill.all
-  end # method list
+  before_filter :authenticate, :only => [:edit, :new, :update]
   
-  def edit
-    @skill = skill_from_id_or_slug params[:id]
-  end # method edit
-  
+  # GET /articles/pendragon/skills/:id
+  # GET /articles/pendragon/skills/:slug
   def show
     @skill = skill_from_id_or_slug params[:id]
-  end # method show
+  end # action show
+  
+  # GET /articles/pendragon/skills/list
+  def list
+    @skills = PendragonSkill.all
+  end # action list
+  
+  # GET /articles/pendragon/skills/new
+  def new
+    @skill = PendragonSkill.new
+  end # action new
+  
+  # POST /articles/pendragon/skills
+  def create
+    # concatenate the skill subtypes
+    subtypes = params[:subtype].select do |subtype| !(subtype.nil? || subtype.empty?) end
+    subtypes = subtypes.map do |subtype| subtype.downcase end
+    params[:pendragon_skill][:subtypes] = subtypes.sort().join(",")
+    
+    @skill = PendragonSkill.new(params[:pendragon_skill])
+    
+    if @skill.save
+      redirect_to @skill, :namespace => "articles"
+    else
+      render :action => "new"
+    end # if-else
+  end # action create
+  
+  # GET /articles/pendragon/skills/:id/edit
+  # GET /articles/pendragon/skills/:slug/edit
+  def edit
+    @skill = skill_from_id_or_slug params[:id]
+  end # action edit
+  
+  # PUT /articles/pendragon/skills/:id
+  # PUT /articles/pendragon/skills/:slug
+  def update
+    @skill = skill_from_id_or_slug params[:id]
+    
+    # concatenate the skill subtypes
+    subtypes = params[:subtype].select do |subtype| !(subtype.nil? || subtype.empty?) end
+    subtypes = subtypes.map do |subtype| subtype.downcase end
+    params[:pendragon_skill][:subtypes] = subtypes.sort().join(",")
+    
+    if @skill.update_attributes(params[:pendragon_skill])
+      # successful update
+      logger.debug "#{self}: Successfully updated skill.\n#{@skill.inspect}"
+      redirect_to articles_pendragon_skill_path, :notice => 'Skill was successfully updated.'
+    else
+      # unsuccessful update
+      render :action => "edit"
+    end # if-else
+  end # action update
+  
+  def authenticate
+    unless authenticate_user
+      redirect_to "/articles/pendragon"
+    end # unless
+  end # method authenticate
+  private :authenticate
   
   def skill_from_id_or_slug(param)
     if param.match /^\d*$/

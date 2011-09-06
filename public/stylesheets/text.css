@@ -63,12 +63,12 @@ div#sidebar {
     padding-top: 10px;
     margin-bottom: 10px; }
 
-div.error {
+div.notices {
   border-style: solid;
   border-width: 2px;
   padding: 8px;
   margin-bottom: 20px; }
-  div.error ul {
+  div.notices ul {
     margin-top: 0;
     margin-bottom: 0; }
 
@@ -90,6 +90,8 @@ body {
   font-size: 15px;
   line-height: 20px;
   text-align: justify; }
+  body #sidebar {
+    text-align: left; }
 
 .strong {
   font-weight: bold !important; }
@@ -106,14 +108,16 @@ body {
   margin-bottom: 0; }
 
 /* HEADINGS */
-h1.title, h2.title, h3.title, h4.title {
-  margin-bottom: 0; }
-h1.subtitle, h2.subtitle, h3.subtitle, h4.subtitle {
-  font-style: italic;
-  font-weight: normal; }
-h1.inline, h2.inline, h3.inline, h4.inline {
-  display: inline-block;
-  margin: 0; }
+h1, h2, h3, h4 {
+  font-family: "Gentium Book Basic", "Georgia", "Palatino", "Times New Roman", "Hoefler Text", "Baskerville", serif; }
+  h1.title, h2.title, h3.title, h4.title {
+    margin-bottom: 0; }
+  h1.subtitle, h2.subtitle, h3.subtitle, h4.subtitle {
+    font-style: italic;
+    font-weight: normal; }
+  h1.inline, h2.inline, h3.inline, h4.inline {
+    display: inline-block;
+    margin: 0; }
 
 h1 {
   margin: 0 0 20px;
@@ -137,6 +141,7 @@ h4 {
 
 /* PARAGRAPHS */
 p {
+  font-family: "Gentium Book Basic", "Georgia", "Palatino", "Times New Roman", "Hoefler Text", "Baskerville", serif;
   margin: 0 0 20px; }
 
 /* ANCHORS */
@@ -147,14 +152,17 @@ a {
 
 /* LISTS */
 ul {
+  font-family: "Gentium Book Basic", "Georgia", "Palatino", "Times New Roman", "Hoefler Text", "Baskerville", serif;
   margin: 0 0 20px;
   padding: 0; }
   ul li {
     font-size: 15px;
     line-height: 20px;
-    margin-left: 20px; }
-    ul li.apple {
-      list-style-type: none; }
+    margin-left: 20px;
+    padding-left: 5px; }
+    ul li.apple, ul li.leaf {
+      list-style-type: none;
+      margin-left: 0px; }
 
 ul#side_navigation li {
   font-size: 17px;
@@ -162,6 +170,7 @@ ul#side_navigation li {
 
 /* TABLES */
 table {
+  font-family: "Gentium Book Basic", "Georgia", "Palatino", "Times New Roman", "Hoefler Text", "Baskerville", serif;
   font-size: 15px;
   line-height: 18px; }
   table th, table td {

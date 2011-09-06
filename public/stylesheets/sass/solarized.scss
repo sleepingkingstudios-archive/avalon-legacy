@@ -42,9 +42,16 @@ html {
     padding-left: 25px;
   } // html .apple
   
-  div.error {
+  .leaf {
+    background-image: url('../images/leaf_color_light_large.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+  } // html .leaf
+  
+  div.notices {
     border-color: $base00;
-  } // html div.error
+  } // html div.notices
   
   &.dark {
     background-color: $base03;
@@ -77,8 +84,8 @@ html {
       padding-left: 25px;
     } // html.dark .apple
     
-    div.error {
+    div.notices {
       border-color: $base0;
-    } // html.dark div.error
+    } // html.dark div.notices
   } // html.dark
 } // html

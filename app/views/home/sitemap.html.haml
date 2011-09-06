@@ -1,32 +1,70 @@
-/ %h1 Home#sitemap
-/ %p Find me in app/views/home/sitemap.html.haml
+-# app/views/home/sitemap.html.haml
 
 %h1 Sitemap
 %p
-  This will be a sitemap someday. For now, it is a demonstration page for CSS.
-  
-%p.apple
-  Choose a theme:
-  %a#theme_select_light{:href => "#light"} Light
-  |
-  %a#theme_select_dark{:href => "#dark"} Dark
-  
+  The following pages are available on this site. Individual
+  = link_to "articles", "/articles"
+  and
+  = link_to "blog entries", "/blog"
+  are not listed here, nor are administrative pages not accessible by the
+  general public, the major public, or indeed any public regardless of rank.
 %p
-  This is <strong>bold text</strong>.
-  This is <em>italic text</em>.
+  The secret pages are also not listed here. Good luck!
 
-- @errors ||= ["This is an error message."] * 2
-= render "articles/error"  
+%ul
+  %li.apple
+    = link_to "Home", :root
+    %p.no_margin
+      The home page. A tree features, prominently. It's supposed to be an apple
+      tree, in case you were wondering (if you weren't wondering, that's okay
+      too).
+  %li.apple
+    = link_to "Projects", :projects
+    %p.no_margin
+      My projects of the code variety. Currently featuring Camelot, a
+      text-based adventure game engine under occasional development.
+  %li.apple
+    = link_to "Blog", "/blog"
+    %p.no-margin
+      An occasionally updated web log, its contents being a mixture of project
+      updates, abstracts from recent
+      = "#{link_to "articles", "/articles"},".html_safe
+      and the occasional thought/note/oddity undeserving of its own full
+      article yet
+      %span{:style => "text-decoration: line-through;"} inflicted upon
+      shared with the world (or at least the Internet).
+  
+%h2 Articles
+%ul
+  %li.apple
+    = link_to "Articles", "/articles"
+    %p
+      The Articles home page. These articles include my thoughts on game design
+      and development, as well as writing projects.
+    %p.no_margin
+      Articles also includes:
+      
+    %ul.no_margin
+      %li.apple
+        = link_to "Pendragon", "/articles/pendragon"
+        %p
+          Pendragon is a game system for tabletop, pen-and-paper roleplaying.
+          It is designed to be simple, fast, and fun, a game you can pick up in
+          an afternoon and finish in an evening. Check it out!
 
-%h2 Images
+%h2 Miscellany
+%ul
+  %li.apple
+    = link_to "About", :about
+    %br
+    Contains information about the author (that's me!), about this site, and
+    about Sleeping King Studios.
+  %li.apple
+    = link_to "Sitemap", :sitemap
+    %br
+    A list of all the pages on this site. This is the page you are currently
+    looking at. So, clicking this link will just take you back here. But feel
+    free if you really want to.
 
-%h3 Apples (Light)
-/ = image_tag 'apple_color_light_very_large.png'
-= image_tag 'apple_color_light_large.png'
-/ = image_tag 'apple_color_light_mid.png'
-= image_tag 'apple_color_light_small.png'
-/ = image_tag 'apple_color_light_very_small.png'
-
-%h3 Apples (Dark)
-= image_tag 'apple_color_dark_large.png'
-= image_tag 'apple_color_dark_small.png'
+%p
+  Confused? Horrified? In awe? Send me an email!

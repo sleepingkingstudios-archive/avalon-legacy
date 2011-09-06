@@ -1,0 +1,37 @@
+/ %h1 Home#sitemap
+/ %p Find me in app/views/home/sitemap.html.haml
+
+%h1 CSS Demonstration
+
+- flash.now[:error].push "This is an error message."
+- flash.now[:warning].push "This is a warning message."
+- flash.now[:notice].push "This is a notice message."
+
+%p
+  This is a demonstration page for CSS.
+  
+%p.apple
+  Choose a theme:
+  %a#theme_select_light{:href => "#light"} Light
+  |
+  %a#theme_select_dark{:href => "#dark"} Dark
+  
+%p
+  This is <strong>bold text</strong>.
+  This is <em>italic text</em>.
+
+%h2 Images
+
+%h3 Apples (Light)
+/ = image_tag 'apple_color_light_very_large.png'
+= image_tag 'apple_color_light_large.png'
+/ = image_tag 'apple_color_light_mid.png'
+= image_tag 'apple_color_light_small.png'
+/ = image_tag 'apple_color_light_very_small.png'
+
+%h3 Apples (Dark)
+= image_tag 'apple_color_dark_large.png'
+= image_tag 'apple_color_dark_small.png'
+
+%h3 Leafs (Light + Dark)
+= image_tag 'leaf_color_light_large.png'
