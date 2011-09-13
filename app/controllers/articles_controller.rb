@@ -28,8 +28,8 @@ class ArticlesController < ApplicationController
         if path_is_directory? "#{prefix}#{path}"
           highest_valid_index = index
         else
-          flash[:error].push "Unable to locate directory at \"#{path}\""
-          logger.error flash[:error].last
+          flash[:errors].push "Unable to locate directory at \"#{path}\""
+          logger.error flash[:errors].last
           break
         end # if-else path_is_directory?
       else
@@ -46,12 +46,12 @@ class ArticlesController < ApplicationController
             @layouts = render_layouts(prefix, path_tokens)
             rendered_file = render_to_string :file => "#{prefix}#{path}/index.html.haml"
           else
-            flash[:error].push "Unable to locate index for directory \"#{path}\""
-            logger.error flash[:error].last
+            flash[:errors].push "Unable to locate index for directory \"#{path}\""
+            logger.error flash[:errors].last
           end # if
         else
-          flash[:error].push "Unable to locate file or directory at \"#{path}\""
-          logger.error flash[:error].last
+          flash[:errors].push "Unable to locate file or directory at \"#{path}\""
+          logger.error flash[:errors].last
           break
         end # if-elsif-if
       end # if-else

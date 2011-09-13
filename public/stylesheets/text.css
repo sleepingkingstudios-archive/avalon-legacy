@@ -2,9 +2,8 @@
  * public/stylesheets/sass/text.scss
  ***************************************************************************/
 /****************************************************************************
- *  public/stylesheets/sass/layout.scss
+ *  public/stylesheets/sass/_dimensions.scss
  ***************************************************************************/
-/* DEFINE VARIABLES */
 /*  940 pixels allows for a wide variety of grid/column combinations, using
  *  a 20 pixel grid size (the minus one accounts for an "extra" margin,
  *  since in most layouts there will be one fewer space between sections
@@ -17,74 +16,6 @@
  *    3 columns @ 300px
  *    4 columns @ 220px
  */
-html {
-  overflow-y: scroll; }
-
-body {
-  position: relative;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0; }
-
-div#banner {
-  width: 940px;
-  height: 80px;
-  margin-top: 20px; }
-  div#banner h1 {
-    margin: 0;
-    font-size: 64px;
-    line-height: 80px;
-    text-align: center; }
-
-div#top_navigation {
-  width: 940px;
-  height: 30px; }
-  div#top_navigation h2.navigation_item {
-    width: 172px;
-    height: 30px;
-    margin: 0 0 0 20px;
-    float: left;
-    text-align: center; }
-    div#top_navigation h2.navigation_item:first-child {
-      margin-left: 0; }
-
-div#content {
-  width: 660px;
-  min-height: 480px;
-  margin-top: 20px;
-  float: left; }
-
-div#sidebar {
-  width: 260px;
-  margin-top: 20px;
-  margin-left: 20px;
-  float: left; }
-  div#sidebar h2:first-child {
-    padding-top: 10px;
-    margin-bottom: 10px; }
-
-div.notices {
-  border-style: solid;
-  border-width: 2px;
-  padding: 8px;
-  margin-bottom: 20px; }
-  div.notices ul {
-    margin-top: 0;
-    margin-bottom: 0; }
-
-table {
-  margin: 0 0 20px;
-  border-collapse: collapse;
-  border-style: solid;
-  border-width: 1px; }
-
-table, td, th {
-  border: solid;
-  border-width: 1px; }
-
-br.clear {
-  clear: both; }
-
 body {
   font-size: 100%;
   font-size: 15px;

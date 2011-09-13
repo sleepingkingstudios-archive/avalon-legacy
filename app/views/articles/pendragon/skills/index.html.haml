@@ -1,0 +1,169 @@
+-# app/views/articles/pendragon/skills/index.html.haml
+
+= render "layoutRenderer"
+
+%h1 Skills and Techniques
+%p
+  Skills and Techniques are what make Pendragon characters and creatures
+  unique.
+
+%h2 Types of Skill
+%p
+  Most skills fall into one of the following categories:
+
+%h3 Skill Checks and Proficiency
+%p
+  The
+  = pendragon_skill_link "Role Proficiency"
+  skill indicates that the creature is trained in or has sufficient experience
+  in the selected role (see
+  = "#{link_to "Skill Roles", "#skill-roles"},".html_safe
+  below). Creatures attempting to make a skill check in an unfamiliar role
+  suffer a -3 penalty to the check.
+%p
+  The
+  = pendragon_skill_link "Role Mastery"
+  skill grants a bonus to skill checks in that role, representing the benefit
+  of additional training or experience beyond the point of mere proficiency. In
+  addition, for some roles having a Role Mastery of a certain level is required
+  to learn or improve advanced Techniques.
+%p
+  Other skills grant a situational or conditional bonus to skill checks made
+  in one or more roles.
+  %span.rewrite Need example here.
+
+%h3 Techniques
+%p
+  Techniques are special skills that allow a creature to use a special trick or
+  ability. Typically, techniques are combat-focused abilities, such as spells
+  or special attacks. Techniques add variety to creatures&rsquo; and
+  characters&rsquo; options in combat.
+%p
+  Techniques often require the creature to spend Tokens to use, which are
+  themselves obtained from skills granting a Token Pool (see below). In order
+  to learn (but not necessarily use) a technique associated with a given skill
+  role, the creature must have proficiency in that role. More powerful
+  techniques, or improving ones techniques already known, will often require
+  the creature to have a certain level of mastery in that role as well.
+%p
+  For more information on techniques, see
+  = "#{link_to "Using Techniques", "/articles/pendragon/running/combat#techniques"}.".html_safe
+
+%h3 Token Pools
+%p
+  Token Pools provide a creature with a resource they can spend to use
+  techniques. Most creatures have at least one token pool. By default, a token
+  pool has a maximum size equal to the creature's Spirit score. Creatures can
+  increase the size of their token pools by taking the
+  = pendragon_skill_link "Extra Token"
+  skill. Token pools come in two basic varieties, as noted in the token pool's
+  description:
+%p
+  Some token pools represent power that is built up quickly in combat, such as
+  a berserker's rage. A token pool of this type starts empty when combat
+  begins, and is charged as a result of actions the creature takes in battle.
+  For an example, see the
+  = link_to "Guardian", [:articles, PendragonSkill.find_by_slug("guardian")]
+  skill.
+%p
+  Other token pools represent power that is slowly gathered over time and
+  expended quickly in battle, such as a wizard's stores of magic. A token pool
+  of this type starts full after each rest, but is not normally replenished
+  during battle. In addition, token pools of this type grant a token reserve,
+  which is only replenished after a daily rest. By default, a token pool of
+  this type grants 3 reserve tokens. For an example, see the
+  = link_to "Mystic", [:articles, PendragonSkill.find_by_slug("mystic")]
+  skill.
+
+%h3 Other Skills
+%p
+  Some skills grant a benefit that does not fall into any of these categories.
+  For example, the
+  = pendragon_skill_link "Extra Hit Points"
+  skill increases a creature's maximum hit points.
+
+%h2#skill-roles Skill Roles
+
+%h3 Skill Checks
+%p
+  Skill checks are used to resolve most actions in the Pendragon system. To
+  perform a skill check, roll a check as normal and add the creature's relevant
+  attribute score, plus any bonuses from the Role Mastery skill, equipment, or
+  other applicable effects.
+
+%h4 Role Proficiency
+
+%h3 Crafting Skills, Items, and Consumables
+  
+%h2 Skill Tasks
+
+%h2 Reading the Skill Entries
+
+%h3 Skill Name
+%p
+  At the top of the skill entry is the skill name. Each skill has a unique
+  name, which reflects the nature and the effects of the skill.
+
+%h3 Skill Type and Subtypes
+%p
+  Directly below the name is the skill type, which determines the requirements
+  on or restrictions to using the skill, as well as what other effects can
+  influence the use or the effect of the skill. Each skill has a single type,
+  plus zero or more subtypes, which are listed in square brackets after the
+  skill type.
+%p
+  The following types and subtypes have special requirements, restrictions, or
+  other rules regarding their use. Other subtypes not listed only determine
+  what other effects are triggered by or can influence the use of skills of
+  that subtype.
+
+%h4#instant Instant
+%p
+  The instant subtype indicates that the skill can be used out of the usual
+  turn order, even in the middle of another creature's action. However, the
+  skill can only be used immediately after the trigger condition is met (see
+  Trigger, below).
+
+%h4#magic Magic
+%p
+  The magic subtype indicates that the effect is powered by supernatural
+  energies. Skills with the magic subtype typically require the user to spend
+  mana tokens.
+  
+%h4#melee Melee
+%p
+  The melee subtype indicates that the user must make a successful melee attack
+  check in order to use the skill. For techniques with the melee subtype, the
+  check must be made using the specified equipment. If the user cannot make a
+  melee attack (e.g. the target is out of reach), or if the check fails, then
+  the skill fails.
+%p
+  If the skill is a technique, then unless otherwise noted the usual effect of
+  a successful melee attack is applied to the target in addition to the effects
+  of the technique.
+
+%h4#projectile Projectile
+%p
+  As the melee subtype, above, except that the user must make a successful
+  projectile attack in order to use the skill. Skills with the projectile
+  subtype require a clear path to the target.
+
+%h4#spell Spell
+%p
+  Spells are magical effects brought forth through ritual and incantation.
+  Characters or creatures with roles such as &ldquo;sorcerer&rdquo;,
+  &ldquo;wizard&rdquo; or &ldquo;mystic&rdquo; make extensive use of spells.
+%p
+  Spells have no inherent restrictions or requirements, but most spellcasters
+  have one or more restrictions on spell use, depending on the magical
+  tradition they represent. In addition, spells always have the [Magic]
+  subtype (see above), and are subject to the restrictions thereof.
+
+%h4#technique Technique
+%p
+  Techniques are special abilities that use or require a piece of equipment, as
+  determined by the full type, e.g. a &ldquo;Melee Weapon Technique&rdquo;
+  requires the use of any melee weapon, and a &ldquo;Shield Technique&rdquo;
+  requires the user to be wielding a shield. If the user is not wielding (or
+  wearing, in the case of worn equipment) the specified equipment, then the
+  creature or character cannot use that skill.

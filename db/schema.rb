@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110906005618) do
+ActiveRecord::Schema.define(:version => 20110909184124) do
 
   create_table "pendragon_skills", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20110906005618) do
     t.datetime "updated_at"
     t.string   "slug"
     t.string   "action"
+    t.string   "resist"
+    t.text     "requirements"
   end
 
   create_table "users", :force => true do |t|

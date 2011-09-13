@@ -21,18 +21,25 @@ class ApplicationController < ActionController::Base
     
       render :text => activity.html_safe
     else
-      # standard http; redirect to route
+      # standard http; redirect to root
       redirect_to :root
     end # if-else
   end # action recent_activity
   
-  before_filter :get_local_time, :get_theme_override, :override_flash_notices
+  before_filter :get_local_time, :get_theme_override
+  before_filter :override_flash_notices, :except => :recent_activity
   
   def override_flash_notices
+    logger.debug flash.inspect
+    logger.debug flash.now.inspect
     %w(error warning notice).each do |key|
-      flash[key.intern] = [flash[key.intern] || []].flatten
-      flash.now[key.intern] = [flash.now[key.intern] || []].flatten
+      single_key = key.intern
+      plural_key = (key + "s").intern
+      flash[plural_key] = [flash[plural_key] || []].push(flash[single_key]).flatten.compact.uniq
+      flash.now[plural_key] = [flash.now[plural_key] || []].push(flash.now[single_key]).flatten.compact.uniq
     end # each
+    logger.debug flash.inspect
+    logger.debug flash.now.inspect
   end # method override_flash_notices
   
   def get_local_time

@@ -2,31 +2,7 @@
  *  public/stylesheets/sass/layout.scss
  ***************************************************************************/
 
-/* DEFINE VARIABLES */
-$margin: 20px;
-$total_width: 940px;
-  /*  940 pixels allows for a wide variety of grid/column combinations, using
-   *  a 20 pixel grid size (the minus one accounts for an "extra" margin,
-   *  since in most layouts there will be one fewer space between sections
-   *  than there are sections).
-   *  
-   *  940 = 20 * (48 - 1):
-   *    2 columns @ 460px
-   *    2 columns @ 580px, 340px (golden ratio, 96.9% accurate)
-   *    2 columns @ 660px, 260px (golden ratio squared)
-   *    3 columns @ 300px
-   *    4 columns @ 220px
-   */
-   
-$banner_height: 80px;
-
-$top_nav_height: 30px;
-$top_nav_item_count: 5;
-
-$content_width: 660px;
-$content_min_height: 480px;
-
-$sidebar_width: 260px;
+@import "dimensions";
 
 html {
   overflow-y: scroll;
@@ -87,6 +63,10 @@ div#sidebar {
   h2:first-child {
     padding-top: 10px;
     margin-bottom: 10px;
+    
+    &.title {
+      margin-bottom: 0;
+    } // div#sidebar h2.title:first-child
   } // div#sidebar h2:first-child
 } // div#sidebar
 

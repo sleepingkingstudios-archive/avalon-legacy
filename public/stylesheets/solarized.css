@@ -35,6 +35,8 @@ html {
     background-position: left top;
     background-repeat: no-repeat;
     padding-left: 25px; }
+  html .rewrite {
+    color: #6c71c4; }
   html div.notices {
     border-color: #657b83; }
   html.dark {
@@ -55,5 +57,7 @@ html {
       background-position: left -2px;
       background-repeat: no-repeat;
       padding-left: 25px; }
+    html.dark .rewrite {
+      color: #cb4b16; }
     html.dark div.notices {
       border-color: #839496; }

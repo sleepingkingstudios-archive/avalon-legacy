@@ -16,7 +16,7 @@ class PendragonSkill < ActiveRecord::Base
   end # method <=>
   
   def subtypes_as_array
-    return (self.subtypes || []).split(",").map do |subtype| subtype.strip end
+    return (self.subtypes || "").split(",").map do |subtype| subtype.strip end
   end # method subtypes_as_array
   
   def subtypes_as_formatted_string

@@ -13,7 +13,7 @@ class Articles::Pendragon::SkillsController < ApplicationController
   
   # GET /articles/pendragon/skills/list
   def list
-    @skills = PendragonSkill.all
+    @skills = PendragonSkill.all.sort_by(&:name)
   end # action list
   
   # GET /articles/pendragon/skills/new
@@ -32,7 +32,7 @@ class Articles::Pendragon::SkillsController < ApplicationController
     @skill = PendragonSkill.new(params[:pendragon_skill])
     
     if @skill.save
-      redirect_to articles_pendragon_skill_path, :namespace => "articles", :notice => "Skill was successfully created."
+      redirect_to [:articles, @skill], :notice => "Skill was successfully created."
     else
       render :action => "new"
     end # if-else

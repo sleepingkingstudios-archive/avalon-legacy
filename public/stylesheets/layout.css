@@ -1,7 +1,9 @@
 /****************************************************************************
  *  public/stylesheets/sass/layout.scss
  ***************************************************************************/
-/* DEFINE VARIABLES */
+/****************************************************************************
+ *  public/stylesheets/sass/_dimensions.scss
+ ***************************************************************************/
 /*  940 pixels allows for a wide variety of grid/column combinations, using
  *  a 20 pixel grid size (the minus one accounts for an "extra" margin,
  *  since in most layouts there will be one fewer space between sections
@@ -59,6 +61,8 @@ div#sidebar {
   div#sidebar h2:first-child {
     padding-top: 10px;
     margin-bottom: 10px; }
+    div#sidebar h2:first-child.title {
+      margin-bottom: 0; }
 
 div.notices {
   border-style: solid;

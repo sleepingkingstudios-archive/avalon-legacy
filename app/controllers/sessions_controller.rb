@@ -13,9 +13,14 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to root_url, :notice => "Log in successful. What is thy bidding, my master?"
+      flash[:notices].push "Log in successful. What is thy bidding, my master?"
+      flash.keep :notices
+      logger.debug flash.inspect
+      redirect_to root_url
     else
-      flash.now.alert = "Invalid email or password"
+      flash[:errors].push "Invalid email or password"
+      flash.keep :errors
+      logger.debug flash.inspect
       redirect_to root_url
     end # end if-else
   end # action create

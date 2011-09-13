@@ -6,6 +6,10 @@
       %p
         = skill.type
         = skill.subtypes_as_formatted_string
+      - unless skill.requirements.nil? || skill.requirements.empty?
+        %p
+          %strong Requirements:
+          = skill.requirements
       - unless skill.action.nil? || skill.action.empty?
         %p
           %strong Action:
@@ -22,6 +26,10 @@
         %p
           %strong Target:
           = skill.target
+      - unless skill.resist.nil? || skill.resist.empty?
+        %p
+          %strong Resist:
+          = skill.resist
       - unless skill.trigger.nil? || skill.trigger.empty?
         %p
           %strong Trigger:

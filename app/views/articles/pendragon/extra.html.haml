@@ -51,6 +51,98 @@
       attacks?).
 
 %h1 Other Notes
+%p
+  Combat system based around encounter/daily duality; many resources have an
+  encounter version and a daily version. Examples:
+%table
+  %tbody
+    %tr
+      %th Encounter
+      %th Daily
+    %tr
+      %td Damage tokens
+      %td Wound tokens
+    %tr
+      %td Mana tokens
+      %td Reserve tokens
+      
+%p
+  Some effects are daily/longer, e.g. consumables, character death (without a
+  res spell handy). Call it &ldquo;expedition&rdquo; length?
+  
+%h2 Token Pools
+%p
+  Token pools come in two varieties. Some token pools start empty, and are
+  filled over the course of an encounter when a criterion is met (the creature
+  blocks an attack, the creature hits with a melee attack, etc).
+  %strong Examples:
+  Adrenaline/Rage tokens, Shield tokens.
+%p
+  Other token pools start full but are slowly depleted over the course of an
+  encounter.
+  %strong Examples:
+  Mana tokens.
+%p Balancing these two may be challenging.
+
+%h2 Mooks, Toughs, and Bosses
+%p
+  %strong Mooks
+  are &ldquo;trash mobs&rdquo;, encountered in large numbers, in softball
+  encounters, or escorting more powerful monsters. When a Mook's total damage
+  plus Wounds exceeds its hit point total, it immediately falls unconscious.
+  Mooks often have skills that rely on or benefit from having many allies.
+%p
+  %strong Toughs
+  are stronger creatures encountered in small numbers, or alone and
+  encountered by a gaggle of mooks. A full group of toughs can be a serious
+  challenge for an unprepared group. Toughs use the standard rules for damage
+  and wounds, and can use Encounter techniques. They often carry consumables.
+%p
+  %strong Bosses
+  are very strong creatures that are (hopefully) encountered alone or
+  accompanied by small numbers of mooks or toughs. A climactic encounter could
+  include a boss, one or two toughs, and a gaggle of mooks. Bosses have double
+  the hit points of a normal creature of their type, and use the standard rules
+  for damage and wounds. They can also use Encounter techniques and
+  consumables. Bosses often have powerful abilities that target multiple
+  enemies at once.
+  
+%h2 Size Categories
+%p
+  Each size above Medium grants +1 to Attack, +1 hit point, and +1 Athletics,
+  but -1 Defense and -1 Acrobatics.
+%p
+  Each size below Medium grants +1 to Defense and +1 to Defense, but -1 to
+  Attack, -1 hit point, and -1 Athletics.
+
+%h2 Resting
+
+%h3 Light Rest
+%p
+  Lasts 10 minutes. Creatures lose damage tokens equal to Body score, restore
+  mana tokens, etc. Can attempt heal check to lose additional damage tokens.
+  Cannot be chained together - must upgrade to hour's rest instead.
+
+%h3 Hour Rest
+%p
+  Lasts 1 hour. As light rest, but creatures lose all damage tokens. Spell
+  casters with Readied Spells can change their spells readied.
+
+%h3 Daily Rest
+%p
+  Lasts 8 hours. As hour rest, but creatures recover 1 wound token. Spell
+  casters with Prepared Spells can prepare new spells. Characters with
+  crafting skills may craft a consumable item if they (or the recipient) have a
+  consumable slot open.
+
+%h2 Weapon Chain Techniques
+%p
+  A weapon chain technique requires multiple attack rolls, each of which has
+  a defined effect (and cost). E.g. dagger attack -> hamstring (cripple) ->
+  disembowel (inflicts 1 wound). Total effect is greater than a normal technique,
+  but requires multiple rolls to succeed.
+%p
+  Mix and match technique chain bits?
 
 %h2 Special Movement Skills
 %p
@@ -109,7 +201,7 @@
 %p
   For a Vancian wizard, who casts memorized spells once and must prepare them
   anew each day, take the Spell Preparation skill one or more times. Each time
-  that skill is taken, the creature gains two prepared spell slots, which he,
+  that skill is taken, the creature gains three prepared spell slots, which he,
   she, or it can fill with any spells for which he, she, or it has access (see
   Spell Books and Spell Access, below). The wizard may cast any of its prepared
   spells as if it were a spell known, expending the activation time, mana cost,

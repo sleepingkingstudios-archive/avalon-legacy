@@ -123,9 +123,12 @@
                 - index += 1
             = link_to "Add Subtype", {}, :class => "add_subtype_link"
         %tr
+          %td= form.label :requirements
+          %td= form.text_area :requirements, :rows => 3, :style => "width: 100% !important;"
+        %tr
           %td= form.label :action
           %td
-            = form.select :action, options_for_select(["Full-Round Action", "Standard Action", "Move Action", "Minor Action", "Instant", ""])
+            = form.select :action, options_for_select(["", "Full-Round Action", "Standard Action", "Move Action", "Minor Action", "Instant"])
         %tr
           %td= form.label :cost
           %td= form.text_field :cost
@@ -135,6 +138,9 @@
         %tr
           %td= form.label :target
           %td= form.text_field :target
+        %tr
+          %td= form.label :resist
+          %td= form.text_field :resist
         %tr
           %td= form.label :trigger
           %td= form.text_field :trigger

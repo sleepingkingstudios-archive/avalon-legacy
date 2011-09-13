@@ -49,6 +49,10 @@ html {
     padding-left: 25px;
   } // html .leaf
   
+  .rewrite {
+    color: $violet;
+  } // *.rewrite
+  
   div.notices {
     border-color: $base00;
   } // html div.notices
@@ -83,6 +87,10 @@ html {
       background-repeat: no-repeat;
       padding-left: 25px;
     } // html.dark .apple
+    
+    .rewrite {
+      color: $orange;
+    } // html.dark *.rewrite
     
     div.notices {
       border-color: $base0;

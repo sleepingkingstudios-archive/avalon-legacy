@@ -11,22 +11,34 @@
   
 = content_for :sidebar do
   %h2 Pendragon Navigation
-  %ul#side_navigation
+  
+  %ul#side_navigation{:style => "margin-bottom: 10px;"}
     %li.apple= link_to "Home", "/articles/pendragon"
-    %li.apple= link_to "The Basics", "/articles/pendragon/basics"
-    %li.apple= link_to "Character Creation", "/articles/pendragon/character-creation"
+    %li.apple= link_to "Glossary", "/articles/pendragon/glossary"
+    %li.apple= link_to "Quick Reference", "/articles/pendragon/quick-reference"
+    - if current_user then
+      %li.leaf= link_to "Extra Notes", "/articles/pendragon/extra"
+      %li.leaf= link_to "Todo List", "/articles/pendragon/todo"
+    
+  %h3.subtitle Creatures and Characters
+  %ul#side_navigation{:style => "margin-bottom: 10px;"}
+    %li.apple= link_to "Character Basics", "/articles/pendragon/basics"
+    %li.apple= link_to "Attributes", "/articles/pendragon/attributes"
     %li.apple
-      = link_to "Skills", "/articles/pendragon/skills"
+      = link_to "Skills and Techniques", "/articles/pendragon/skills"
       %ul.no_margin
         %li.leaf= link_to "List of Skills", "/articles/pendragon/skills/list"
-    %li.apple
-      = link_to "Running the Game", "/articles/pendragon/running"
-      %ul.no_margin
-        %li.leaf= link_to "Combat", "/articles/pendragon/running/combat"
-    %li.apple= link_to "Glossary", "/articles/pendragon/glossary"
-    %li.apple
-      = link_to "Quick Reference", "/articles/pendragon/quick-reference"
+    %li.apple Stats and Tokens
+    %li.apple= link_to "Creating a Character", "/articles/pendragon/character-creation"
+
+  %h3.subtitle Running the Game
+  %ul#side_navigation{:style => "margin-bottom: 10px;"}
+    %li.apple= "Game Basics" #link_to "Game Basics", "/articles/pendragon/running"
+    %li.apple= link_to "Combat", "/articles/pendragon/running/combat"
+    %li.apple Exploration
   
-  %h2 Site Navigation
-  %ul#side_navigation
-    = navigation :tag => :li, :tag_class => :apple
+  %h3.subtitle Narrator's Guide
+  
+  / %h2 Site Navigation
+  / %ul#side_navigation
+  /   = navigation :tag => :li, :tag_class => :apple

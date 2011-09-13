@@ -61,7 +61,9 @@
         }); // end click
         
         // load recent activity
-        jQuery('#recent_activity').load('#{recent_activity_path}')
+        if(jQuery('#recent_activity').css('display') == "block") {
+          jQuery('#recent_activity').load('#{recent_activity_path}');
+        } // end if
       }); // end document.ready
     
     = csrf_meta_tag

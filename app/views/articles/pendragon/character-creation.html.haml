@@ -45,9 +45,9 @@
 %p.apple= link_to "Back to Top", "#top"
 
 %h2#attributes Select Your Attributes
-/ %p.apple
-/   Main Article:
-/   = link_to "Attributes", "/pendragon/attributes"
+%p.apple
+  Main Article:
+  = link_to "Attributes", "/pendragon/attributes"
 %p
   Each creature and character in Pendragon has three attribute scores, one for
   each of the Mind, Body, and Spirit attributes. An average human has a score
@@ -131,6 +131,11 @@
   his, her, or its Mind score. So, a creature with a Mind score of 5 would
   select five skills. Skills may be chosen from the following
   = "#{link_to "List of Skills", "/articles/pendragon/skills/list"}.".html_safe
+%p
+  In addition, each creature may choose one Token Pool skill and one Encounter
+  skill. A Token Pool allows a creature to gather and spend tokens, which are
+  used to power various abilities. Encounter skills are powerful techniques
+  that require rest before they can be used again.
 
 %h3 Earning Skill Points
 %p
