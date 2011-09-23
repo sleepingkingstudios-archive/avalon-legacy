@@ -14,7 +14,7 @@ Avalon::Application.routes.draw do
   
   namespace "articles" do
     namespace "pendragon" do
-      resources :skills, :only => [:create, :edit, :new, :show, :update] do
+      resources :skills, :except => :destroy do
         collection do
           get 'list'
         end # collection

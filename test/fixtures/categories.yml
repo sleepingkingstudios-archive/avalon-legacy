@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+weapons:
+  title: Weapons
+  slug: weapons
+
+swords:
+  title: Swords
+  slug: swords
+
+japanese_swords:
+  title: Japanese Swords
+  slug: japanese-swords
+  
+berries:
+  title: Berries
+  slug: berries

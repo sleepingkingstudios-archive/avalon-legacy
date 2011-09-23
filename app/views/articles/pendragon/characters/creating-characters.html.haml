@@ -1,0 +1,182 @@
+= render "layoutRenderer"
+
+%h1 Character Creation
+%p
+  Designing a new creature or character in Pendragon can be as simple (or as
+  involved) as you like. The following steps will guide you through the
+  process.
+  
+.block
+  %p.apple= link_to "Create a Concept", "#concept"
+  %p.apple= link_to "Select your Attributes", "#attributes"
+  %p.apple= link_to "Choose your Skills", "#skills"
+  %p.apple= link_to "Finishing Up", "#finishing-up"
+
+%h2#concept Create a Concept
+%p
+  The most important step in creating a new character or creature is starting
+  with a strong concept.
+  
+%h3 The Hook
+%p
+  A strong concept starts with a compelling hook. Here, brevity is indeed the
+  soul of wit. Aim for a concept that can be conveyed plainly in just a
+  sentence or two, one to sum up the creature or character's abilities, e.g.
+  &ldquo;A swashbuckling desert warrior with some fire magic...&rdquo; and one
+  to give them a bit of personality or motivation, e.g. &ldquo;...who seeks fame
+  and fortune by exploring ruins of lost civilizations.&rdquo;
+%p.no_margin
+  Here are a few more sample hooks for characters and creatures, both heroic
+  and villainous:
+%ul
+  %li
+    &ldquo;A warrior with protective- and faith-based abilities who wants to
+    protect the weak, the innocent, and the downtrodden.&rdquo;
+  %li
+    &ldquo;A staff-wielding scholar with hidden psychic powers who wants to
+    uncover the truth about an ancient mystery.&rdquo;
+  %li
+    &ldquo;A tribe of gun-toting ratmen that live in the sewers and worship
+    chaos cults.&rdquo;
+  %li
+    &ldquo;A living slime creature that absorbs elemental magic from its
+    surroundings.&rdquo;
+
+%p.apple= link_to "Back to Top", "#top"
+
+%h2#attributes Select Your Attributes
+%p.apple
+  Main Article:
+  = link_to "Attributes", "/pendragon/attributes"
+%p
+  Each creature and character in Pendragon has three attribute scores, one for
+  each of the Mind, Body, and Spirit attributes. An average human has a score
+  of 3 in each of these attributes.
+  
+%h3 The Three Attributes
+%p
+  Attribute scores are used when making checks to resolve actions, but each
+  attribute also has an inherent effect at character creation.
+  
+%h4 Mind
+%p
+  The Mind attribute represents intellect, intuition, and insight. A
+  character's starting Mind score determines how many Skills he or she can
+  select at character creation (see 
+  ="#{(link_to "Choose Your Skills", "#skills")},".html_safe
+  below).
+
+%h4 Body
+%p
+  The Body attribute represents physical strength, dexterity and endurance. A
+  character's starting Body score determines the size of the creature's hit
+  point pool.
+
+%h4 Spirit
+%p
+  The Spirit attribute represents faith, fortune, force of personality, and
+  simple
+  :plain
+    <em>je ne sais quoi</em>.
+  A character's starting Spirit score determines the size of the creature's
+  token pools (aside from the hit point pool).
+  
+  
+%h3 Assigning Attribute Points
+%p
+  Since heroes, villains, and beasties of all descriptions are typically
+  anything but rarely average, during character creation you can select your
+  own attribute scores. Ask your Narrator how many points you can distribute
+  among your three attributes:
+
+%table
+  %tbody
+    %tr
+      %th.left Game Power
+      %td Gritty
+      %td Average
+      %td Heroic
+      %td Legendary
+    %tr
+      %th.left Points
+      %td 9-10
+      %td 11-12
+      %td 13-14
+      %td 15+
+
+%p
+  You may distribute the attribute points as you wish, subject to the following
+  rules: first, the minimum score is 1 and the maximum score is 6, representing
+  the nadir and the height of human possibility (remember, a 3 is average).
+  However, ask (and receive) your Narrator's permission before choosing a score
+  of 1 in any attribute. Characters with a score that low may not be adequately
+  prepared for challenges normally appropriate to characters of that experience.
+
+%p.apple= link_to "Back to Top", "#top"
+
+%h2#skills Choose Your Skills
+%p.apple
+  Main Article:
+  = link_to "Skills", "/articles/pendragon/skills"
+  
+%p
+  Skills are the most important mechanic in the Pendragon system, and are what
+  define and differentiate creatures and characters within the sphere of game
+  mechanics. Skills can grant new attacks, spells, shouts, or other techniques,
+  or grant bonuses to checks in specific circumstances.
+  
+%h3 Starting Skills
+%p
+  At character creation, each creature may choose one skill for each point of
+  his, her, or its Mind score. So, a creature with a Mind score of 5 would
+  select five skills. Skills may be chosen from the following
+  = "#{link_to "List of Skills", "/articles/pendragon/skills/list"}.".html_safe
+%p
+  In addition, each creature may choose one Token Pool skill and one Encounter
+  skill. A Token Pool allows a creature to gather and spend tokens, which are
+  used to power various abilities. Encounter skills are powerful techniques
+  that require rest before they can be used again.
+
+%h3 Earning Skill Points
+%p
+  During an adventuring career, a character will earn Skill Points for
+  overcoming obstacles and achieving quest or campaign objectives. Skill points
+  can be spent to acquire new skills, or to pick up skill boosts for the
+  character's existing skills.
+
+%h4 Skill Boosts
+%p
+  This space unintentionally left blank. Caveat lector.
+  
+%h4 Skills and Training
+%p
+  Depending on the campaign, the Narrator may ask the players to justify how
+  each character gained his or her new skills, or to go so far as to mandate
+  explicit training periods during downtime. For most campaigns, however, the
+  author recommends that no formal training requirement be applied for most
+  skills, so long as the skill is not a radical departure from the character's
+  core concept.
+%p
+  Instead, the character is assumed to have been practicing and experimenting
+  during the course of his or her adventures. A mage, for example, may have
+  been practicing a new incantation or formula, or a swordsman a new technique.
+  Even in the case of a swordsman picking up a basic spell or two, it can be
+  hand-waved by simply saying that the swordsman has been practicing with the
+  party mage over the campfire.
+%p
+  A formal justification can be applied, however, if there is an in-game reason
+  why the skill would be difficult to learn or obtain. For example, learning a
+  rare and powerful spell could require a tense negotiation with the wizard's
+  guild, or even a side quest into an ancient crypt complex to retrieve the
+  spell scroll from the tomb of an ancient mummy mage. Likewise, abilities tied
+  to a particular group, organization or tradition may require affiliation and
+  training to acquire. To compensate for the increased difficulty of acquiring
+  these rare abilities, the Narrator may allow a character to apply a single
+  Skill Boost (see above) to the ability when learned, without spending a skill
+  point.
+
+%p.apple= link_to "Back to Top", "#top"
+
+%h2#finishing-up Finishing Up
+
+%p.apple= link_to "Continue to Running the Game", "/articles/pendragon/running"

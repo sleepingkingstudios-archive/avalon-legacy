@@ -1,6 +1,10 @@
 class Articles::Pendragon::SkillsController < ApplicationController
   before_filter :authenticate, :only => [:edit, :new, :update]
   
+  def index
+    
+  end # method index
+  
   # GET /articles/pendragon/skills/:id
   # GET /articles/pendragon/skills/:slug
   def show
