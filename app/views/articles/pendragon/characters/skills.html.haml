@@ -1,0 +1,107 @@
+-# app/views/articles/pendragon/characters/skills.html.haml
+
+= render "layoutRenderer"
+
+%h1 Skills and Techniques
+%ul
+  %li.apple= link_to "Skill Roles", "#skill-roles"
+  %li.apple= link_to "Types of Skill", "#types-of-skill"
+%p
+  Skills and Techniques are what make Pendragon characters and creatures unique.
+
+%h2#skill-roles Skill Roles
+%ul
+  %li.leaf= link_to "Skill Checks", "#skill-checks"
+  %li.leaf= link_to "Skill Tasks", "#skill-tasks"
+
+%h3#skill-checks Skill Checks
+%p
+  Skill checks are used to resolve most actions in the Pendragon system. To
+  perform a skill check, roll a check as normal and add the creature's relevant
+  attribute score, plus any bonuses from the Role Mastery skill, equipment, or
+  other applicable effects.
+
+%h4 Role Proficiency
+
+%h3#skill-tasks Skill Tasks
+
+%p.apple= link_to "Back to Top", "#"
+
+%h2#types-of-skill Types of Skill
+%p
+  Most skills fall into one of the following categories:
+
+%h3 Skill Checks and Proficiency
+%p
+  The
+  = pendragon_skill_link "Role Proficiency"
+  skill indicates that the creature is trained in or has sufficient experience
+  in the selected role (see
+  = "#{link_to "Skill Roles", "#skill-roles"},".html_safe
+  below). Creatures attempting to make a skill check in an unfamiliar role
+  suffer a -3 penalty to the check.
+%p
+  The
+  = pendragon_skill_link "Role Mastery"
+  skill grants a bonus to skill checks in that role, representing the benefit
+  of additional training or experience beyond the point of mere proficiency. In
+  addition, for some roles having a Role Mastery of a certain level is required
+  to learn or improve advanced Techniques.
+%p
+  Other skills grant a situational or conditional bonus to skill checks made
+  in one or more roles.
+  %span.rewrite Need example here.
+
+%h3 Techniques
+%p
+  Techniques are special skills that allow a creature to use a special trick or
+  ability. Typically, techniques are combat-focused abilities, such as spells
+  or special attacks. Techniques add variety to creatures&rsquo; and
+  characters&rsquo; options in combat.
+%p
+  Techniques often require the creature to spend Tokens to use, which are
+  themselves obtained from skills granting a Token Pool (see below). In order
+  to learn (but not necessarily use) a technique associated with a given skill
+  role, the creature must have proficiency in that role. More powerful
+  techniques, or improving ones techniques already known, will often require
+  the creature to have a certain level of mastery in that role as well.
+%p
+  For more information on techniques, see
+  = "#{link_to "Using Techniques", "/articles/pendragon/running/combat#techniques"}.".html_safe
+
+%h3 Token Pools
+%p
+  Token Pools provide a creature with a resource they can spend to use
+  techniques. Most creatures have at least one token pool. By default, a token
+  pool has a maximum size equal to the creature's Spirit score. Creatures can
+  increase the size of their token pools by taking the
+  = pendragon_skill_link "Extra Token"
+  skill. Token pools come in two basic varieties, as noted in the token pool's
+  description:
+%p
+  Some token pools represent power that is built up quickly in combat, such as
+  a berserker's rage. A token pool of this type starts empty when combat
+  begins, and is charged as a result of actions the creature takes in battle.
+  For example, the
+  = pendragon_skill_link "Guardian"
+  skill powers abilities that protect the user and allies, and is recharged
+  whenever an attack fails on the user.
+%p
+  Other token pools represent power that is slowly gathered over time and
+  expended quickly in battle, such as a wizard's stores of magic. A token pool
+  of this type starts full after each rest, but is not normally replenished
+  during battle. In addition, token pools of this type grant a token reserve,
+  which is only replenished after a daily rest. By default, a token pool of
+  this type grants 3 reserve tokens. For example, the
+  = pendragon_skill_link "Mystic"
+  skill powers spells and other magical abilities.
+
+%h3 Other Skills
+%p
+  Some skills grant a benefit that does not fall into any of these categories.
+  For example, the
+  = pendragon_skill_link "Extra Hit Points"
+  skill increases a creature's maximum hit points.
+  
+%p.apple
+  = link_to "Continue to Stats and Tokens", "/articles/pendragon/characters/tokens"

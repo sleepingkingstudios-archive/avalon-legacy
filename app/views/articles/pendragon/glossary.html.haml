@@ -3,23 +3,45 @@
 %h1 Glossary
 %p
   The following is a glossary of terms used in the Pendragon game system.
-  
-%h3.glossary-item#skill Skill
+
+%h3.glossary-item#attributes
+  Attributes
+  %span#body &nbsp;
+  %span#mind &nbsp;
+  %span#spirit &nbsp;
 %p.apple
   Main Article:
-  = link_to "Skills", "/articles/pendragon/skills"
+  = link_to "Attributes", "/articles/pendragon/characters/attributes"
 %p
-  Skills are the most important mechanic in the Pendragon system, and are what
-  define and differentiate creatures and characters within the sphere of game
-  mechanics. Skills can be (roughly) divided into two categories: skill
-  abilities and skill bonuses.
+  Each creature and character in Pendragon has three attribute scores, one for
+  each of the Mind, Body, and Spirit attributes. Attribute scores typically
+  range from 1 to 6; an average human has a score of 3 in each of these
+  attributes.
 %p
-  Skill abilities grant a creature or character an additional ability or trick
-  that it can use. A magic spell, a weapon technique, a psychic shield, and the
-  ability to land safely after a long fall are all examples of skill abilities.
+  Most actions require a check to resolve, which adds the creature's relevant
+  attribute score (and possibly a Skill or other bonus) to the die result. In
+  addition, each attribute has an innate effect on creatures: the Body
+  attribute determines a creature's hit point total, the Mind attribute
+  determines how many starting Skills a creature can select, and the Spirit
+  attribute determines the size of a creature's Token Pools.
+%p.leaf
+  See Also:
+  = "#{link_to "Checks", "#checks"},".html_safe
+  = "#{link_to "Hit Points", "#hit-points"},".html_safe
+  = link_to "Token Pools", "#token-pools"
+%p.apple= link_to "Back to Top", "#"
+
+%h3.glossary-item#skills Skills
+%p.apple
+  Main Article:
+  = link_to "Skills", "/articles/pendragon/characters/skills"
 %p
-  Skill bonuses provide some sort of numeric bonus or effect. Unlike skill
-  abilities, skill bonuses are not activated by the user. Instead, they are
-  typically static or "always on", e.g. a skill that grants +1 to casting Fire
-  spells, or a skill that grants +1 to checks made to climb or to gather
-  information socially.
+  Skills are what make Pendragon characters and creatures unique. Each skill
+  grants the creature a specific bonus, whether it is a bonus to a particular
+  type of check, the use of a special ability (skills of this type are called
+  Techniques), access to a Token Pool or some other benefit.
+%p.leaf
+  See Also:
+  = "#{link_to "Skill Points", "#skill-points"},".html_safe
+  = link_to "Techniques", "#techniques"
+%p.apple= link_to "Back to Top", "#"

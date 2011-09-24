@@ -42,6 +42,6 @@
           = skill.description.html_safe
         - when "redcarpet"
           :redcarpet
-            = skill.description
+            #{skill.description}
     %span.skill-links
       = link_to "Edit Skill", "/articles/pendragon/skills/#{skill.slug}/edit"

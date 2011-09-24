@@ -1,0 +1,34 @@
+-# app/views/articles/pendragon/running/index.html.haml
+
+= render "layoutRenderer"
+
+%h1.title Running The Game
+%h2.subtitle The Basics
+
+%h2#checks The Check
+%p
+  The most basic task resolution in the Pendragon system is the
+  <strong>check</strong>, which is used to determine the success or failure of
+  virtually all non-trivial actions taken by creatures or characters.
+
+%h3 Making a Check
+%p
+  To perform or &ldquo;make&rdquo; a check, roll two six-sided dice and add the
+  numbers that appear; this is referred to as the <strong>dice result</strong>.
+  To the dice result, you also add any bonuses or subtract any penalties from
+  game effects that make the action easier or harder. For example, physical
+  fitness makes it easier to lift a heavy rock, so you would add the creature's
+  Body score to the die result (this is an Attribute check, see below).
+
+%h3 Types of Check
+  
+
+%h4 Attribute Checks
+
+%h4 Skill Checks
+
+%h4 Resist Checks
+
+%h3 Resolving Other Actions
+
+%p.apple= articles_link "Continue to Combat", "pendragon/running/combat"

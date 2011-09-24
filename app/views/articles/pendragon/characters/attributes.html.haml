@@ -1,0 +1,92 @@
+-# app/views/articles/pendragon/attributes.html.haml
+
+= render "layoutRenderer"
+
+%h1 Attributes
+%p
+  A creature's
+  %strong attributes
+  represent its base physical, mental, and spiritual aptitudes. Each creature
+  has an
+  %strong attribute score
+  in each of the three attributes &ndash; Mind, Body, and Spirit &ndash; which
+  is a numerical measure of that creature's aptitude in that area. Attribute
+  scores are used for making most checks (see
+  = "#{link_to "Attribute Checks", "#attribute-checks"},".html_safe
+  below), and for determining many of a creature's other stats, such as its hit
+  point total and the size of its token pools.
+  
+%h2 Attribute Scores
+%p
+  An attribute score is a numerical measure of a creature's aptitude in a
+  particular attribute. Each creature has an attribute score for each of the
+  three attributes: Mind, Body, and Spirit (see below).
+%p
+  Generally, attribute scores vary from 1 to 6, with a score of 1 representing
+  a minimum functional ability and 6 the pinnacle of human ability. A score of
+  3 is considered equivalent to an average human. Some creatures have innately
+  higher or lower scores; for example, a gnome or halfling would have a lower
+  Body score because of its size, whereas a hulking troll would have a higher
+  Body score. The average troll might have a Body score of 5, and a range from
+  3 to 8 (an effective +2 to Body compared to a human).
+
+%h3#attribute-checks Attribute Checks
+%p
+  = articles_link "Checks", "pendragon/running/#checks", :append => ","
+
+%h4 Resist Checks
+
+%h2 Mind, Body, and Spirit
+%p
+  There are three attributes in the Pendragon system: Mind, Body, and Spirit.
+  Each attribute represents a different broad aspect of the creature's basic
+  capabilities.
+  
+%h3#mind Mind
+%p
+  The Mind attribute represents a creature's mental aptitude. A creature's Mind
+  score determines how many Skills it can choose at character creation.
+%p
+  Creatures with a high Mind score can be intellectual, intuitive, or
+  insightful. They can be thoughtful and contemplative, preferring to think
+  through problems before taking action, or they can be lightning-fast
+  thinkers, able to solve a problem at a glance.
+%p
+  Creatures with a low Mind score may be slow thinkers, slow to pick up on
+  things others take for granted, or they can simply be direct to a fault,
+  preferring action to waiting around and thinking things over.
+
+%h3#body Body
+%p
+  The Body attribute represents a creature's physical aptitude. A creature's
+  Body score determines its hit point total.
+%p
+  Creatures with a high Body score can be strong, fast, or tough. They can be
+  large and muscular, with a well-defined physique; they can be small and
+  slender but highly agile, swift and dextrous; or they can even be simply
+  large, able to shrug off harm and challenges that lesser creatures would find
+  difficult or impossible.
+%p
+  Creatures with a low Body score may be physically unimposing, perhaps from a
+  focus on academic study rather than physical pursuits or the effect of some
+  ravaging disease. They can be small and lacking in strength, slow and clumsy,
+  or dangerously thin and vulnerable to harm.
+
+%h3#spirit Spirit
+%p
+  The Spirit attribute represents a creature's spiritual aptitude. A creature's
+  Spirit score determines the size of its token pools.
+%p
+  Creatures with a high Spirit score can be deeply attuned to the natural,
+  magical or spiritual worlds, either through an innate connection or by the
+  benefit of long focus and meditation. They can be empowered by a strong and
+  sincere faith, granting them spiritual strength; they can be the beneficiary
+  of inexplicable luck, possessed of such charisma that trouble seems to melt
+  around them, or simply have a certain <em>je ne sais quoi</em>.
+%p
+  Creatures with a low Spirit score may be unfocused and lackadaisical, lacking
+  the sheer force of personality to easily manipulate the world around them.
+  They may be plagued with ill luck or the effect of some curse, or simply
+  oblivious to the powers and wonders of the spiritual world.
+
+%p.apple= link_to "Continue to Skills", "/articles/pendragon/characters/skills"

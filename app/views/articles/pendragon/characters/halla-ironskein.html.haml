@@ -45,8 +45,11 @@
     %strong Attributes:
     Body +5, Mind +3, Spirit +4
   %p
+    %strong Techniques:
+    Endure Pain (E), Guardian, Guard Ally
+  %p
     %strong Skills:
-    Guardian, Guard Ally, Athletics +1, Axe Mastery +1, Shield Mastery +1
+    Athletics +1, Axe Mastery +1, Shield Mastery +1
   %p
     %strong Items:
     Long-handle Axe, Iron Shield, Breastplate, Crossbow
@@ -58,5 +61,6 @@
 
 %h2 Halla's Skills
 
+= render "articles/pendragon/skills/skill", :skill => PendragonSkill.find_by_slug("endure-pain")
 = render "articles/pendragon/skills/skill", :skill => PendragonSkill.find_by_slug("guardian")
 = render "articles/pendragon/skills/skill", :skill => PendragonSkill.find_by_slug("guard-ally")
