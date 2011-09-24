@@ -1,0 +1,49 @@
+-# app/views/articles/_form.html.haml
+
+= content_for :css do
+  :css
+    table.form {
+      width: 100%;
+    }
+    
+    table.form, table.form th, table.form td {
+      border: 0px none;
+      text-align: left;
+      vertical-align: top;
+    }
+    
+    table.form td label {
+      font-weight: bold;
+    }
+    
+    table.form td input {
+      width: 100%;
+    }
+
+
+%h2 Articles Form
+
+- if @article.is_a? Article
+  %ul
+    - @article.errors.full_messages.each do |message|
+      %li= message
+  
+  = form_for @article do |form|
+    %table.form
+      %tbody
+        %tr
+          %td= form.label :category_id
+          %td= form.collection_select(:category_id, @categories, :id, :title)
+        %tr
+          %td= form.label :title
+          %td= form.text_field :title
+        %tr
+          %td= form.label :slug
+          %td= form.text_field :slug
+        %tr
+          %td= form.label :contents
+          %td= form.text_area :contents, :rows => 6, :style => "width: 100% !important;"
+    %p= form.submit
+- else
+  %strong Error:
+  No article found.

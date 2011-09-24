@@ -1,0 +1,44 @@
+= content_for :css do
+  = stylesheet_link_tag "articles"
+
+= content_for :article_breadcrumbs do
+  %span.breadcrumb.breadcrumb_index
+    = link_to "Back to Pendragon", "/articles/pendragon"
+    |
+
+= content_for :footer_quote do
+  A Million Miles is the Difference Between a Failure and a New Chance
+  
+= content_for :sidebar do
+  %h2 Pendragon Navigation
+  
+  %ul#side_navigation{:style => "margin-bottom: 10px;"}
+    %li.apple= link_to "Home", "/articles/pendragon"
+    %li.apple= link_to "Glossary", "/articles/pendragon/glossary"
+    %li.apple= link_to "Quick Reference", "/articles/pendragon/quick-reference"
+    - if current_user then
+      %li.leaf= link_to "Extra Notes", "/articles/pendragon/notes"
+      %li.leaf= link_to "Todo List", "/articles/pendragon/todo"
+    
+  %h3.subtitle Creatures and Characters
+  %ul#side_navigation{:style => "margin-bottom: 10px;"}
+    %li.apple= link_to "Character Basics", "/articles/pendragon/characters"
+    %li.apple= link_to "Attributes", "/articles/pendragon/characters/attributes"
+    %li.apple
+      = link_to "Skills and Techniques", "/articles/pendragon/characters/skills"
+      %ul.no_margin
+        %li.leaf= link_to "List of Skills", "/articles/pendragon/skills/list"
+    %li.apple= link_to "Stats and Tokens", "/articles/pendragon/characters/tokens"
+    %li.apple= link_to "Creating a Character", "/articles/pendragon/characters/creating-characters"
+
+  %h3.subtitle Running the Game
+  %ul#side_navigation{:style => "margin-bottom: 10px;"}
+    %li.apple= link_to "Game Basics", "/articles/pendragon/running"
+    %li.apple= link_to "Combat", "/articles/pendragon/running/combat"
+    %li.apple Exploration
+  
+  %h3.subtitle Narrator's Guide
+  
+  / %h2 Site Navigation
+  / %ul#side_navigation
+  /   = navigation :tag => :li, :tag_class => :apple

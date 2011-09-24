@@ -1,0 +1,10 @@
+-# app/views/articles/pendragon/skills/show.html.haml
+
+= render "articles/pendragon/skills/custom_layout"
+
+%h1 Skill
+
+= render "skill", :object => @skill
+
+%p.apple
+  = link_to "Back to Skills", "/articles/pendragon/skills/list"

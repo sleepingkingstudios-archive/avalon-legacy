@@ -1,0 +1,80 @@
+-# app/views/articles/pendragon/skills/index.html.haml
+
+= render "articles/pendragon/skills/custom_layout"
+
+%h1#reading-the-skill-entries Reading the Skill Entries
+
+%ul
+  %li.apple= link_to "Skill Name", "#skill-name"
+  %li.apple= link_to "Skill Type and Subtypes", "#skill-type"
+
+%h2#skill-name Skill Name
+%p
+  At the top of the skill entry is the skill name. Each skill has a unique
+  name, which reflects the nature and the effects of the skill.
+
+%h2#skill-type Skill Type and Subtypes
+%p
+  Directly below the name is the skill type, which determines the requirements
+  on or restrictions to using the skill, as well as what other effects can
+  influence the use or the effect of the skill. Each skill has a single type,
+  plus zero or more subtypes, which are listed in square brackets after the
+  skill type.
+%p
+  The following types and subtypes have special requirements, restrictions, or
+  other rules regarding their use. Other subtypes not listed only determine
+  what other effects are triggered by or can influence the use of skills of
+  that subtype.
+
+%h3#instant Instant
+%p
+  The instant subtype indicates that the skill can be used out of the usual
+  turn order, even in the middle of another creature's action. However, the
+  skill can only be used immediately after the trigger condition is met (see
+  Trigger, below).
+
+%h3#magic Magic
+%p
+  The magic subtype indicates that the effect is powered by supernatural
+  energies. Skills with the magic subtype typically require the user to spend
+  mana tokens.
+  
+%h3#melee Melee
+%p
+  The melee subtype indicates that the user must make a successful melee attack
+  check in order to use the skill. For techniques with the melee subtype, the
+  check must be made using the specified equipment. If the user cannot make a
+  melee attack (e.g. the target is out of reach), or if the check fails, then
+  the skill fails.
+%p
+  If the skill is a technique, then unless otherwise noted the usual effect of
+  a successful melee attack is applied to the target in addition to the effects
+  of the technique.
+
+%h3#projectile Projectile
+%p
+  As the melee subtype, above, except that the user must make a successful
+  projectile attack in order to use the skill. Skills with the projectile
+  subtype require a clear path to the target.
+
+%h3#spell Spell
+%p
+  Spells are magical effects brought forth through ritual and incantation.
+  Characters or creatures with roles such as &ldquo;sorcerer&rdquo;,
+  &ldquo;wizard&rdquo; or &ldquo;mystic&rdquo; make extensive use of spells.
+%p
+  Spells have no inherent restrictions or requirements, but most spellcasters
+  have one or more restrictions on spell use, depending on the magical
+  tradition they represent. In addition, spells always have the [Magic]
+  subtype (see above), and are subject to the restrictions thereof.
+
+%h3#technique Technique
+%p
+  Techniques are special abilities that use or require a piece of equipment, as
+  determined by the full type, e.g. a &ldquo;Melee Weapon Technique&rdquo;
+  requires the use of any melee weapon, and a &ldquo;Shield Technique&rdquo;
+  requires the user to be wielding a shield. If the user is not wielding (or
+  wearing, in the case of worn equipment) the specified equipment, then the
+  creature or character cannot use that skill.
+
+%p.apple= link_to "Continue to List of Skills", "/articles/pendragon/skills/list"

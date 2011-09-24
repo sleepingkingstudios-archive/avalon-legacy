@@ -1,0 +1,10 @@
+-# app/views/articles/_article.html.haml
+
+- if @article.is_a? Article
+  %h1= @article.title
+  %p
+    :redcarpet
+      #{@article.contents}
+- else
+  %strong Error:
+  No article found.

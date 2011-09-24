@@ -1,0 +1,66 @@
+-# app/views/articles/pendragon/characters/halla-ironskein.html.haml
+
+= content_for :css do
+  :css
+    .indent {
+      padding-left: 25px;
+    }
+    
+    .small-caps {
+      font-variant: small-caps;
+    }
+
+= render "layoutRenderer"
+
+%h1{:style => "margin-bottom: 0;"} Halla Ironskein
+.block.stat-block
+  %p
+    Female Dwarf Fighter
+  %p
+    %strong Hit Points:
+    5
+  %p
+    %strong Tokens:
+    4 Shield tokens
+  %p
+    %strong Skills:
+    .indent
+      Long-handle Axe:
+      <span class="small-caps">attack</span> +6,
+      <span class="small-caps">damage</span> 1 slashing
+      %br
+      Crossbow:
+      <span class="small-caps">attack</span> +5,
+      <span class="small-caps">damage</span> 1 piercing,
+      <span class="small-caps">range</span> Close
+  %p
+    %strong Stats:
+    .indent
+      Defense 12/+5,
+      %br
+      Athletics 6/-1,
+      %br
+      Perception 7/+0
+  %p
+    %strong Attributes:
+    Body +5, Mind +3, Spirit +4
+  %p
+    %strong Techniques:
+    Endure Pain (E), Guardian, Guard Ally
+  %p
+    %strong Skills:
+    Athletics +1, Axe Mastery +1, Shield Mastery +1
+  %p
+    %strong Items:
+    Long-handle Axe, Iron Shield, Breastplate, Crossbow
+  %p
+    %strong Consumables:
+    20 Crossbow Bolts,
+    3 Potions of Minor Healing
+    (<span class="small-caps">effect</span> heals 1 damage)
+
+%h2 Halla's Skills
+
+= render "articles/pendragon/skills/skill", :skill => PendragonSkill.find_by_slug("endure-pain")
+= render "articles/pendragon/skills/skill", :skill => PendragonSkill.find_by_slug("guardian")
+= render "articles/pendragon/skills/skill", :skill => PendragonSkill.find_by_slug("guard-ally")

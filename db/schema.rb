@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110922160331) do
+ActiveRecord::Schema.define(:version => 20110923125710) do
+
+  create_table "articles", :force => true do |t|
+    t.string   "slug"
+    t.text     "contents"
+    t.integer  "category_id"
+    t.boolean  "is_published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "title"

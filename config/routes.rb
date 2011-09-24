@@ -10,22 +10,24 @@ Avalon::Application.routes.draw do
   
   resource :session, :only => [:new, :create, :destroy]
   
-  # articles routing; abandon hope, all ye who enter here
+  resources :articles
   
-  namespace "articles" do
-    namespace "pendragon" do
-      resources :skills, :except => :destroy do
-        collection do
-          get 'list'
-        end # collection
-      end # resources skills
-    end # namespace articles/pendragon
-  end # namespace articles
+  # (old) articles routing; abandon hope, all ye who enter here
   
-  match "/pendragon/:path" => redirect("/articles/pendragon/%{path}")
-  
-  get 'articles/*path' => "articles#static"
-  get 'articles'       => "articles#static"
+  # namespace "articles" do
+  #   namespace "pendragon" do
+  #     resources :skills, :except => :destroy do
+  #       collection do
+  #         get 'list'
+  #       end # collection
+  #     end # resources skills
+  #   end # namespace articles/pendragon
+  # end # namespace articles
+  # 
+  # match "/pendragon/:path" => redirect("/articles/pendragon/%{path}")
+  # 
+  # get 'articles/*path' => "articles#static"
+  # get 'articles'       => "articles#static"
   
   # root url
   root :to => "home#index"

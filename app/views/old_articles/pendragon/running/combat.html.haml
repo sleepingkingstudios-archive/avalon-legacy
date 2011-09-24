@@ -1,0 +1,217 @@
+-# app/views/articles/pendragon/quick-reference/combat.html.haml
+
+= render "layoutRenderer"
+= content_for :css do
+  :css
+    .inline-block {
+      / display: inline-block;
+    }
+
+%h1.title Running the Game
+%h2.subtitle Combat Encounters
+
+%ul
+  %li.apple= link_to "Getting Started", "#getting-started"
+  %li.apple= link_to "Combat Rounds and Turns", "#rounds"
+  %li.apple
+    = link_to "Actions in Combat", "#combat-actions"
+    %ul.no_margin.rewrite
+      %li.leaf= link_to "Attacking the Enemy", "#attacks"
+      %li.leaf= link_to "Move Around", "#combat-moves"
+      %li.leaf= link_to "Make a Skill Check", "#skill-checks"
+      %li.leaf= link_to "Use a Technique", "#techniques"
+      %li.leaf= link_to "Use a Combat Maneuver", "#combat-maneuvers"
+  %li.apple= link_to "Hit Points, Damage, and Wounds", "#damage"
+
+%h2#getting-started Getting Started
+%p
+  Each participant rolls an Initiative check (normally, a Spirit check plus any
+  applicable bonuses). In the case of a tie, the participant with the higher
+  Spirit score acts first; if the Spirit scores are also tied, play a round of
+  rock-paper-scissors, and the winning player's character acts first.
+
+%p.apple= link_to "Back to Top", "#top"
+
+%h2#rounds Combat Rounds and Turns
+%p
+  Combat is divided into rounds, each representing (very approximately) six
+  seconds of in-game time. During each round, each participant acts once in
+  order of their Initiative results, highest to lowest. This is the
+  participant's Turn.
+  %span.rewrite
+    Any effects that have a set duration of Rounds will end at the beginning
+    of that participant's turn in the final round of the effect.
+
+%h3#actions Turns and Actions
+%p
+  During their Turn, each participant can take one or more Actions.
+  Specifically, a participant may take either a single full-round action, or a
+  standard action, a move action, and a minor action. The player may substitute
+  a move action for a standard action, or a minor action for a move action if
+  desired, and may choose not to take all of the actions available in a given
+  Turn.
+  
+%ul
+  %li
+    %strong Full-Round Action:
+    %br
+    An action that requires the creature's full focus for the entire round.
+    Examples could include a chain of attacks, or a complex spell or ritual.
+  %li
+    %strong Standard Action:
+    %br
+    An action that requires time and focus, but allows the creature to move and
+    take minor actions as well. Attacking an opponent with most weapons is a
+    standard action, as is using many techniques.
+  %li
+    %strong Move Action:
+    %br
+    An action that takes some time and focus, but allows the creature to attack
+    or cast a spell as well. Moving a short distance is a move action.
+  %li
+    %strong Minor Action:
+    %br
+    An action that takes minimal time and focus. Examples include drawing a
+    sheathed weapon, opening a door, or grabbing a potion from a belt pouch
+    (but not from a backpack or saddle bag).
+  %li
+    %strong Instant Action:
+    %br
+    An instant action is taken out of turn (see below). Examples include
+    casting a counterspell to negate an enemy incantation or parrying an
+    incoming attack.
+
+%h4 Instant Actions
+%p
+  Some Techniques allow a creature to take an action outside of their Turn.
+  These instant actions are in addition to the actions permitted above, but
+  the technique can only be used when the specified condition is met. However,
+  a creature can only take a single Instant action each round; once it has used
+  any Instant action, it cannot take another until its next Turn.
+
+%p.apple= link_to "Back to Top", "#top"
+
+%h2#combat-actions.no_margin Actions in Combat
+%ul
+  %li.leaf= link_to "Attacking the Enemy", "#attacks"
+  %li.leaf= link_to "Move Around", "#combat-moves"
+  %li.leaf= link_to "Make a Skill Check", "#skill-checks"
+  %li.leaf= link_to "Use a Technique", "#techniques"
+  %li.leaf= link_to "Use a Combat Maneuver", "#combat-maneuvers"
+
+%h3#attacks Attacking the Enemy
+%p
+  The most basic action in combat is making a weapon attack.
+  %span.rewrite
+    To make a weapon attack, a creature must choose a target in range of their
+    current weapon.
+  Attacking an enemy is a standard action (see Combat Actions, above) unless
+  noted otherwise in the weapon and/or technique description.
+%p
+  To make a weapon attack, the creature must make a successful attack check
+  with a Difficulty equal to the target's Defense stat. Typically, the defense
+  stat is equal to 7 + the creature's Body score, plus any bonuses from armor or
+  defensive skills.
+%p
+  If the check succeeds, the attack is successful and the target creature takes
+  damage as determined by the weapon used, typically 1 token of physical
+  damage.
+
+%h4#critical-hits Critical Hits
+%p
+  If the attack check result beats the target creature's Defense by 3 or more,
+  the attack is a critical hit. Any damage from a critical hit is inflicted as
+  wounds instead of hit point damage (see Damage and Wounds, below).
+
+%h4#unarmed-attacks Unarmed Attacks and Improvised Weapons
+%p
+  A creature without any equipped weapons or natural weapons (claws, fangs,
+  a tail whip, a wing buffet, et cetera) can still attempt to attack opponents;
+  however, they suffer a -3 penalty to the attack check, and cannot make
+  critical hits.
+%p
+  Creatures may instead use improvised weapons, such as a broken bottle, a
+  chair leg, and so on. Improvised weapons do not reduce the attack penalty for
+  attacking unarmed, but may have different damage types and can inflict
+  critical hits. In addition, at the Narrator's discretion, individual
+  improvised weapons may confer additional bonuses, such as a bar stool
+  allowing the wielder to use an improvised block technique as if it were a
+  shield.
+  
+%h3#techniques Use a Technique
+
+%h4 Encounter Techniques
+%p
+  Some techniques have the Encounter subtype. A creature can only use a single
+  encounter technique between rests, even if the creature has more than one
+  encounter technique available.
+%p
+  Generally, encounter techniques offer a benefit that is too powerful to use
+  at will. Once a creature has used an encounter technique, it cannot use
+  another until it has had at least a
+  = "#{link_to "Light Rest", "/articles/pendragon/running/exploration#rest"}.".html_safe
+
+%h3#combat-maneuvers Use a Combat Maneuver
+
+%h4#attacks-of-opportunity Attacks of Opportunity
+%p
+  %span.rewrite
+    Creatures may take an attack of opportunity as an Instant action.
+    
+%p.apple= link_to "Back to Top", "#top"
+
+%h2#damage Hit Points, Damage, and Wounds
+%p
+  Many effects inflict damage on a creature's opponents. The base unit of
+  damage is the Token. Whenever a creature takes damage, place the appropriate
+  number of Damage Tokens on that creature, up to a total number of damage
+  tokens equal to the creature's hit points. Any remaining damage is instead
+  converted to Wounds; place a number of Wound tokens on the creature equal to
+  the remaining damage from the effect. Some effects can also apply wounds
+  directly.
+%p
+  A creature's hit points represent its ability to evade, absorb or simply
+  shrug off damage, whereas wounds represent actual injury, sufficient to
+  reduce the creature's overall effectiveness. Each wound token on a creature
+  applies a cumulative -1 penalty to all checks, so a creature that has taken 3
+  wounds suffers a -3 penalty.
+%p
+  %span.rewrite
+    As a general rule, hit point damage is relatively easy to remove, whereas
+    wounds are difficult to remove (although they can be slowly healed with
+    time and rest).
+  
+%h3 Unconsciousness
+%p
+  %span.rewrite
+    When a creature takes damage, if the total of its damage and wounds exceeds
+    its hit points, it must make an immediate Spirit check against a Difficulty
+    of 10 + the amount of damage just taken.
+  Remember to subtract the creature's wounds from the check result. On a failed
+  check, the creature falls unconscious and cannot take any actions, even
+  purely mental ones, until the creature is revived or rallies (see below).
+%p
+  Once per round during its turn, an unconscious creature can attempt to rally
+  with a successful Spirit check (Difficulty 10). On a successful check, the
+  creature is no longer unconscious and may act as normal during subsequent
+  turns.
+%p
+  %span.rewrite
+    An adjacent ally can attempt to revive a downed ally by making a successful
+    Heal check against a Difficulty equal to 10 + the creature's total damage.
+  Some effects can also immediately revive downed allies.
+
+%h3 Death and Dying
+%p
+  If a creature's wounds ever exceed 6 + the creature's Body score, the
+  creature dies. Dead creatures cannot take any actions, even purely mental
+  ones, and cannot rally or be revived. Some effects can resurrect dead
+  creatures within a short period after death (typically the duration of a
+  combat encounter), but creatures that have been dead for a longer period,
+  or whose physical forms have been destroyed, require the use of a
+  resurrection ritual or quest to restore to life.
+%p
+  Some effects can also inflict death directly. A few environmental effects
+  are similarly hazardous, such as falling into molten lava.
+
+%p.apple= link_to "Back to Top", "#top"

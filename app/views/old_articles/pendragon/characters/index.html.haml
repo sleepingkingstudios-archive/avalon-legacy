@@ -1,0 +1,37 @@
+= render "layoutRenderer"
+- read_more = "Read&nbsp;More".html_safe
+
+%h1 Character Basics
+%h2 Attributes
+%p
+  Each character or creature has three attributes &mdash; Mind, Body, and
+  Spirit &mdash; each with a numeric score from range of 1 to 6.
+  Taken together, these attribute scores representing its base level of
+  ability, and are used to determine the creature's bonus when making checks,
+  its maximum hit points, and how many tokens it can gather and spend in battle
+  to power its abilities (see Tokens, below).
+%p
+  = link_to "Read More on Attributes", "/articles/pendragon/characters/attributes", :class => "leaf"
+
+%h2 Skills and Techniques
+%p
+  Skills represent the benefit of training and experience. By learning skills,
+  creatures can gain proficiency in a variety of roles, from sword combat and
+  spell casting to athletics, lore, and persuasion. Skills can also empower the
+  creature to use powerful special abilities, from weapons techniques and
+  spells to running up walls and reading minds. Skills that grant the use of a
+  special ability are called Techniques.
+%p
+  = link_to "Read More on Skills and Techniques", "/articles/pendragon/skills", :class => "leaf"
+
+%h2 Tokens
+%p.rewrite
+  During encounters, a creature's current status is tracked using tokens. In
+  addition to hit points and damage, tokens are used to power abilities, such
+  as special techniques and magic spells. Tokens are highly dynamic &ndash; as
+  the flow of an encounter shifts, creatures will pick up, lose, spend, and
+  recover tokens often. In a difficult challenge, careful management of this
+  resource can mean the difference between victory and defeat.
+  = "#{link_to read_more, "/articles/pendragon/running#tokens"}.".html_safe
+
+%p.apple= link_to "Continue to Attributes", "/articles/pendragon/characters/attributes"

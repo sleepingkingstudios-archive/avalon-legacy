@@ -1,0 +1,83 @@
+-# app/views/pendragon/_list.html.haml
+
+- content_for :javascript do
+  :javascript
+    function toggleSkill(name) {
+      var skill = jQuery('#skill-' + name);
+      if(skill.find('.stat-block').css('display') == 'none') {
+        // the skill is hidden
+        showSkill(name);
+      } else {
+        // the skill is shown
+        hideSkill(name);
+      } // end if-else
+    } // end function toggleSkill
+    
+    function showSkill(name) {
+      console.log('showing skill ' + name);
+      var skill = jQuery('#skill-' + name);
+      skill.find('.stat-block, .description').show();
+      
+      jQuery('#toggle-skill-' + name).html('Hide Skill');
+    } // end function showSkill
+    
+    function hideSkill(name) {
+      console.log('hiding skill ' + name);
+      var skill = jQuery('#skill-' + name);
+      skill.find('.stat-block, .description').hide();
+      
+      jQuery('#toggle-skill-' + name).html('Show Skill');
+    } // end function hideSkill
+    
+    jQuery(document).ready(function(){
+      var skills = jQuery('.skill');
+      
+      skills.each(function(){
+        var skill = jQuery(this);
+        var name = skill.attr('id');
+        name = name.substring(6, name.length);
+        console.log(skill);
+        
+        var toggle = jQuery('<a>').attr('id', 'toggle-skill-' + name).addClass('toggle-link').html("Hide Skill");
+        var skill_links = skill.find('.skill-links')
+        if(skill_links.html().length > 0) {
+          skill_links.prepend(' |');
+        } // end if
+        skill_links.prepend(toggle);
+      }); // end each
+      
+      jQuery('.toggle-link').click(function(){
+        var name = this.id.substring(13);
+        
+        toggleSkill(name);
+      }); // end click
+      
+      jQuery('.show-all-skills').click(function(){
+        skills.each(function(){
+          var skill = jQuery(this);
+          var name = skill.attr('id');
+          name = name.substring(6, name.length);
+          
+          showSkill(name);
+        }); // end each
+      }); // end click
+      
+      jQuery('.hide-all-skills').click(function(){
+        skills.each(function(){
+          var skill = jQuery(this);
+          var name = skill.attr('id');
+          name = name.substring(6, name.length);
+          
+          hideSkill(name);
+        }); // end each
+      }); // end click
+    }); // end document.ready
+
+%p
+  = "<a class='show-all-skills'>Show All Skills</a>".html_safe
+  |
+  = "<a class='hide-all-skills'>Hide All Skills</a>".html_safe
+
+- @skills.each do |skill|
+  - @skill = skill
+  = render "skill", :skill => skill

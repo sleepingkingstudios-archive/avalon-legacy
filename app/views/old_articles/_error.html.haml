@@ -1,0 +1,7 @@
+- unless @errors.nil?
+  .error
+    %ul
+      - @errors.each do |error|
+        %li
+          %strong Error:
+          = error

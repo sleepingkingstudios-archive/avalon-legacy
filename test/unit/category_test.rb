@@ -7,6 +7,10 @@ class CategoryTest < ActiveSupport::TestCase
     @japanese_swords = Category.find_by_slug("japanese-swords")
   end # method setup
   
+  test "category requires title" do
+    @axes = Category.new
+  end # test category requires title
+  
   test "category.parent=" do
     @swords.parent = @weapons
     @swords.save

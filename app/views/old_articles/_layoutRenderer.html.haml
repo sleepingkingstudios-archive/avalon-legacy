@@ -1,0 +1,3 @@
+- unless @layouts.nil?
+  - @layouts.each do |layout|
+    = render :inline => layout, :type => :haml

@@ -1,8 +1,9 @@
 class Category < ActiveRecord::Base
-  validate :title, :slug, :presence => :true
+  validates :title, :presence => true
   
   belongs_to :parent, :class_name => "Category"
   has_many :children, :class_name => "Category", :foreign_key => "parent_id"
+  has_many :articles
   
   def path
     if self.parent.is_a? Category
